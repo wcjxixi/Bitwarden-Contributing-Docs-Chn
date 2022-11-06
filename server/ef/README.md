@@ -31,13 +31,13 @@
 
 ### Postgres <a href="#postgres" id="postgres"></a>
 
-1在服务器存储库的 dev 文件夹中，运行：
+1、在服务器存储库的 dev 文件夹中，运行：
 
-2
+2、
 
-3
+3、
 
-4
+4、
 
 ### MySql <a href="#mysql" id="mysql"></a>
 
