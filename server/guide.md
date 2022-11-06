@@ -303,7 +303,7 @@ dotnet run
 
 调试：
 
-* 在 Windows 上，右键点击每个项目 → 单点击 **Debug** → 点击 **Start New Instance**
+* 在 Windows 上，右键点击每个项目 → 点击 **Debug** → 点击 **Start New Instance**
 * 在 MacOS 上，右键点击每个项目 → 点击 **Start Debugging Project**
 
 ### Rider <a href="#rider" id="rider"></a>
