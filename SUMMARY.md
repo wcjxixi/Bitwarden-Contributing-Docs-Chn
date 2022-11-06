@@ -9,7 +9,7 @@
     * [迁移](server/mssql/migrations.md)
   * [实体框架](server/ef/README.md)
     * [部署实体框架](server/ef/deploying.md)
-  * [管理员门户](server/admin.md)
+  * [管理门户](server/admin.md)
   * [用户机密参考](server/user-secrets.md)
 * [客户端](clients/README.md)
   * [Web Vault](clients/web-vault/README.md)

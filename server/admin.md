@@ -1,4 +1,4 @@
-# 管理员门户
+# 管理门户
 
 {% hint style="info" %}
 对应的[官方页面地址](https://contributing.bitwarden.com/server/admin/)
@@ -6,7 +6,7 @@
 
 ## 配置用户 <a href="#configuring-users" id="configuring-users"></a>
 
-使用电子邮件发送的链接，管理员门户认证完全通过无密码流程完成。电子邮件地址必须是位于 `adminSettings:admins` 用户机密中的才能获得授权。
+使用电子邮件发送的链接，管理门户认证完全通过无密码流程完成。电子邮件地址必须是位于 `adminSettings:admins` 用户机密中的才能获得授权。
 
 如果您遵循了[服务器设置指南](guide.md)，这应该已经被配置并且默认为 `admin@localhost`。如果没有，请立即返回并配置它。
 

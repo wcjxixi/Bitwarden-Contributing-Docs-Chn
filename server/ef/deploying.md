@@ -134,4 +134,4 @@ for f in `ls -v ./*.psql`; do docker cp $f bitwarden-postgres:/var/lib/postgresq
 
 8、运行 `bitwarden.sh restart` 以确保一切都是最新的
 
-您的自托管实例现在应该可以使用 Postgres 了！
+您的自托管实例现在应该可以使用 postgres 了！
