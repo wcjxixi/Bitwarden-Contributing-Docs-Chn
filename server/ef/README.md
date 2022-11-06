@@ -33,13 +33,13 @@
 
 1、在服务器存储库的 `dev` 文件夹中，运行：
 
-```
+```docker
 docker compose --profile postgres up
 ```
 
 2、在您的 API 和个人信息的用户机密中添加以下值，根据需要更改 root 密码等信息。如果您已经有这些机密，请确保更新现有的值，而不是创建新的值：
 
-```
+```systemd
 "globalSettings:databaseProvider": "postgres",
 "globalSettings:postgreSql:connectionString": "Host=localhost;Username=postgres;Password=example;Database=vault_dev;Include Error Detail=true",
 ```
@@ -61,13 +61,13 @@ pwsh migrate.ps1 -postgres
 
 1、在您的服务器存储库的 `dev` 文件夹中，运行：
 
-```
+```docker
 docker compose --profile mysql up
 ```
 
 2、在您的 API 和个人信息的用户机密中添加以下值，根据需要更改 root 密码等信息。如果您已经有这些机密，请确保更新现有的值，而不是创建新的值：
 
-```
+```systemd
 "globalSettings:databaseProvider": "mysql",
 "globalSettings:mySql:connectionString": "server=localhost;uid=root;pwd=example;database=vault_dev",
 ```

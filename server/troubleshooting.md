@@ -32,7 +32,7 @@ security dump-trust-settings -d
 
 以下命令应该可以解决问题：
 
-```
+```git
 dotnet nuget locals all --clear  
 git clean -xfd  
 git rm \*\*/packages.lock.json -f  
@@ -49,7 +49,7 @@ dotnet restore
 
 幸运的是，可以手动将端口标记为反向，以防止 Hyper-V 保留它们。以特权模式启动 CMD 会话并运行以下命令，然后重新启动计算机。
 
-```
+```batch
 net stop winnat
 
 netsh int ipv4 add excludedportrange protocol=tcp startport=<port> numberofports=1 store=persistent
