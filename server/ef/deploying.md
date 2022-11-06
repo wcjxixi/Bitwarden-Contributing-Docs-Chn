@@ -18,7 +18,7 @@
 这些步骤仅在 Linux 上测试过。
 {% endhint %}
 
-## 步骤 <a href="#instructions" id="instructions"></a>
+## 教学 <a href="#instructions" id="instructions"></a>
 
 1、像平常一样安装 Bitwarden 自托管实例：[https://bitwarden.com/help/install-on-premise-linux/](https://bitwarden.com/help/install-on-premise-linux/)
 
@@ -134,4 +134,4 @@ for f in `ls -v ./*.psql`; do docker cp $f bitwarden-postgres:/var/lib/postgresq
 
 8、运行 `bitwarden.sh restart` 以确保一切都是最新的
 
-您的自托管实例现在应该可以使用 postgres 了！
+您的自托管实例现在应该可以使用 Postgres 了！
