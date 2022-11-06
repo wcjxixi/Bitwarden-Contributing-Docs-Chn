@@ -12,7 +12,7 @@
 
 实体框架 (EF) 是一个 ORM 框架，充当数据库的包装器。它允许我们支持多个（非 MSSQL）数据库，而无需为每个数据库维护迁移和查询脚本。
 
-我们的 EF 实现目前支持 Postgres 和 ySQL。
+我们的 EF 实现目前支持 Postgres 和 MySQL。
 
 ## 设置 EF 数据库 <a href="#setting-up-ef-databases" id="setting-up-ef-databases"></a>
 

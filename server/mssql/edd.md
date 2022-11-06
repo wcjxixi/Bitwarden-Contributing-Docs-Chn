@@ -4,9 +4,9 @@
 对应的[官方页面地址](https://contributing.bitwarden.com/server/mssql/edd/)
 {% endhint %}
 
-在 Bitwarden，我们遵循[进化数据库设计 (EDD)](https://en.wikipedia.org/wiki/Evolutionary\_database\_design)。EDD 描述了一个过程，在这个过程中，数据库架构被持续更新，同时通过使用数据库过渡阶段仍然确保与旧版本的兼容性。
+在 Bitwarden，我们遵循[进化数据库设计 (EDD)](https://en.wikipedia.org/wiki/Evolutionary\_database\_design)。EDD 描述了一个过程，在这个过程中，数据库模式被持续更新，同时通过使用数据库过渡阶段仍然确保与旧版本的兼容性。
 
-简而言之，Bitwarden服务器的数据库架构必须**支持**以前的服务器版本。数据库迁移将在代码部署前进行，在版本回滚的情况下，数据库架构将**不会**被更新。
+简而言之，Bitwarden服务器的数据库模式必须**支持**以前的服务器版本。数据库迁移将在代码部署前进行，在版本回滚的情况下，数据库模式将**不会**被更新。
 
 ## 设计 <a href="#design" id="design"></a>
 
