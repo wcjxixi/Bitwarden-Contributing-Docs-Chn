@@ -10,7 +10,7 @@
 
 ### 编辑用户机密 - Windows Visual Studio <a href="#editing-user-secrets-visual-studio-on-windows" id="editing-user-secrets-visual-studio-on-windows"></a>
 
-右键单击解决方案资源管理器中的项目，然后单击 **Manage User Secrets**。
+右键点击解决方案资源管理器中的项目，然后点击 **Manage User Secrets**。
 
 ### 编辑用户机密 - macOS Visual Studio <a href="#editing-user-secrets-visual-studio-on-macos" id="editing-user-secrets-visual-studio-on-macos"></a>
 
@@ -39,4 +39,4 @@ dotnet user-secrets list
 ### 编辑用户机密 - Rider <a href="#editing-user-secrets-rider" id="editing-user-secrets-rider"></a>
 
 * 导航到 **Preferences** -> **Plugins** 并安装 .NET Core User Secrets
-* 右键单击项目，然后单击 **Tools** -> **Open project user secrets**
+* 右键点击项目，然后点击 **Tools** -> **Open project user secrets**
