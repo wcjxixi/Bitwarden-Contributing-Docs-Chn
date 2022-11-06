@@ -89,9 +89,9 @@ pwsh migrate.ps1 -mysql
 
 ## 生成 EF 迁移 <a href="#generating-ef-migrations" id="generating-ef-migrations"></a>
 
-如果您改变了数据库架构，则必须创建一个 EF 迁移脚本，以确保 EF 数据库与这些变化保持同步。开发人员必须这样做，并且要在他们的 PR 中包含迁移的内容。
+如果您更改了数据库架构，则必须创建一个 EF 迁移脚本，以确保 EF 数据库与这些变化保持同步。开发人员必须这样做，并且要在他们的 PR 中包含迁移的内容。
 
-### 说明 <a href="#instructions" id="instructions"></a>
+### 步骤 <a href="#instructions" id="instructions"></a>
 
 1、根据需要更新您的 `Core/Entities` 中的数据模型
 
