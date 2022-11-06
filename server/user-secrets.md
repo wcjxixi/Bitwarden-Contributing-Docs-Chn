@@ -6,7 +6,7 @@
 
 ## 手动编辑用户机密 <a href="#manually-editing-user-secrets" id="manually-editing-user-secrets"></a>
 
-我们建议使用[服务器设置指南](guide.md)中描述的自动帮助程序脚本。然而，您也可以使用以下的说明手动编辑您的用户机密或对其进行故障排除。如果您手动编辑正在使用的机密，请务必记住将您的更改复制到所有要求的项目。
+我们建议使用[服务器设置指南](guide.md)中描述的自动帮助程序脚本。然而，您也可以使用以下的说明手动编辑您的用户机密或对其进行故障排除。如果您手动编辑正在使用的机密，如果需要，请务必记住将您的更改复制到所有项目。
 
 ### 编辑用户机密 - Windows  Visual Studio <a href="#editing-user-secrets-visual-studio-on-windows" id="editing-user-secrets-visual-studio-on-windows"></a>
 
@@ -14,7 +14,7 @@
 
 ### 编辑用户机密 - macOS Visual Studio <a href="#editing-user-secrets-visual-studio-on-macos" id="editing-user-secrets-visual-studio-on-macos"></a>
 
-打开终端并导航到项目目录。
+打开终端并导航到项目的目录。
 
 添加用户机密：
 
