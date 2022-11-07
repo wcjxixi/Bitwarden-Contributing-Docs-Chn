@@ -67,7 +67,7 @@ docker compose --profile mysql up
 
 2、在您的 API 和个人信息的用户机密中添加以下值，根据需要更改 root 密码等信息。如果您已经有这些机密，请确保更新现有的值，而不是创建新的值：
 
-```systemd
+```json
 "globalSettings:databaseProvider": "mysql",
 "globalSettings:mySql:connectionString": "server=localhost;uid=root;pwd=example;database=vault_dev",
 ```

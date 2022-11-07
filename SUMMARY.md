@@ -14,7 +14,7 @@
 * [客户端](clients/README.md)
   * [Web Vault](clients/web-vault/README.md)
     * [WebAuthn](clients/web-vault/webauthn.md)
-  * [浏览器](clients/browser/README.md)
+  * [浏览器端](clients/browser/README.md)
     * [生物识别解锁](clients/browser/biometric.md)
     * [Firefox 隐私模式](clients/browser/ff-private.md)
   * [桌面端](clients/desktop/README.md)
