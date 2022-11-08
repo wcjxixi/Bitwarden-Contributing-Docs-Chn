@@ -19,7 +19,7 @@
     * [Firefox 隐私模式](clients/browser/ff-private.md)
   * [桌面端](clients/desktop/README.md)
     * [更新测试](clients/desktop/update.md)
-    * [原生消息测试运行程序](clients/desktop/native-messaging-test-runner.md)
+    * [本机消息传递测试运行程序](clients/desktop/native-messaging-test-runner.md)
   * [CLI](clients/cli.md)
   * [故障排除](clients/troubleshooting.md)
 * [移动端](mobile/README.md)
