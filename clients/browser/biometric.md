@@ -47,7 +47,7 @@ _不支持：_
 
 {% embed url="https://contributing.bitwarden.com/clients/browser/extension-id.png" %}
 
-* 使用您的 IDE 将 ID 添加到 `NativeMessageHost` JSON。此文件嵌套在应用程序支持目录中。例如，对于 Chrome 浏览器，该文件位于：
+* 使用您的 IDE 将 ID 添加到 `NativeMessageHost` JSON 文件中。此文件嵌套在应用程序支持目录下。例如，对于 Chrome 浏览器，该文件位于：
 
 {% tabs %}
 {% tab title="Windows" %}
