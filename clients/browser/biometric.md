@@ -13,13 +13,13 @@
 _支持：_
 
 * 基于 Chromium 的浏览器
-* Firefox 版本 87 及更高版本
+* Firefox 87 及更高版本
 * Safari 14 及更高版本
 * 从 [download](https://bitwarden.com/download) 获取的侧面加载的 Windows 桌面应用程序
 
 _不支持：_
 
-* Firefox 版本 86 及更早版本
+* Firefox 86 及更早版本
 * 侧面加载的 MacOS 桌面应用程序
 * Linux OS
 
