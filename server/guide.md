@@ -56,11 +56,11 @@ cp .env.example .env
 {% hint style="danger" %}
 您的 MSSQL 密码必须符合以下[密码复杂性准则](https://learn.microsoft.com/zh-cn/sql/relational-databases/security/password-policy?view=sql-server-ver15#password-complexity)：
 
-* 它必须至少有八个字符长。
+* 它必须至少有八个字符。
 * 它必须包含来自以下四个类别中的三个类别的字符：
   * 拉丁文大写字母 (A-Z)
   * 拉丁文小写字母 (a-z)
-  * 以 10 位为基数 (0-9)
+  * 基本的 10 位数数字 (0-9)
   * 非字母数字字符，例如：感叹号 (!)、美元符号 ($)、数字符号 (#) 或百分比 (%)。
 {% endhint %}
 
@@ -68,7 +68,7 @@ cp .env.example .env
 
 5、启动 Docker 容器。
 
-使用 PowerShell 导航到已克隆的服务器存储库位置，进入 dev 文件夹并运行下面的 docker 命令。
+使用 PowerShell 导航到已克隆的服务器存储库位置，进入 dev 文件夹然后运行下面的 docker 命令。
 
 {% tabs %}
 {% tab title="社区开发人员" %}
@@ -108,7 +108,7 @@ docker compose --profile cloud --profile mail up -d
 
 为了支持基于 ARM 的开发环境，例如 M1 Mac，我们使用 [Azure SQL Edge](https://hub.docker.com/\_/microsoft-azure-sql-edge) docker 容器而不是普通的 [Microsoft SQL Server](https://hub.docker.com/\_/microsoft-mssql-server) 容器。它的行为与常规 SQL Server 实例基本相同，并运行在 1433 端口上。
 
-您可以使用 Azure Data Studio 并使用以下凭据连接到它：
+您可以使用 Azure Data Studio 并通过以下凭据连接到它：
 
 * 服务器：localhost
 * 用户名：sa
