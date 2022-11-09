@@ -4,11 +4,11 @@
 对应的[官方页面地址](https://contributing.bitwarden.com/clients/browser/biometric/)
 {% endhint %}
 
-目前，移动端、桌面端和浏览器扩展支持生物识别解锁。Bitwarden 的生物识别解锁功能与本机消息传递 API 集成以利用此功能。
+目前，移动端、桌面端和浏览器扩展支持生物识别解锁。Bitwarden 的生物识别解锁功能与本机消息传递 API 集成以发挥其功能。
 
 ## 哪些设备支持生物识别解锁？ <a href="#which-devices-support-biometric-unlock" id="which-devices-support-biometric-unlock"></a>
 
-有关最新信息，请参阅[帮助文章](https://help.ppgg.in/your-vault/unlocking-with-biometrics)，但在撰写本文时，以下是概要：
+有关最新的信息，请参阅[帮助文章](https://help.ppgg.in/your-vault/unlocking-with-biometrics)，但在撰写本文时，以下是概要：
 
 _支持：_
 
@@ -26,7 +26,7 @@ _不支持：_
 ## 一般设置步骤 <a href="#general-setup-steps" id="general-setup-steps"></a>
 
 {% hint style="danger" %}
-如果您之前为 Safari 安装了本地构建的浏览器扩展，请按照[此处](./)所述重置扩展引用路径。
+如果您之前已经为 Safari 安装了本地构建的浏览器扩展，请按照[此处](./)所述重置扩展引用路径。
 {% endhint %}
 
 本机消息传递的工作方式是让浏览器启动一个轻量级的代理，并将其植入我们的桌面应用程序。
@@ -77,7 +77,7 @@ _不支持：_
 在 macOS 上，您需要构建一个 Mac App Store Development Build，或者关闭 Gatekeeper。
 {% endhint %}
 
-我的项目已经在运行了，现在呢？
+我的项目已经在运行了，然后呢？
 
 * 在桌面应用程序的首选项菜单中，开启 `Enable browser integration`。
 * 在浏览器扩展中，访问设置菜单，然后启用 `Unlock with biometrics` 选项。
