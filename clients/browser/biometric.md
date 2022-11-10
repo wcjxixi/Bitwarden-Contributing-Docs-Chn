@@ -8,7 +8,7 @@
 
 ## 哪些设备支持生物识别解锁？ <a href="#which-devices-support-biometric-unlock" id="which-devices-support-biometric-unlock"></a>
 
-有关最新的信息，请参阅[帮助文章](https://help.ppgg.in/your-vault/unlocking-with-biometrics)，但在撰写本文时，以下是概要：
+有关最新的信息，请参阅[帮助文章](https://help.ppgg.in/your-vault/unlocking-with-biometrics)。截止撰写本文时，以下是概要：
 
 _支持：_
 
@@ -31,12 +31,12 @@ _不支持：_
 
 本机消息传递的工作方式是让浏览器启动一个轻量级的代理，并将其植入我们的桌面应用程序。
 
-开箱即用，桌面应用程序只能与生产浏览器扩展通信。当您在桌面应用程序中启用浏览器集成时，应用程序会生成包含浏览器扩展的生产 ID 的清单。要启用桌面应用程序与开发版本浏览器扩展之间的通信，我们需要将您的浏览器扩展开发 ID 添加到此清单中。
+开箱即用，桌面应用程序只能与生产型浏览器扩展通信。当您在桌面应用程序中启用浏览器集成时，应用程序会生成包含浏览器扩展的生产 ID 的清单。要启用桌面应用程序与开发版浏览器扩展之间的通信，我们需要将您的浏览器扩展开发 ID 添加到此清单中。
 
 ### 构建并运行浏览器扩展 <a href="#build-and-run-the-browser-extension" id="build-and-run-the-browser-extension"></a>
 
 * 在本地浏览器项目中，运行 `npm install`。
-* 要在 Safari 上使用本地浏览器扩展，请使用以下命令：`npm run dist:safari:dmg`。构建完成后，您应该会在 Safari 的「偏好设置」中的「扩展」菜单下看到 Bitwarden 扩展。如果没有，打开并构建相关的 Xcode 项目（通常位于 `$HOME/browser/dist/Safari/dmg/desktop.xcodeproj`）。然后它应该出现在「偏好设置」菜单中，您就可以启用它了。
+* 要在 Safari 上使用本地浏览器扩展，请使用以下命令：`npm run dist:safari:dmg`。构建完成后，您应该会在 Safari 的「偏好设置」中的「扩展」菜单下看到 Bitwarden 扩展。如果没有，打开并构建相关的 Xcode 项目（通常位于 `$HOME/browser/dist/Safari/dmg/desktop.xcodeproj`）。然后它会出现在「偏好设置」菜单中，您就可以启用它了。
 * 对于其他浏览器，使用 `npm run build:watch` 然后使用[此处](./#testing-and-debugging)描述的方法加载本地构建的扩展。
 
 ### 为本机消息添加扩展 ID <a href="#add-the-extension-id-for-native-messaging" id="add-the-extension-id-for-native-messaging"></a>
