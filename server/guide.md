@@ -40,7 +40,7 @@ git config blame.ignoreRevsFile .git-blame-ignore-revs
 
 ## 配置 Docker <a href="#configure-docker" id="configure-docker"></a>
 
-我们提供了一个 Docker Compose 配置，在开发过程中使用它来提供所需的依赖项。这被分成多个服务配置文件，以方便自定义。
+我们提供了一个 Docker Compose 配置，用于在开发过程提供所需的依赖。这被分成多个服务配置文件，以方便自定义。
 
 1、一些 Docker 设置被配置在环境文件 `dev/.env` 中。复制示例环境文件：
 
@@ -51,7 +51,7 @@ cp .env.example .env
 
 2、使用您喜欢的编辑器打开 `.env`。
 
-3、设置 `MSSQL_PASSWORD` 变量。这将是您的 MSSQL 数据库服务器的密码。
+3、设置 `MSSQL_PASSWORD` 变量。这将是用于您的 MSSQL 数据库服务器的密码。
 
 {% hint style="danger" %}
 您的 MSSQL 密码必须符合以下[密码复杂性准则](https://learn.microsoft.com/zh-cn/sql/relational-databases/security/password-policy?view=sql-server-ver15#password-complexity)：
@@ -64,7 +64,7 @@ cp .env.example .env
   * 非字母数字字符，例如：感叹号 (!)、美元符号 ($)、数字符号 (#) 或百分比 (%)。
 {% endhint %}
 
-4、您可以更改其他变量或使用它们的默认值。保存并退出此文件。
+4、您可以更改其他变量，也可以使用它们的默认值。保存并退出此文件。
 
 5、启动 Docker 容器。
 
