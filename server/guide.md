@@ -216,7 +216,7 @@ C3A6CECAD3DB580F91A52FC9C767FE780300D8AB  CN=Bitwarden Data Protection Dev
 
 [用户机密](https://learn.microsoft.com/zh-cn/aspnet/core/security/app-secrets?view=aspnetcore-6.0)是一种基于每个开发人员管理应用程序设置的方法。它们覆盖每个项目的 `appsettings.json` 中的设置。您的用户机密文件应与您打算覆盖的设置的 `appsettings.json` 文件的结构相匹配。
 
-我们提供了一个帮助脚本，可以简化为服务器存储库中的所有项目设置用户机密。
+我们提供了一个帮助脚本，可以简化为服务器存储库中的所有项目设置用户机密的步骤。
 
 1、复制示例 `secret.json` 文件。
 
