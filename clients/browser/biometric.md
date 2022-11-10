@@ -20,7 +20,7 @@ _支持：_
 _不支持：_
 
 * Firefox 86 及更早版本
-* 侧面加载的 MacOS 桌面应用程序
+* 侧面加载的 macOS 桌面应用程序
 * Linux OS
 
 ## 一般设置步骤 <a href="#general-setup-steps" id="general-setup-steps"></a>
@@ -56,7 +56,7 @@ _不支持：_
 ```
 {% endtab %}
 
-{% tab title="MacOS" %}
+{% tab title="macOS" %}
 ```
 ~/Library/Application Support/Google/Chrome/NativeMessagingHosts/com.8bit.bitwarden.jso
 ```

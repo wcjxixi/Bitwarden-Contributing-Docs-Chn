@@ -142,9 +142,9 @@ pwsh setup_azurite.ps1
 
 ## 创建数据库 <a href="#create-database" id="create-database"></a>
 
-现在 MSSQL 服务器已经运行了。下一步是创建 Bitwarden 服务器所使用的数据库。
+现在 MSSQL 服务器已经运行了。下一步是创建由 Bitwarden 服务器所使用的数据库。
 
-我们提供了一个帮助脚本用于创建开发数据库 `vault_dev` 并同时运行所有迁移。
+我们提供了一个帮助脚本，它将创建开发数据库 `vault_dev` 并同时运行所有迁移。
 
 1、创建数据库并运行所有迁移：
 
@@ -152,7 +152,7 @@ pwsh setup_azurite.ps1
 pwsh migrate.ps1
 ```
 
-2、您应该会收到各个迁移脚本已成功运行的确认信息：
+2、您应该会收到每个迁移脚本已成功运行的确认信息：
 
 ```
 Performing /mnt/migrator/DbScripts/2017-08-19_00_InitialSetup.sql
@@ -169,9 +169,9 @@ Performing /mnt/migrator/DbScripts/2017-08-30_00_CollectionWriteOnly.sql
 
 ## 生成证书 <a href="#generate-certificates" id="generate-certificates"></a>
 
-下一步是为本地开发创建两个自签名证书。我们提供了一个帮助脚本，用于生成这些证书并将它们添加到您系统的钥匙串或证书存储中。
+下一步是为本地开发创建两个自签名证书。我们提供了一个帮助脚本，它将生成这些证书并将它们添加到您系统的钥匙串或证书存储中。
 
-### macOS
+### MacOS
 
 1、生成证书并将它们保存到您的钥匙串中：
 
@@ -191,7 +191,7 @@ Data Protection Dev: C3A6CECAD3DB580F91A52FC9C767FE780300D8AB
 
 4、双击 `Bitwarden Data Protection Dev` 和 `Bitwarden Identity Server Dev` 证书。
 
-5、将每个证书的信任设置更改为「始终信任」。
+5、在每个证书中，将信任设置更改为「始终信任」。
 
 ### Windows
 
@@ -214,7 +214,7 @@ C3A6CECAD3DB580F91A52FC9C767FE780300D8AB  CN=Bitwarden Data Protection Dev
 
 ## 配置用户机密 <a href="#configure-user-secrets" id="configure-user-secrets"></a>
 
-[用户机密](https://learn.microsoft.com/zh-cn/aspnet/core/security/app-secrets?view=aspnetcore-6.0)是一种开发人员管理应用程序设置的方法。它们覆盖每一个项目的 `appsettings.json` 中的设置。您的用户机密文件应与您打算覆盖的设置的 `appsettings.json` 文件的结构相匹配。
+[用户机密](https://learn.microsoft.com/zh-cn/aspnet/core/security/app-secrets?view=aspnetcore-6.0)是一种基于每个开发人员管理应用程序设置的方法。它们覆盖每个项目的 `appsettings.json` 中的设置。您的用户机密文件应与您打算覆盖的设置的 `appsettings.json` 文件的结构相匹配。
 
 我们提供了一个帮助脚本，可以简化为服务器存储库中的所有项目设置用户机密的步骤。
 
@@ -233,9 +233,9 @@ cp secrets.json.example secrets.json
 3、您还需要以下附加用户机密：
 
 * `installation` > `id` 和 `key`：[获取一组主机安装 ID 和密钥](https://bitwarden.com/host/)，并在此处插入
-* `licenseDirectory`：将此设置为空目录，这是用于存储上传的许可证文件的位置
+* `licenseDirectory`：将此设置为空目录，这是存储已上传的许可证文件的位置
 
-4、将机密添加到每一个 Bitwarden 服务器项目：
+4、将机密添加到每个 Bitwarden 服务器项目：
 
 ```
 pwsh setup_secrets.ps1
@@ -304,7 +304,7 @@ dotnet run
 调试：
 
 * 在 Windows 上，右键点击每个项目 → 点击 **Debug** → 点击 **Start New Instance**
-* 在 macOS 上，右键点击每个项目 → 点击 **Start Debugging Project**
+* 在 MacOS 上，右键点击每个项目 → 点击 **Start Debugging Project**
 
 ### Rider <a href="#rider" id="rider"></a>
 

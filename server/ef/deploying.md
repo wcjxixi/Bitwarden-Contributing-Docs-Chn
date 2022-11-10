@@ -9,7 +9,7 @@
 
 我们还没有一个自动运行数据库迁移的方法。您需要在_每次更新您的 Bitwarden 实例时_自己做。最好不要多次运行给定的迁移。同样，这不是自动的，因此需要您自己跟踪。
 
-我们不会尝试将数据从现有的 MSSQL 数据库迁移到一个新的数据库提供程序。您可以在任何时候通过将 `globalSettings__databaseProvider="postgres"` 更改为 `globalSettings__databaseProvider="sqlServer"` 以换回 MSSQL。
+我们不会尝试将数据从现有的 MSSQL 数据库迁移到一个新的数据库提供程序。您可以在任何时候通过将 `globalSettings__databaseProvider="postgres"` 更改为 `globalSettings__databaseProvider="sqlServer"` 以切换回 MSSQL。
 
 **不要在有您在乎的数据的生产实例中这样做!**
 {% endhint %}

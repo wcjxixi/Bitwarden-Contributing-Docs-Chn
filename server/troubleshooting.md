@@ -4,7 +4,7 @@
 对应的[官方页面地址](https://contributing.bitwarden.com/server/troubleshooting/)
 {% endhint %}
 
-## MacOS
+## macOS
 
 ### AppleCFErrorCryptographicExceptio <a href="#applecferrorcryptographicexception" id="applecferrorcryptographicexception"></a>
 
