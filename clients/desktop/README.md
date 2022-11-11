@@ -47,10 +47,20 @@ npm run electron
 
 Electron 应用程序有一个在 Electron 窗口中运行的渲染器进程，以及一个在后台运行的主进程。
 
-可以使用 Chromium 调试器检查渲染器进程。它应该在桌面应用程序打开时自动打开，或者您可以从“查看”菜单中打开它。
+渲染器进程可以使用 Chromium 调试器进行检查。它应该在桌面应用程序打开时自动打开，或者您可以从「视图」菜单中打开它。
 
-可以通过在 Visual Studio Code 中从 Javascript 调试终端运行应用程序，然后在 build/main.js 中放置断点来调试主进程。
+主进程可以通过从 Visual Studio Code 中的 [Javascript 调试终端](https://code.visualstudio.com/docs/nodejs/nodejs-debugging#\_javascript-debug-terminal)运行此应用程序，然后在 `build/main.js` 中放置断点进行调试。
 
 ## 生物识别解锁（本机消息传递） <a href="#biometric-unlock-native-messaging" id="biometric-unlock-native-messaging"></a>
 
+配置本机消息传递（桌面应用程序和浏览器扩展之间的通信）的说明位于[浏览器部分](../browser/biometric.md)。
+
 ## 构建中的故障 <a href="#trouble-building" id="trouble-building"></a>
+
+如果您看到这样的错误：
+
+```
+[Main] Error: Cannot find module '@bitwarden/desktop-native-darwin-arm64'
+```
+
+您可能还没有构建本机模块，请参阅[构建本机模块](./#build-native-module)。

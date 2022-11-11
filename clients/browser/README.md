@@ -6,7 +6,7 @@
 
 ## 要求 <a href="#requirements" id="requirements"></a>
 
-在开始之前，您必须先完成[客户端存储库设置说明](../)。
+在开始之前，您必须先完成[客户端存储库设置的说明](../)。
 
 ## 构建说明 <a href="#build-instructions" id="build-instructions"></a>
 
