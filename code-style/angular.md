@@ -124,8 +124,8 @@ ngOnDestroy() {
 
 异步订阅很少如您期望的那样工作。它们不是按顺序执行，而是有可能并行执行。这很容易导致意外行为。为避免这种情况，我们的代码库中禁止异步订阅，您需要选择正确的操作。
 
-一些合适的运算符是：
+一些合适的操作符如下：
 
-* ``[`witchMap`](https://www.learnrxjs.io/learn-rxjs/operators/transformation/switchmap)：取消之前的操作，使其适用于我们在收到新输入后不关心旧结果的场景。
-* ``[`concatMap`](https://www.learnrxjs.io/learn-rxjs/operators/transformation/concatmap)：按顺序运行异步操作，防止并行和乱序执行。如果我们关心处理每个事件，请使用它。
-* ``[`mergeMap`](https://www.learnrxjs.io/learn-rxjs/operators/transformation/mergemap)：请仔细考虑这是否适合您的用例。mergeMap 将展平可观察对象，但不关心顺序。如果排序很重要，请使用 concatMap。如果您只关心最新值，请使用 switchMap。
+* [`switchMap`](https://www.learnrxjs.io/learn-rxjs/operators/transformation/switchmap)：取消之前的操作，使其适用于我们在收到新的输入后不关心旧结果的场景。
+* [`concatMap`](https://www.learnrxjs.io/learn-rxjs/operators/transformation/concatmap)：按顺序运行异步操作，防止并行和乱序执行。如果我们关心每一个事件的处理，请使用它。
+* [`mergeMap`](https://www.learnrxjs.io/learn-rxjs/operators/transformation/mergemap)：请仔细考虑这是否适合您的用例。mergeMap 将展平可观察对象，但不关心顺序。如果排序很重要，请使用 `concatMap`。如果您只关心最新值，请使用 `switchMap`。
