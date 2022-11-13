@@ -6,7 +6,7 @@
 
 ## 要求 <a href="#requirements" id="requirements"></a>
 
-在开始之前，您必须先完成[客户端存储库设置的说明](../)。
+在开始之前，您必须先完成[客户端存储库设置说明](../)。
 
 ## 构建说明 <a href="#build-instructions" id="build-instructions"></a>
 
@@ -85,7 +85,7 @@ npm run dist:safari:dmg
 
 2、打开 Safari 并检偏好设置以确认扩展已安装且已启用
 
-{% hint style="danger" %}
+{% hint style="warning" %}
 您可能需要[在 macOS 中配置 Safari 以运行未签名的扩展](https://developer.apple.com/documentation/safariservices/safari\_web\_extensions/running\_your\_safari\_web\_extension#3744467)。
 {% endhint %}
 

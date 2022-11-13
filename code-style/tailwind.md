@@ -16,7 +16,7 @@
 
 为此，我们不鼓励使用任意值，唯一的例外是支持现有的 Bootstrap 样式。在这种情况下，它应该被记录并添加为技术债务，作为从 Bootstrap 迁移的一部分来解决。
 
-{% hint style="info" %}
+{% hint style="warning" %}
 所有 Tailwind 类都需要以 tailwind 配置中定义的 `tw-` 为前缀。用法示例：`<div class="tw-bg-background-alt2"> ... </div>`
 {% endhint %}
 
@@ -42,4 +42,4 @@ Bitwarden 的一项工程计划是[组件库](https://github.com/bitwarden/clien
 
 如果您的 PR 将 **UI Review** 审核为待处理或被拒绝，请联系 Design 以使您的更改获得批准。
 
-{% embed url="https://contributing.bitwarden.com/code-style/chromatic.png" %}
+<figure><img src="https://contributing.bitwarden.com/code-style/chromatic.png" alt=""><figcaption></figcaption></figure>

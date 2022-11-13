@@ -25,7 +25,7 @@ _不支持：_
 
 ## 一般设置步骤 <a href="#general-setup-steps" id="general-setup-steps"></a>
 
-{% hint style="danger" %}
+{% hint style="warning" %}
 如果您之前已经为 Safari 安装了本地构建的浏览器扩展，请按照[此处](./)所述重置扩展引用路径。
 {% endhint %}
 

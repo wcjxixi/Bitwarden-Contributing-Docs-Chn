@@ -32,7 +32,7 @@ Webpack 默认通过阻止主机名来防止 DNS 重新绑定攻击。但是，�
 
 ### 主机文件 <a href="#hosts-file" id="hosts-file"></a>
 
-{% hint style="info" %}
+{% hint style="warning" %}
 您需要管理员权限才能编辑此文件。
 {% endhint %}
 

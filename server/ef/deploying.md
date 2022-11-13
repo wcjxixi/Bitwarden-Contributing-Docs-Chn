@@ -26,7 +26,7 @@
 
 > 注意：您应该选择一个更合适的 PgAdmin4 密码
 
-```yaml
+```json
 #
 # Useful references:
 # https://docs.docker.com/compose/compose-file/

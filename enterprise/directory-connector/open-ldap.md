@@ -94,8 +94,8 @@ docker-compose --profile ldap up -d
 
 ## 同步 <a href="#sync" id="sync"></a>
 
-{% hint style="danger" %}
-当您进行真正的同步时，邀请电子邮件将发送给所有同步的用户。确保您使用的是 [Mailcatcher](../../server/guide.md#mailcatcher)，这样您就不会发送实时电子邮件。
+{% hint style="warning" %}
+当您进行真正的同步时，邀请电子邮件将发送给所有已同步的用户。确保您使用的是 [Mailcatcher](../../server/guide.md#mailcatcher)，这样您就不会发送实时电子邮件。
 {% endhint %}
 
 1. 点击目录连接器中的「Test Now」按钮。你应该会得到一个用户列表
