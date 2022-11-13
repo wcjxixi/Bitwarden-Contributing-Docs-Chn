@@ -101,7 +101,7 @@ pwsh setup_secrets.ps1
 
 {% tabs %}
 {% tab title="Visual Studio" %}
-
+使用 Visual Studio 打开解决方案文件 (bitwarden-key-connector.sln)，然后单击「Play」按钮。
 {% endtab %}
 
 {% tab title="CLI" %}
