@@ -4,7 +4,7 @@
 对应的[官方页面地址](https://contributing.bitwarden.com/)
 {% endhint %}
 
-欢迎！对于社区开发人员入门，Bitwarden 贡献文档包含您需要的所有信息。
+欢迎！Bitwarden 贡献文档包含社区开发人员入门所需要的所有信息。
 
 ## 入门 <a href="#getting-started" id="getting-started"></a>
 
