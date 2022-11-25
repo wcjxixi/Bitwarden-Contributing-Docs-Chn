@@ -9,7 +9,7 @@
 Bitwarden 服务器由多个可以独立运行的服务组成。对于基本的开发设置，需要 **API** 和 **Identity** 服务。
 
 {% hint style="info" %}
-开始之前：确保您已经安装好了推荐的[工具和库](../tools.md)，包括：
+开始之前：确保您已经安装好了推荐的[工具和库](../tools/)，包括：
 
 * Docker Desktop
 * Visual Studio

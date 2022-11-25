@@ -18,7 +18,7 @@
 
 ### 最佳实践 <a href="#best-practices" id="best-practices"></a>
 
-在编写迁移脚本时，我们遵循了一些最佳实践。请查看 [T-SQL 代码样式](../../contributing/code-style/t-sql.md)以获取更多详细信息。
+在编写迁移脚本时，我们遵循了一些最佳实践。请查看 [T-SQL 代码样式](../../code-style/t-sql.md)以获取更多详细信息。
 
 ### 向后兼容 <a href="#backwards-compatible" id="backwards-compatible"></a>
 
