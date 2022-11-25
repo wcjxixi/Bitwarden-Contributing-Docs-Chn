@@ -1,7 +1,7 @@
 # T-SQL
 
 {% hint style="info" %}
-对应的[官方页面地址](https://contributing.bitwarden.com/code-style/sql/)
+对应的[官方页面地址](https://contributing.bitwarden.com/contributing/code-style/sql)
 {% endhint %}
 
 ## 部署脚本 <a href="#deployment-scripts" id="deployment-scripts"></a>

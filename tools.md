@@ -27,7 +27,7 @@
 
 ## 提交签名 <a href="#commit-signing" id="commit-signing"></a>
 
-所有 Bitwarden 开发人员都需要[提交签名](commit-signing.md)，并且强烈鼓励社区贡献者使用。
+所有 Bitwarden 开发人员都需要[提交签名](contributing/commit-signing.md)，并且强烈鼓励社区贡献者使用。
 
 ## 其他工具 <a href="#other-tools" id="other-tools"></a>
 

@@ -1,7 +1,7 @@
 # Tailwind
 
 {% hint style="info" %}
-对应的[官方页面地址](https://contributing.bitwarden.com/code-style/tailwind/)
+对应的[官方页面地址](https://contributing.bitwarden.com/contributing/code-style/tailwind)
 {% endhint %}
 
 我们目前正在将基于 Web 的客户端迁移到 Tailwind。目前涉及 web vault，但长期计划是迁移桌面端和浏览器。

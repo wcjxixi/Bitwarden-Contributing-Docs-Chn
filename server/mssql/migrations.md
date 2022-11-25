@@ -18,7 +18,7 @@
 
 ### 最佳实践 <a href="#best-practices" id="best-practices"></a>
 
-在编写迁移脚本时，我们遵循了一些最佳实践。请查看 [T-SQL 代码样式](../../code-style/t-sql.md)以获取更多详细信息。
+在编写迁移脚本时，我们遵循了一些最佳实践。请查看 [T-SQL 代码样式](../../contributing/code-style/t-sql.md)以获取更多详细信息。
 
 ### 向后兼容 <a href="#backwards-compatible" id="backwards-compatible"></a>
 
@@ -29,5 +29,5 @@
 
 1. 将相关的 `.sql` 文件从 `src/Sql/dbo` 复制到 `src/Sql/dbo_future`。
 2. 删除不再需要的向后兼容。
-3. 编写一个新的迁移并将其放在 `src/Migrator/DbScripts_future` 中，命名为 `YYYY-0M-FutureMigration.sql`。
+3. 编写一个新的迁移并将其放在 `src/Migrator/DbScripts_future` 中，将其命名为 `YYYY-0M-FutureMigration.sql`。
    * 通常，迁移被设计为按顺序运行。但是，由于 DbScripts\_future 中的迁移可能会乱序运行，因此必须注意确保它们与 DbScripts 的更改保持兼容。为了实现这一点，我们只保留一个迁移，它执行所有向后不兼容的模式更改。

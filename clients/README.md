@@ -15,7 +15,7 @@
 
 ## 要求 <a href="#requirements" id="requirements"></a>
 
-在开始之前，您应该已经安装了 Node 和 npm。有关详细信息，请参阅[工具和库](../tools/)页面。
+在开始之前，您应该已经安装了 Node 和 npm。有关详细信息，请参阅[工具和库](../tools.md)页面。
 
 ## 设置说明 <a href="#setup-instructions" id="setup-instructions"></a>
 

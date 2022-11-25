@@ -1,7 +1,7 @@
 # 提交签名
 
 {% hint style="info" %}
-对应的[官方页面地址](https://contributing.bitwarden.com/tools/commit-signing/)
+对应的[官方页面地址](https://contributing.bitwarden.com/contributing/commit-signing)
 {% endhint %}
 
 为了防止提交欺骗，所有 Bitwarden 开发人员都必须对他们的提交进行数字签名。这是可选的，但鼓励社区贡献者使用。

@@ -1,7 +1,7 @@
 # C\#
 
 {% hint style="info" %}
-对应的[官方页面地址](https://contributing.bitwarden.com/code-style/csharp/)
+对应的[官方页面地址](https://contributing.bitwarden.com/contributing/code-style/csharp)
 {% endhint %}
 
 我们使用 [dotnet-format](https://github.com/dotnet/format) 工具来格式化我们的 C# 代码。像如下运行：

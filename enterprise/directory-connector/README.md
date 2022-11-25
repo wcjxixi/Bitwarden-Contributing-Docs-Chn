@@ -65,4 +65,4 @@ node bwdc.js sync
 * 一个 [Open LDAP Docker 镜像](open-ldap.md)（推荐）
 * [JumpCloud](jumpcloud.md)
 
-这些都是 LDAP 目录服务。如果您需要测试另一种类型，您应该能够找到提供该免费服务的平台。
+这些都是 LDAP 目录服务。如果您需要测试另一种类型，您应该能够找到提供该免费层级的服务的平台。
