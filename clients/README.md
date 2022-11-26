@@ -11,7 +11,7 @@
 * [桌面端](desktop/)
 * [CLI](cli.md)
 
-在这里，「客户端」通常指的是 Typescript 客户端，它们位于 `client` 单一存储库中。[移动应用程序](../mobile/)位于单独的章节（以及存储库），因为它不共享公共代码。
+在这里，「客户端」通常指的是 Typescript 客户端，它们位于 `client` 单一存储库中。[移动应用程序](mobile/)位于单独的章节（以及存储库），因为它不共享公共代码。
 
 ## 要求 <a href="#requirements" id="requirements"></a>
 

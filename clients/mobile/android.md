@@ -6,7 +6,7 @@
 
 ## 要求 <a href="#requirements" id="requirements"></a>
 
-在开始之前，您应该已经安装了推荐的[工具和库](../tools/)。您还需要安装：
+在开始之前，您应该已经安装了推荐的[工具和库](../../tools/)。您还需要安装：
 
 1. Visual Studio 2019（VS 2022 中尚未包含所需的依赖项；可以在 VS 2022 中完成开发）
 2. [.NET Core 3.1（最新版）](https://dotnet.microsoft.com/zh-cn/download/dotnet/3.1)\
