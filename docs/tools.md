@@ -42,34 +42,34 @@
 * [PgAdmin4](https://www.pgadmin.org/) - 用于 PostgreSQL 数据库的基准测试
 * [MySQLWorkbench](https://www.mysql.com/products/workbench/) - 用于 MySQL 数据库的基准测试
 
-### Visual Studio 代码扩展 <a href="#visual-studio-code-extensions" id="visual-studio-code-extensions"></a>
+### Visual Studio Code 扩展 <a href="#visual-studio-code-extensions" id="visual-studio-code-extensions"></a>
 
-在我们的工作中，有一些 VS 代码扩展可以挽救生命。强烈推荐的列表包括以下内容：
+有一些 VS Code 扩展可以节约我们工作中的时间。强烈推荐下面列表中的这些扩展：
 
 * 通用
-  * Back & Forth - 在编辑器的右上角添加前进和后退按钮。很简单，但我喜欢它。
-  * Code Spell Checker - 可能很烦人，但为我节省了很多写作组织的时间。
-  * LiveShare - 用于结对编程
+  * [Back & Forth](https://marketplace.visualstudio.com/items?itemName=nick-rudenko.back-n-forth) - 在编辑器的右上角添加前进和后退按钮。很简单，但我喜欢它。
+  * [Code Spell Checker](https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker) - 可能很烦人，但为我节省了很多 `tmes form writting oragnizations`。
+  * [LiveShare](https://marketplace.visualstudio.com/items?itemName=MS-vsliveshare.vsliveshare) - 用于结对编程
 * C#
-  * C# - Omnisharp 集成
-  * .NET Core Test Explorer - 用于 .NET 测试的测试资源管理器
-  * .NET Core User Secrets - 通过右键单击 .proj 并选择编辑用户机密来编辑机密文件
+  * [C#](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csharp) - Omnisharp 集成
+  * [.NET Core Test Explorer](https://marketplace.visualstudio.com/items?itemName=formulahendry.dotnet-test-explorer) - 用于 .NET 测试的测试资源管理器
+  * [.NET Core User Secrets](https://marketplace.visualstudio.com/items?itemName=adrianwilczynski.user-secrets) - 通过右键点击 `.proj` 并选择编辑用户机密来编辑机密文件
 * Git
-  * Git Graph - 出色的 git 可视化工具
-  * Git History - 更多 Git 历史
-  * Git Lens - 更多 Git 选项
+  * [Git Graph](https://marketplace.visualstudio.com/items?itemName=mhutchie.git-graph) - 出色的 git 可视化工具
+  * [Git History](https://marketplace.visualstudio.com/items?itemName=donjayamanne.githistory) - 更多的 Git 历史
+  * [Git Lens](https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens) - 更多的 Git 选项
 * Typescript / Angular
-  * Angular Language Service - 了解 Angular 模板
-  * Jest - Jest 测试运行器
-  * Prettier - 与更漂亮的代码格式集成
-  * ESLint - ESLint 的集成
+  * [Angular Language Service](https://marketplace.visualstudio.com/items?itemName=Angular.ng-template) - 了解 Angular 模板
+  * [Jest](https://marketplace.visualstudio.com/items?itemName=Orta.vscode-jest) - Jest 测试运行器
+  * [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode) - 与更漂亮的代码格式集成
+  * [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint) - 用于 ESLint 集成
 * Rust
-  * rust-analyzer - 伟大的 rust 语言服务器
-  * Even Better TOML - 用于处理 TOML（货物配置）
-  * CodeLLDB - 用于 rust 调试
+  * [rust-analyzer](https://marketplace.visualstudio.com/items?itemName=matklad.rust-analyzer) - 强大的 rust 语言服务器
+  * [Even Better TOML](https://marketplace.visualstudio.com/items?itemName=tamasfe.even-better-toml) - 用于处理 TOML（cargo 配置）
+  * [CodeLLDB](https://marketplace.visualstudio.com/items?itemName=vadimcn.vscode-lldb) - 用于 rust 调试
 * 数据库
-  * MySQL Syntax - 用于 MySQL 的语法高亮显示
-  * PostgreSQL - 用于 PostgreSQL 的语法高亮显示
+  * [MySQL Syntax](https://marketplace.visualstudio.com/items?itemName=jakebathman.mysql-syntax) - 用于 MySQL 的语法高亮显示
+  * [PostgreSQL](https://marketplace.visualstudio.com/items?itemName=ckolkman.vscode-postgres) - 用于 PostgreSQL 的语法高亮显示
 
 ## 可选工具 <a href="#optional-tools" id="optional-tools"></a>
 
