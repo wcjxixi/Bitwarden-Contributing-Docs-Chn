@@ -16,7 +16,7 @@ ID 应具有以下三个组件：
 
 请在组件内使用破折号，并使用下划线分隔_组件_。
 
-```
+```bash
 <component name>_<html element>_<readable name>
 
 register_button_submit
@@ -25,7 +25,7 @@ register-form_input_email
 
 在为组件库编写组件时，有时需要确保 ID 存在，以便正确处理对其他元素的引用的可访问性。可以考虑使用自动生成的 ID，但要确保它可以被覆盖。对自动 ID 使用以下命名约定：
 
-```
+```bash
 <component selector>-<incrementing number>
 
 bit-input-0
@@ -41,7 +41,7 @@ bit-input-0
 
 或者，您可以手动运行它们：
 
-```
+```bash
 npm run prettier
 npm run lint:fix
 ```

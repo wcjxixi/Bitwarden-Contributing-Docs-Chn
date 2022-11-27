@@ -23,13 +23,13 @@ macOS 需要更新 SSL 库，否则您将收到「No usable version of libssl wa
 
 2、安装 OpenSSL 包：
 
-```
+```bash
 brew install openssl
 ```
 
 3、将所需的环境变量设置为指向 OpenSSL 库：
 
-```
+```bash
 echo 'DYLD_LIBRARY_PATH="/usr/local/opt/openssl@1.1/lib"' >> ~/.zshrc
 ```
 
@@ -39,7 +39,7 @@ echo 'DYLD_LIBRARY_PATH="/usr/local/opt/openssl@1.1/lib"' >> ~/.zshrc
 
 克隆存储库：
 
-```
+```bash
 git clone https://github.com/bitwarden/key-connector.git
 ```
 
@@ -53,7 +53,7 @@ git clone https://github.com/bitwarden/key-connector.git
 
 2、生成一个新的 RSA 密钥对（如果它们位于 `dev` 文件夹中，git 将忽略它们）：
 
-```json
+```bash
 openssl req -x509 -newkey rsa:4096 -sha256 -nodes -keyout bwkc.key -out bwkc.crt -subj "/CN=Bitwarden Key Connector" -days 36500
 
 openssl pkcs12 -export -out ./bwkc.pfx -inkey bwkc.key -in bwkc.crt -passout pass:{Password}}
@@ -61,7 +61,7 @@ openssl pkcs12 -export -out ./bwkc.pfx -inkey bwkc.key -in bwkc.crt -passout pas
 
 3、创建您自己的示例用户机密副本：
 
-```
+```bash
 cp secrets.json.example secrets.json
 ```
 
@@ -78,7 +78,7 @@ cp secrets.json.example secrets.json
 
 6、保存并应用用户机密：
 
-```
+```bash
 pwsh setup_secrets.ps1
 ```
 
@@ -109,7 +109,7 @@ pwsh setup_secrets.ps1
 {% tab title="CLI" %}
 从存储库根目录运行以下命令：
 
-```
+```bash
 dotnet run --project src/KeyConnector --configuration Development
 ```
 

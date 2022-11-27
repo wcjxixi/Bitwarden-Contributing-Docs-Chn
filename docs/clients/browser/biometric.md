@@ -45,7 +45,7 @@ _不支持：_
 
 * 在 `chrome://extensions` 或 `about:debugging` 中找到扩展 ID。
 
-{% embed url="https://contributing.bitwarden.com/clients/browser/extension-id.png" %}
+{% embed url="https://contributing.bitwarden.com/assets/images/extension-id-2d5d9c8d9954b5ebda77216ba436fe23.png" %}
 
 * 使用您的 IDE 将 ID 添加到 `NativeMessageHost` JSON 文件中。此文件嵌套在应用程序支持目录下。例如，对于 Chrome 浏览器，该文件位于：
 

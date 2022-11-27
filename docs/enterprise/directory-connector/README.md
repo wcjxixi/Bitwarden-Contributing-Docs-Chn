@@ -17,13 +17,13 @@ Bitwarden 目录连接器是一个桌面应用程序，用于将您的 Bitwarden
 
 1、克隆存储库：
 
-```
+```bash
 git clone https://github.com/bitwarden/directory-connector.git
 ```
 
 2、安装依赖项：
 
-```
+```bash
 cd directory-connector
 npm ci
 ```
@@ -32,19 +32,19 @@ npm ci
 
 {% tabs %}
 {% tab title="GUI" %}
-```
+```bash
 npm run electron
 ```
 {% endtab %}
 
 {% tab title="CLI" %}
-```
+```bash
 npm run build:cli:watch
 ```
 
 然后，从 `./build-cli` 文件夹运行命令：
 
-```
+```bash
 cd ./build-cli
 
 node ./bwdc.js --help

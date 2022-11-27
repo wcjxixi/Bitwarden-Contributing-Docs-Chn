@@ -81,7 +81,7 @@
 
 **注意**：为了让 git 钩子在使用 nvm 时在 macOS 上正常运行，请创建以下文件：
 
-```sql
+```bash
     # ~/.huskyrc
     # This loads nvm.sh and sets the correct PATH before running hook
     export NVM_DIR="$HOME/.nvm"

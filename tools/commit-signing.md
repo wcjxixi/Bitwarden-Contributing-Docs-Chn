@@ -14,7 +14,7 @@ Github 支持使用 GPG、SSH 和 S/MIME 方式的提交签名。如果您不确
 
 {% tabs %}
 {% tab title="macOS" %}
-```
+```bash
 brew install gnupg
 echo "export GPG_TTY=$(tty)" >> ~/.zshrc
 ```
@@ -27,19 +27,19 @@ echo "export GPG_TTY=$(tty)" >> ~/.zshrc
 
 4、将测试提交推送到 Github 并确保「Verified」标记出现在提交描述旁边：
 
-<figure><img src="https://contributing.bitwarden.com/tools/commit-signing.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="https://contributing.bitwarden.com/assets/images/commit-signing-bd1537917a2ce059f7bdff988017b829.png" alt=""><figcaption></figcaption></figure>
 
 ### 命令行上的 git <a href="#git-on-the-command-line" id="git-on-the-command-line"></a>
 
 配置提交签名后，您可以使用 `-S` 标志对提交进行签名：
 
-```
+```bash
 git commit -S
 ```
 
 为了避免每次都使用 `-S` 标志，您可以默认签署所有提交：
 
-```
+```bash
 git config --global commit.gpgSign true 
 ```
 
@@ -47,7 +47,7 @@ git config --global commit.gpgSign true
 
 ### Visual Studio 代码 <a href="#visual-studio-code" id="visual-studio-code"></a>
 
-在 Preferences -> Settings -> 搜索 "commit signing" 以启用提交签名。
+在 Preferences -> Settings -> 搜索「commit signing」以启用提交签名。
 
 #### macOS：GPG 密钥密码短语提示故障 <a href="#macos-gpg-key-passphrase-prompt-issue" id="macos-gpg-key-passphrase-prompt-issue"></a>
 
@@ -67,4 +67,4 @@ git config --global commit.gpgSign true
 
 ## 故障排除 <a href="#troubleshooting" id="troubleshooting"></a>
 
-如果您收到此错误消息 "error: gpg failed to sign the data"，请确保将 `export GPG_TTY=$(tty)` 添加到您的 `~/.zshrc`（或 `~/.bashrc`，如果您使用 bash）并重新启动您的终端。有关此错误的更多帮助，请参阅[此故障排除文档](https://gist.github.com/paolocarrasco/18ca8fe6e63490ae1be23e84a7039374)。
+如果您收到此错误消息「error: gpg failed to sign the data」，请确保将 `export GPG_TTY=$(tty)` 添加到您的 `~/.zshrc`（或 `~/.bashrc`，如果您使用 bash）并重新启动您的终端。有关此错误的更多帮助，请参阅[此故障排除文档](https://gist.github.com/paolocarrasco/18ca8fe6e63490ae1be23e84a7039374)。

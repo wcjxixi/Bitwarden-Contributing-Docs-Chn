@@ -22,7 +22,7 @@ Bitwarden 服务器由多个可以独立运行的服务组成。对于基本的�
 
 1、克隆 Bitwarden 服务器项目：
 
-```
+```bash
 git clone https://github.com/bitwarden/server.git
 ```
 
@@ -34,7 +34,7 @@ git clone https://github.com/bitwarden/server.git
 
 配置 Git 以忽略 Prettier 修订：
 
-```
+```bash
 git config blame.ignoreRevsFile .git-blame-ignore-revs
 ```
 
@@ -44,7 +44,7 @@ git config blame.ignoreRevsFile .git-blame-ignore-revs
 
 1、一些 Docker 设置被配置在环境文件 `dev/.env` 中。复制示例环境文件：
 
-```
+```bash
 cd dev
 cp .env.example .env
 ```
@@ -74,7 +74,7 @@ cp .env.example .env
 {% tab title="社区开发人员" %}
 如果您是**社区开发人员**，我们推荐使用以下命令。它启动 MSSQL 和本地邮件服务器容器，这应该适合大多数社区贡献。
 
-```docker
+```bash
 docker compose --profile mssql --profile mail up -d
 ```
 {% endtab %}
@@ -82,7 +82,7 @@ docker compose --profile mssql --profile mail up -d
 {% tab title="Bitwarden 开发人员" %}
 如果您是 **Bitwarden 开发人员**，我们推荐使用以下命令。它同时启动 MSSQL 和 Azurite 容器，Azurite 容器被云实例用于模拟 Azure 服务。
 
-```docker
+```bash
 docker compose --profile cloud --profile mail up -d
 ```
 {% endtab %}
@@ -130,13 +130,13 @@ docker compose --profile cloud --profile mail up -d
 
 1、安装 Az 模块。在不提供任何用户反馈的情况下，这可能需要几分钟才能完成（它可能会显示为冻结）。
 
-```
+```bash
 pwsh -Command "Install-Module -Name Az -Scope CurrentUser -Repository PSGallery -Force"
 ```
 
 2、运行安装脚本：
 
-```
+```bash
 pwsh setup_azurite.ps1
 ```
 
@@ -148,7 +148,7 @@ pwsh setup_azurite.ps1
 
 1、创建数据库并运行所有迁移：
 
-```
+```bash
 pwsh migrate.ps1
 ```
 
@@ -175,7 +175,7 @@ Performing /mnt/migrator/DbScripts/2017-08-30_00_CollectionWriteOnly.sql
 
 1、生成证书并将它们保存到您的钥匙串中：
 
-```
+```bash
 sh create_certificates_mac.sh
 ```
 
@@ -197,7 +197,7 @@ Data Protection Dev: C3A6CECAD3DB580F91A52FC9C767FE780300D8AB
 
 1、生成证书并将它们保存到证书存储中：
 
-```
+```bash
 .\create_certificates_windows.ps1
 ```
 
@@ -220,7 +220,7 @@ C3A6CECAD3DB580F91A52FC9C767FE780300D8AB  CN=Bitwarden Data Protection Dev
 
 1、复制示例 `secret.json` 文件。
 
-```
+```bash
 cp secrets.json.example secrets.json
 ```
 
@@ -237,13 +237,13 @@ cp secrets.json.example secrets.json
 
 4、将机密添加到每一个 Bitwarden 服务器项目：
 
-```
+```bash
 pwsh setup_secrets.ps1
 ```
 
 此帮助脚本还支持一个可选标志，该标志用于在重新应用之前删除所有现有的设置：
 
-```
+```bash
 pwsh setup_secrets.ps1 -clear:$True
 ```
 
@@ -255,14 +255,14 @@ pwsh setup_secrets.ps1 -clear:$True
 
 2、恢复 Identity 服务所需的 nuget 包：
 
-```
+```bash
 cd src/Identity
 dotnet restore
 ```
 
 3、启动 Identity 服务：
 
-```
+```bash
 dotnet run
 ```
 
@@ -270,14 +270,14 @@ dotnet run
 
 5、在另一个终端窗口中，恢复 API 服务所需的 nuget 包：
 
-```
+```bash
 cd src/Api
 dotnet restore
 ```
 
 6、启动 API 服务：
 
-```
+```bash
 dotnet run
 ```
 

@@ -16,7 +16,7 @@
 
 构建并运行：
 
-```
+```bash
 cd apps/cli
 npm run build:watch
 ```
@@ -27,13 +27,13 @@ npm run build:watch
 
 构建位于 `build/bw.js`。您可以使用 node 运行它，例如：
 
-```
+```bash
 node build/bw.js login
 ```
 
 首先让文件执行尽可能更方便：
 
-```
+```bash
 cd build
 chmod +x bw.js
 ./bw.js login

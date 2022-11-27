@@ -12,13 +12,13 @@
 
 Mac 有时可以将证书的信任设置设置为管理员而不是用户。如果您运行下面的命令后没有看到您的证书：
 
-```
+```bash
 security dump-trust-settings
 ```
 
 那么请尝试运行：
 
-```
+```bash
 security dump-trust-settings -d
 ```
 
@@ -32,7 +32,7 @@ security dump-trust-settings -d
 
 以下命令应该可以解决问题：
 
-```git
+```bash
 dotnet nuget locals all --clear  
 git clean -xfd  
 git rm \*\*/packages.lock.json -f  
@@ -49,7 +49,7 @@ dotnet restore
 
 幸运的是，可以手动将端口标记为反向，以防止 Hyper-V 保留它们。以特权模式启动 CMD 会话并运行以下命令，然后重新启动计算机。
 
-```batch
+```bash
 net stop winnat
 
 netsh int ipv4 add excludedportrange protocol=tcp startport=<port> numberofports=1 store=persistent

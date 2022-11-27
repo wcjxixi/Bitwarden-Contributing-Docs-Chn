@@ -16,7 +16,7 @@
 
 EDD 将每个数据库迁移分为三个阶段。_开始_、_过渡_和_结束_。
 
-{% embed url="https://contributing.bitwarden.com/server/mssql/stages_refactoring.jpg" %}
+{% embed url="https://contributing.bitwarden.com/assets/images/stages_refactoring-4e6864b672648dcd79589749db600cd5.jpg" %}
 
 {% embed url="https://www.martinfowler.com/articles/evodb.html#TransitionPhase" %}
 
@@ -26,7 +26,7 @@ EDD 将每个数据库迁移分为三个阶段。_开始_、_过渡_和_结束_�
 
 让我们看一个例子，重命名列的重构如下图所示。
 
-{% embed url="https://contributing.bitwarden.com/server/mssql/rename-column.gif" %}
+{% embed url="https://contributing.bitwarden.com/assets/images/rename-column-1f4999a32d438f4a75649089e85b4c18.gif" %}
 
 在这个重构中，我们将 `Customer` 表中的 `Fname` 列重命名为 `FirstName`。这可以很容易地使用常规的 `Alter Table` 语句来实现，但这将破坏与现有运行代码的兼容性。相反，让我们来看看如何逐步重构这个表。
 

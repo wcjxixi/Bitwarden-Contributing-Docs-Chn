@@ -20,31 +20,31 @@
 
 2、恢复 nuget 包：
 
-```
+```bash
 dotnet restore
 ```
 
 3、安装 npm 包：
 
-```
+```bash
 npm ci
 ```
 
 4、构建管理项目：
 
-```
+```bash
 dotnet build
 ```
 
 5、使用必要的样式表和库构建 `wwwroot` 目录：
 
-```
+```bash
 npx gulp build
 ```
 
 6、启动服务器：
 
-```
+```bash
 dotnet run
 ```
 

@@ -6,7 +6,7 @@
 
 我们使用 [dotnet-format](https://github.com/dotnet/format) 工具来格式化我们的 C# 代码。像如下运行：
 
-```
+```bash
 dotnet format
 ```
 
@@ -23,7 +23,7 @@ dotnet format
 
 示例：
 
-```
+```bash
 private readonly IUserService _userService;
 ```
 

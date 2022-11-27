@@ -27,7 +27,7 @@ Windows（这些都是在 Visual Studio 安装程序中作为附加依赖项提�
 
 桌面应用程序依赖一个使用 rust 编写的本机模块，需要单独编译。这已包含在 `npm run electron` 的构建过程中，但您也可以手动编译它。
 
-```
+```bash
 cd apps/desktop/desktop_native
 npm run build
 ```
@@ -38,7 +38,7 @@ npm run build
 
 构建并运行：
 
-```
+```bash
 cd apps/desktop
 npm run electron
 ```

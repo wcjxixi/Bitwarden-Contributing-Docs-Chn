@@ -20,7 +20,7 @@
 
 3、使用以下的 `publish` 设置修改 `package.json`
 
-```
+```json
 "publish" : {
     "provider": "s3",
     "endpoint": "http://127.0.0.1:9000",
@@ -30,7 +30,7 @@
 
 4、使用以下内容在用户目录 (Windows) 中创建 `.aws/credentials`
 
-```
+```systemd
 [default]
 aws_access_key_id=minioadmin
 aws_secret_access_key=minioadmin

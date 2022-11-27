@@ -10,7 +10,7 @@
 
 您可以通过在 `libs` 和 `apps` 目录中搜索 `node_modules` 来仔细检查：
 
-```
+```bash
 find apps -name node_modules
 find libs -name node_modules
 ```

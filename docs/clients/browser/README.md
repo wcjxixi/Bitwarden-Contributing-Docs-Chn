@@ -12,7 +12,7 @@
 
 1、构建并运行扩展：
 
-```
+```bash
 cd apps/browser
 npm run build:watch
 ```
@@ -79,7 +79,7 @@ npm run build:watch
 
 1、为 Safari 构建扩展
 
-```
+```bash
 npm run dist:safari:dmg
 ```
 
@@ -104,7 +104,7 @@ npm run dist:safari:dmg
 
 1、构建扩展：
 
-```
+```bash
 npm run build
 ```
 

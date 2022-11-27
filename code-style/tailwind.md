@@ -42,4 +42,4 @@ Bitwarden 的一项工程计划是[组件库](https://github.com/bitwarden/clien
 
 如果您的 PR 将 **UI Review** 审核为待处理或被拒绝，请联系 Design 以使您的更改获得批准。
 
-<figure><img src="https://contributing.bitwarden.com/code-style/chromatic.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/Tailwind.png" alt=""><figcaption></figcaption></figure>

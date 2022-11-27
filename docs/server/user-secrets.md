@@ -18,13 +18,13 @@
 
 添加用户机密：
 
-```
+```bash
 dotnet user-secrets set "<key>" "<value>"
 ```
 
 查看当前设置的机密：
 
-```
+```bash
 dotnet user-secrets list
 ```
 

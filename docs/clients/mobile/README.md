@@ -8,7 +8,7 @@
 
 我们建议您将 git 配置为忽略 Prettier 修订：
 
-```
+```bash
 git config blame.ignoreRevsFile .git-blame-ignore-revs
 ```
 

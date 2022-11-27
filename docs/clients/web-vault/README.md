@@ -15,14 +15,14 @@
 
 {% tabs %}
 {% tab title="社区开发人员" %}
-```
+```bash
 cd apps/web
 npm run build:oss:watch
 ```
 {% endtab %}
 
 {% tab title="Bitwarden 开发人员" %}
-```
+```bash
 cd apps/web
 npm run build:bit:watch
 ```
@@ -47,13 +47,13 @@ npm run build:bit:watch
 
 {% tabs %}
 {% tab title="社区开发人员" %}
-```
+```bash
 ENV=cloud npm run build:oss:watch
 ```
 {% endtab %}
 
 {% tab title="Bitwarden 开发人员" %}
-```
+```bash
 ENV=cloud npm run build:bit:watch
 ```
 {% endtab %}

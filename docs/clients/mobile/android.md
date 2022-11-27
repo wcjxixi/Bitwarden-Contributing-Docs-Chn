@@ -48,9 +48,7 @@
 5. 转到 View > Tool Windows > Device Manager
 6. 在 Device Manager 中，使用之前下载的系统镜像创建一个设备
 
-{% embed url="https://contributing.bitwarden.com/mobile/android-sdk.png" %}
-Android SDK 配置的图片参考
-{% endembed %}
+{% embed url="https://contributing.bitwarden.com/assets/images/android-sdk-529574bf6a67ae6500b23196a6843ec5.png" %}
 
 ## 使用安卓模拟器测试和调试 <a href="#testing-and-debugging-using-the-android-emulator" id="testing-and-debugging-using-the-android-emulator"></a>
 

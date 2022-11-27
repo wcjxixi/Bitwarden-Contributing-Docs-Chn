@@ -33,20 +33,20 @@
 
 1、在服务器存储库的 `dev` 文件夹中，运行：
 
-```docker
+```bash
 docker compose --profile postgres up
 ```
 
 2、在您的 API 和个人信息的用户机密中添加以下值，根据需要更改 root 密码等信息。如果您已经有这些机密，请确保更新现有的值，而不是创建新的值：
 
-```systemd
+```json
 "globalSettings:databaseProvider": "postgres",
 "globalSettings:postgreSql:connectionString": "Host=localhost;Username=postgres;Password=example;Database=vault_dev;Include Error Detail=true",
 ```
 
 3、在 `dev` 文件夹中运行以下命令将数据库更新到最新的迁移：
 
-```
+```bash
 pwsh migrate.ps1 -postgres
 ```
 
@@ -61,7 +61,7 @@ pwsh migrate.ps1 -postgres
 
 1、在您的服务器存储库的 `dev` 文件夹中，运行：
 
-```docker
+```bash
 docker compose --profile mysql up
 ```
 
@@ -74,7 +74,7 @@ docker compose --profile mysql up
 
 3、在 `dev` 文件夹中运行以下命令将数据库更新到最新的迁移：
 
-```
+```bash
 pwsh migrate.ps1 -mysql
 ```
 
@@ -101,13 +101,13 @@ pwsh migrate.ps1 -mysql
 
 4、生成迁移。这应该与相应的 MSSQL 迁移具有相同的名称（日期除外，该工具将自动添加该日期前缀）：
 
-```
+```bash
 dotnet ef migrations add [NAME_OF_MIGRATION]
 ```
 
 5、生成迁移 SQL 脚本：
 
-```
+```bash
 dotnet ef migrations script [LATEST_PREVIOUS_MIGRATION]
 ```
 

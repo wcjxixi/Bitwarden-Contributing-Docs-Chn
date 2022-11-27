@@ -47,19 +47,19 @@ LDIF 文件包含目录的配置（例如用户、群组等）。
 
 2、转到 `dev` 文件夹：
 
-```
+```bash
 cd dev
 ```
 
 3、将您的 LDIF 文件复制到此文件夹中，并将其命名为 `directory.ldif`：
 
-```
+```bash
 cp path/to/file.ldif ./directory.ldif
 ```
 
 4、启动 OpenLDAP Docker 容器
 
-```
+```bash
 docker-compose --profile ldap up -d
 ```
 

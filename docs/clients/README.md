@@ -23,13 +23,13 @@
 
 1、克隆存储库：
 
-```
+```bash
 git clone https://github.com/bitwarden/clients.git
 ```
 
 2、安装依赖：
 
-```
+```bash
 npm ci
 ```
 
@@ -39,7 +39,7 @@ npm ci
 
 3、配置 git blame 以忽略某些提交（一般是管理性修改，如格式化）：
 
-```
+```bash
 git config blame.ignoreRevsFile .git-blame-ignore-revs
 ```
 
