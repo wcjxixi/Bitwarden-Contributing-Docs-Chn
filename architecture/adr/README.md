@@ -4,13 +4,27 @@
 对应的[官方页面地址](https://contributing.bitwarden.com/architecture/adr/)
 {% endhint %}
 
+[架构决策 (AD)](https://en.wikipedia.org/wiki/Architectural\_decision) 是一种软件设计选择，用于解决在架构上具有重要意义的功能性或非功能性需求。例如，对于实例，这可能是技术选择（例如 Java 与 JavaScript）、IDE 的选择（例如 IntelliJ 与 Eclipse IDE）、库之间的选择（例如 [SLF4J](https://www.slf4j.org/) 与 [java.util.logging](https://docs.oracle.com/javase/8/docs/api/java/util/logging/package-summary.html)），或功能上的决定（例如，无限撤消与有限撤消）。
+
 ## @Bitwarden
+
+在 Bitwarden 的工程团队中引入架构决策 (AD) 的目的是引导开发朝着可维护和可扩展的代码库方向发展。同时力求所有 pod 的一致性。
+
+AD 还将作为提出和规划技术债务的基础。
 
 ### 状态定义 <a href="#status-definition" id="status-definition"></a>
 
+* **进行中** - ADR 已获批准，我们正在整个项目中采用它。
+* **标准** - ADR 已实施并假定为标准。
+* **已放弃** - ADR 已被放弃，和/或被另一个 ADR 取代。
+
 ### 标签 <a href="#tags" id="tags"></a>
 
+请确保每个 ADR 都包含一个标签，标记它们适用于哪些项目（_客户端_、_移动端_和/或_服务器_）。如果需要，请随意创建更多标签。
+
 ## 过程 <a href="#process" id="process"></a>
+
+虽然过程最初主要是为发起者讨论架构决策而创建的，但对我们来说保持过程对任何人的建议开放是很重要的。为此，任何人都可以自由地打开 PR 来建议 AD。然后将讨论这些建议，以便在采纳之前在发起者之间达成普遍共识。
 
 ## ADR <a href="#adrs" id="adrs"></a>
 
