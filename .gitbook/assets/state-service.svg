@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" height="348px" preserveAspectRatio="none" style="width:646px;height:348px;" version="1.1" viewBox="0 0 646 348" width="646px" zoomAndPan="magnify"><defs/><g><rect fill="none" height="26.2969" id="_title" style="stroke:none;stroke-width:1.0;" width="115" x="258.75" y="5"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="105" x="263.75" y="22.9951">State Service</text><!--MD5=[15ef6bb53f16a6cbfc7e301026ee13d2]
+cluster Example Domain--><g id="cluster_Example Domain"><rect fill="none" height="215" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:1.0;" width="160" x="7" y="44.2969"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="128" x="23" y="59.292">Example Domain</text></g><!--MD5=[014726da6f1eaa453f1de628f8794056]
+entity components--><g id="elem_components"><rect fill="#F1F1F1" height="36.2969" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="110" x="23" y="79.2969"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="90" x="33" y="102.292">Components</text></g><!--MD5=[8890788e37b11dd3053f547e2b5ce265]
+entity domain--><g id="elem_domain"><rect fill="#F1F1F1" height="36.2969" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="127" x="23.5" y="207.2969"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="107" x="33.5" y="230.292">Domain Service</text></g><!--MD5=[f350ee6f6cc17b9109e91461bf56a5ea]
+entity state--><g id="elem_state"><rect fill="#F1F1F1" height="36.2969" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="110" x="273" y="207.2969"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="90" x="283" y="230.292">State Service</text></g><!--MD5=[a5a6ae0ba01c8a4589ab26bd33e87aad]
+entity storage--><g id="elem_storage"><rect fill="#F1F1F1" height="36.2969" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="128" x="74" y="306.2969"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="108" x="84" y="329.292">Storage Service</text></g><!--MD5=[20879fe4a5144c4c272960d5146d3fe2]
+entity secure--><g id="elem_secure"><rect fill="#F1F1F1" height="36.2969" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="181" x="237.5" y="306.2969"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="161" x="247.5" y="329.292">Secure Storage Service</text></g><!--MD5=[50e8e0107fae971cb42bb2943498813a]
+entity memory--><g id="elem_memory"><rect fill="#F1F1F1" height="36.2969" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="187" x="453.5" y="306.2969"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="167" x="463.5" y="329.292">Memory Storage Service</text></g><!--MD5=[97cc6efe9d654ee948cd040a60ad035f]
+link components to domain--><g id="link_components_domain"><path d="M79.23,115.5569 C80.84,138.0769 83.66,177.5369 85.42,202.2169 " fill="none" id="components-to-domain" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="85.78,207.2469,89.1267,197.9841,85.4227,202.2597,81.1472,198.5557,85.78,207.2469" style="stroke:#181818;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="61" x="89.5" y="158.3638">subscribe</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="70" x="89" y="173.4966">observable</text></g><!--MD5=[f2eb9ade000d424cfed6b84574817d90]
+link domain to state--><g id="link_domain_state"><path d="M150.64,225.2969 C186.79,225.2969 231.8,225.2969 267.44,225.2969 " fill="none" id="domain-to-state" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="272.62,225.2969,263.62,221.2969,267.62,225.2969,263.62,229.2969,272.62,225.2969" style="stroke:#181818;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="86" x="168.75" y="218.3638">retrieve state</text></g><!--MD5=[69f3cb6497df6c730c82097bc17de50e]
+link state to storage--><g id="link_state_storage"><path d="M294.47,243.4169 C261.33,260.3369 210.71,286.1769 176.08,303.8569 " fill="none" id="state-to-storage" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="171.51,306.1869,181.3443,305.6515,175.9619,303.9108,177.7026,298.5284,171.51,306.1869" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[77b20d174da7eeb7193119ea233acd58]
+link state to secure--><g id="link_state_secure"><path d="M328,243.6369 C328,259.6369 328,283.4869 328,300.9169 " fill="none" id="state-to-secure" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="328,306.1069,332,297.1069,328,301.1069,324,297.1069,328,306.1069" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[b8aec30c7f6a0292907dfa39ef576c09]
+link state to memory--><g id="link_state_memory"><path d="M366.4,243.3069 C404.71,260.2769 463.48,286.3069 503.49,304.0269 " fill="none" id="state-to-memory" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="508.28,306.1469,501.676,298.8402,503.7098,304.1188,498.4311,306.1526,508.28,306.1469" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[c5a64a2a9a25b9b0d0133ff12713945f]
+@startuml
+skinparam BackgroundColor transparent
+skinparam componentStyle rectangle
+
+title State Service
+
+component "Example Domain" {
+  component "Components" as components
+
+  component "Domain Service" as domain
+}
+
+component "State Service" as state
+
+component "Storage Service" as storage
+component "Secure Storage Service" as secure
+component "Memory Storage Service" as memory
+
+components -d-> domain : subscribe \n observable
+domain -> state : retrieve state
+
+state - -> storage
+state - -> secure
+
+state - -> memory
+
+@enduml
+
+PlantUML version 1.2022.12(Sun Oct 23 18:12:26 GMT 2022)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Default Encoding: UTF-8
+Language: en
+Country: US
+--></g></svg>

@@ -32,7 +32,7 @@ git clone git@github.com:bitwarden/server.git server-selfhost
 
 接下来，我们将致力于让自托管服务器与本地云端配置服务器同时运行。
 
-### 生成安装 ID 和密钥 <a href="#generate-installation-id-and-key" id="generate-installation-id-and-key"></a>
+### 生成安装 ID 和安装 Key <a href="#generate-installation-id-and-key" id="generate-installation-id-and-key"></a>
 
 每一个自托管实例都由安装 ID 和安装 Key 定义。它们被存储在这两个地方：
 
