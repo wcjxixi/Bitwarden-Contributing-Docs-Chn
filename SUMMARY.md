@@ -17,6 +17,7 @@
   * [故障排除](docs/server/troubleshooting.md)
   * [用户机密参考](docs/server/user-secrets.md)
   * [\*自托管指南](docs/server/self-hosted.md)
+  * [\*Secrets.json](docs/server/secrets.md)
 * [客户端](docs/clients/README.md)
   * [Web Vault](docs/clients/web-vault/README.md)
     * [WebAuthn](docs/clients/web-vault/webauthn.md)
