@@ -33,7 +33,7 @@
 
 类名也应使用后缀作为其类名的一部分。例如，服务实现被命名为 `FolderServiceImplementation`，请求模型被命名为 `FolderRequest`。
 
-由于摘要比实现更频繁地被引用，它们使用简化类型，而实现必须指定它们是实现，例如，`.service` 用于摘要，`.service.implementation` 用于植入。
+摘要比实现更频繁地被引用，摘要使用简化类型，而实现必须指定它们是实现，例如，`.service` 用于摘要，`.service.implementation` 用于植入。
 
 ## 可观察对象 ([ADR-0003](../adr/0003-adopt-observable-data-services-for-angular.md)) <a href="#observables-adr-0003" id="observables-adr-0003"></a>
 
