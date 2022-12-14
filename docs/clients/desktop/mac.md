@@ -1,2 +1,0 @@
-# =Mac App Store Dev
-
