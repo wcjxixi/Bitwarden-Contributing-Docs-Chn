@@ -25,7 +25,7 @@
 
 ## 帮助完善本文档 <a href="#help-make-this-documentation-better" id="help-make-this-documentation-better"></a>
 
-我们想要一种共享知识的文化，而文档是实现这一目标的最佳方式之一。
+我们想要一种分享知识的文化，而文档是实现这一目标的最佳方式之一。
 
 * 如果您在遵循某些说明时遇到问题，请改进它们。
 * 如果您添加或更改需要设置开发的某个功能，请更新此文档。
