@@ -35,12 +35,14 @@
 
 * [Android Studio](https://developer.android.com/studio/) - 非常适合设置和运行 Android 模拟器
 * [abd](https://developer.android.com/studio/command-line/adb) - 用于与 Android 模拟人生交互
+* [Apple Icons Generator Gist](https://gist.github.com/brutella/0bcd671a9e4f63edc12e) - 用于从图像生成 Apple 图标的脚本
 
 ### 数据库 <a href="#databases" id="databases"></a>
 
 * [Azure Data Studio](https://docs.microsoft.com/zh-cn/sql/azure-data-studio/download-azure-data-studio) - 用于与本地 SQL Server 一起使用
 * [PgAdmin4](https://www.pgadmin.org/) - 用于 PostgreSQL 数据库的基准测试
 * [MySQLWorkbench](https://www.mysql.com/products/workbench/) - 用于 MySQL 数据库的基准测试
+* [SQLiteStudio](https://www.sqlitestudio.pl/) - 用于操作 SQLite 数据库
 
 ### Visual Studio Code 扩展 <a href="#visual-studio-code-extensions" id="visual-studio-code-extensions"></a>
 
@@ -77,14 +79,5 @@
 
 * [JetBrains Rider](https://www.jetbrains.com/rider/) ($) - Visual Studio 和/或 Visual Studio Code for MacOS 的替代
 * [Microsoft Azure Storage Explorer](https://azure.microsoft.com/zh-cn/features/storage-explorer/) - 用于连接本地 Azure 表存储和队列，或与本地 Azure 表存储和队列一起使用
-* [Sourcetree](https://www.sourcetreeapp.com/) -Git GUI
-
-**注意**：为了让 git 钩子在使用 nvm 时在 macOS 上正常运行，请创建以下文件：
-
-```bash
-    # ~/.huskyrc
-    # This loads nvm.sh and sets the correct PATH before running hook
-    export NVM_DIR="$HOME/.nvm"
-
-    [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
-```
+* [Parallels](https://www.parallels.com/) - 用于运行 Windows VM（虚拟机）
+* [Sourcetree](https://www.sourcetreeapp.com/) -Git GUI。注意：在 macOS 上使用 nvm 时，要使 git hooks 正常运行，请遵循[这些说明](https://typicode.github.io/husky/#/?id=command-not-found)。

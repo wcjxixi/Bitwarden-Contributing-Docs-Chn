@@ -1,4 +1,4 @@
-# MSSQL 数据库
+# MSSQL
 
 {% hint style="info" %}
 对应的[官方页面地址](https://contributing.bitwarden.com/getting-started/server/mssql/)
@@ -16,7 +16,7 @@ Bitwarden 主要将数据存储在 MSSQL (Microsoft SQL Server) 中。服务器�
 
 ## 修改数据库 <a href="#modifying-the-database" id="modifying-the-database"></a>
 
-修改数据库的过程描述在[迁移](migrations.md)中。
+修改数据库的过程描述在[迁移](broken-reference)中。
 
 ## 故障排除 <a href="#troubleshooting" id="troubleshooting"></a>
 

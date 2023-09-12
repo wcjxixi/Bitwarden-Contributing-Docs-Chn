@@ -31,10 +31,4 @@
 * 如果您添加或更改需要设置开发的某个功能，请更新此文档。
 * 如果您正在审查需要更改此文档的 PR，请要求作者将其作为您审查的一部分。
 
-要为此文档做出贡献，请克隆 [Contributing Docs Github 存储库](https://github.com/bitwarden/contributing-docs/)并按照 README 中的说明进行操作。
-
-请遵循以下（非常简短的）风格指南：
-
-* 对所有说明或程序使用编号段落。每个段落以动词开头（「click」、「type」、「restart」等）。
-* 对所有命令使用代码块。不要在行中编写它们。
-* 避免冗长的段落 - 该文档应该切中要点并具有指导性。
+要为此文档做出贡献，请遵循 [Contributing Docs Github 存储库](https://github.com/bitwarden/contributing-docs/)中的说明。
