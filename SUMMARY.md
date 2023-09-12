@@ -8,10 +8,10 @@
 * [服务器](getting-started/server/README.md)
   * [设置指南](getting-started/server/guide.md)
   * [数据库](getting-started/server/database/README.md)
-    * [MSSQL](getting-started/server/database/mssql.md)
-    * [实体框架](getting-started/server/database/ef.md)
+    * [MSSQL](getting-started/server/mssql/README.md)
+    * [实体框架](getting-started/server/ef/README.md)
   * [事件记录](getting-started/server/events.md)
-  * [系统管理门户](getting-started/server/portal.md)
+  * [系统管理门户](getting-started/server/admin.md)
   * [故障排除](getting-started/server/troubleshooting.md)
   * [\*Secrets.json](getting-started/server/secrets.md)
   * [\*自托管指南](getting-started/server/self-hosted.md)
@@ -50,7 +50,7 @@
   * [T-SQL](code-style/t-sql.md)
   * [Tailwind](code-style/tailwind.md)
 * [数据库迁移](contributing/database-migrations/README.md)
-  * [进化的数据库设计](contributing/database-migrations/edd.md)
+  * [进化的数据库设计](getting-started/server/mssql/edd.md)
 * [提交签名](tools/commit-signing.md)
 * [拉取请求](contributing/pull-requests/README.md)
   * [代码审查指南](contributing/pull-requests/code-review.md)
@@ -63,7 +63,7 @@
 
 ## 架构 <a href="#architecture" id="architecture"></a>
 
-* [架构概述](architecture/architecture.md)
+* [架构](architecture/architecture.md)
 * [架构决策记录](architecture/adr/README.md)
   * [0001 - Angular Reactive Forms](architecture/adr/reactive-forms.md)
   * [0002 - Public API for modules](architecture/adr/0002-public-api-for-modules.md)

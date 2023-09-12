@@ -1,4 +1,4 @@
-# 管理门户
+# 系统管理门户
 
 {% hint style="info" %}
 对应的[官方页面地址](https://contributing.bitwarden.com/getting-started/server/admin)

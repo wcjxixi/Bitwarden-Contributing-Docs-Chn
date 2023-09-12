@@ -155,10 +155,10 @@ Performing /mnt/migrator/DbScripts/2017-08-30_00_CollectionWriteOnly.sql
 [...]
 ```
 
-如果迁移被跳过，即使这是一个新的数据库，请参阅 [MSSQL 数据库故障排除](database/mssql.md#troubleshooting)。
+如果迁移被跳过，即使这是一个新的数据库，请参阅 [MSSQL 数据库故障排除](mssql/#troubleshooting)。
 
 {% hint style="info" %}
-您需要定期重新运行迁移帮助程序脚本，以使您的本地开发数据库保持最新。有关详细信息，请参阅 [MSSQL 数据库](database/mssql.md)。
+您需要定期重新运行迁移帮助程序脚本，以使您的本地开发数据库保持最新。有关详细信息，请参阅 [MSSQL 数据库](mssql/)。
 {% endhint %}
 
 ## 生成证书 <a href="#generate-certificates" id="generate-certificates"></a>
