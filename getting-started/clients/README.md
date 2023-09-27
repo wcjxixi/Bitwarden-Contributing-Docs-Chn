@@ -4,6 +4,10 @@
 对应的[官方页面地址](https://contributing.bitwarden.com/getting-started/clients/)
 {% endhint %}
 
+{% hint style="info" %}
+对于移动应用程序，请访问[移动端](mobile/)章节。此页面涵盖了其他客户端。
+{% endhint %}
+
 本章节涵盖了各个 Bitwarden Typescript 客户端应用程序的开发信息：
 
 * [Web Vault](web-vault/)
@@ -11,7 +15,7 @@
 * [桌面端](desktop/)
 * [CLI](cli.md)
 
-在这里，「客户端」通常指的是 Typescript 客户端，它们位于 `client` 单一存储库中。[移动应用程序](mobile/)位于单独的章节（以及存储库），因为它不共享公共代码。
+在这里，「客户端」通常指的是 Typescript 客户端，它们位于 `client` 单一存储库中。
 
 ## 要求 <a href="#requirements" id="requirements"></a>
 
@@ -33,7 +37,7 @@ git clone https://github.com/bitwarden/clients.git
 npm ci
 ```
 
-{% hint style="warning" %}
+{% hint style="info" %}
 您应该只从存储库的根目录安装依赖。不要尝试为单个客户端应用程序安装依赖。
 {% endhint %}
 

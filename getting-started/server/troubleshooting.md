@@ -10,13 +10,21 @@
 
 错误信息：`Interop.AppleCrypto.AppleCFErrorCryptographicException: The operation couldn't be completed.`
 
-Mac 有时可以将证书的信任设置设置为管理员而不是用户。如果您运行下面的命令后没有看到您的证书：
+此问题有好几种可能的修复方法，最有可能的是您需要重新启动设备。
+
+如果这不起作用，您可以尝试使用以下方法强制解锁您的登录钥匙串：
+
+```bash
+security -v unlock-keychain /Users/$USER/Library/Keychains/login.keychain
+```
+
+如果这也不起作用，Mac 有时可以以管理员身份（而不是用户身份）为您的证书设置信任设置。如果您没有看到您的证书，请运行：
 
 ```bash
 security dump-trust-settings
 ```
 
-那么请尝试运行：
+然后请尝试运行：
 
 ```bash
 security dump-trust-settings -d
