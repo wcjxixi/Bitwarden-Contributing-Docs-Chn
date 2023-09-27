@@ -80,7 +80,7 @@ Safari WebExtensions 必须通过 Mac App Store 分发，并与常规 Mac App St
 2. 点击「设置」，然后点击「扩展程序」选项卡
 3. 单击 Bitwarden 扩展旁边的「卸载」
 4. 使用扩展删除此应用程序
-5. 重新打开 Safari 并检查「设置」以确认没有安装 Bitwarden 浏览器扩展。如果仍有 Bitwarden 扩展，请重复步骤 3-4。
+5. 重新打开 Safari 并检查「设置」以确认没有安装 Bitwarden 浏览器扩展。如果仍有 Bitwarden 扩展，请重复步骤 3-4
 6. 退出并完全关闭 Safari 浏览器
 
 如果您要从不同来源加载浏览器扩展（例如，在本地构建和官方版本之间切换），您可能需要定期执行此操作。
@@ -95,7 +95,7 @@ Safari WebExtensions 必须通过 Mac App Store 分发，并与常规 Mac App St
 npm run build
 ```
 
-2、编辑 `build/manifest.json`。将 `nativeMessaging` 权限从 `optional_permissions` 部分移至 `permissions` 部分
+2、编辑 `build/manifest.json`。将 `nativeMessaging` 权限从 `optional_permissions` 部分移至 `permissions` 部分。
 
 3、编辑 `build/index.html` 文件，将 `<html class="__BROWSER__">` 替换为 `<html class="browser_safari">`。
 
@@ -125,7 +125,7 @@ npm run dist:safari:dmg
 您可能需要[在 macOS 中配置 Safari 以运行未签名的扩展](https://developer.apple.com/documentation/safariservices/safari\_web\_extensions/running\_your\_safari\_web\_extension#3744467)。
 {% endhint %}
 
-要启用调试
+要启用调试：
 
 1. 点击「设置」，然后点击「高级」选项卡
 2. 启用「在菜单栏中显示开发菜单」
