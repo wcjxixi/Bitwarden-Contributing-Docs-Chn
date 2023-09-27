@@ -18,7 +18,7 @@
 * **编写文档**：向 [Bitwarden 帮助存储库](https://github.com/bitwarden/help)提交拉取请求
 * **帮助其他用户**：转到社区论坛上的 [Ask the Bitwarden Community category](https://community.bitwarden.com/c/support/)&#x20;
 * **翻译**：请参阅下面的本地化 (i10n) 部分
-* **报告安全问题或漏洞**：欢迎安全审核和反馈。如果问题很敏感，请私下联系我们或通过我们的 [HackerOne 计划](https://hackerone.com/bitwarden/)提交报告。您可以在下面阅读我们的安全政策。
+* **报告安全问题或漏洞**：欢迎安全审核和反馈。如果问题很敏感，请[私下联系我们](https://bitwarden.com/contact)或通过我们的 [HackerOne 计划](https://hackerone.com/bitwarden/)提交报告。您可以在下面阅读我们的安全政策。
 
 ### 贡献者协议 <a href="#contributor-agreement" id="contributor-agreement"></a>
 
@@ -34,14 +34,16 @@
 
 我们使用一个名为 [Crowdin](https://crowdin.com/) 的翻译工具来帮助管理我们跨多种不同语言的本地化工作。
 
-如果您有兴趣帮助将 Bitwarden 应用程序翻译成另一种语言（或进行翻译更正），请在 Crowdin 注册一个帐户并在此处加入我们的项目：
+为了在所有平台和语言之间实现一致的翻译，请访问 [bitwarden.com/translate](https://bitwarden.com/translate) 了解如何使用本地化术语表。
+
+如果您有兴趣帮助将 Bitwarden 应用程序翻译成另一种语言（或进行翻译更正），请在 Crowdin 注册一个账户并在此处加入我们的项目：
 
 * [https://crowdin.com/project/bitwarden-browser](https://crowdin.com/project/bitwarden-browser)
 * [https://crowdin.com/project/bitwarden-desktop](https://crowdin.com/project/bitwarden-desktop)
 *  [https://crowdin.com/project/bitwarden-mobile](https://crowdin.com/project/bitwarden-mobile)
 *  [https://crowdin.com/project/bitwarden-web](https://crowdin.com/project/bitwarden-web)
 
-如果您有兴趣翻译的语言尚未列出，请在 Crowdin 上创建一个新帐户，加入项目并[联系项目的所有者](https://crowdin.com/profile/dwbit)。
+如果您有兴趣翻译的语言尚未列出，请在 Crowdin 上创建一个新账户，加入项目并[联系项目的所有者](https://crowdin.com/profile/dwbit)。
 
 您可以在此处阅读 Crowdin 的译者入门指南：[https://support.crowdin.com/crowdin-intro/](https://support.crowdin.com/crowdin-intro/)。
 
@@ -65,6 +67,6 @@ Bitwarden 认为，与全球的安全研究人员合作对于确保我们的用�
 
 ### 我们想帮助你！ <a href="#we-want-to-help-you" id="we-want-to-help-you"></a>
 
-如果您有一些您认为接近被利用的东西，或者如果您想了解有关内部 API 的一些信息，或者通常对您想努力提供帮助的应用程序有任何疑问，请通过 [https://bitwarden](https://bitwarden.com/contact) 联系我们并询问该信息。如上所述，Bitwarden 希望帮助您发现问题，并且非常愿意提供帮助。
+如果您有一些您认为接近被利用的东西，或者如果您想了解有关内部 API 的一些信息，或者通常对您想努力提供帮助的应用程序有任何疑问，请通过 [https://bitwarden.com/contact ](https://bitwarden.com/contact)联系我们并询问该信息。如上所述，Bitwarden 希望帮助您发现问题，并且非常愿意提供帮助。
 
 感谢您帮助保护 Bitwarden 和我们的用户的安全！

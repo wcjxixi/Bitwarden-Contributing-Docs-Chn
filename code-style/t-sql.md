@@ -4,6 +4,10 @@
 对应的[官方页面地址](https://contributing.bitwarden.com/contributing/code-style/sql)
 {% endhint %}
 
+## 存储库 <a href="#repositories" id="repositories"></a>
+
+我们使用存储库模式，并使用 Dapper 编写 MSSQL 存储库。每个存储库方法依次调用一个存储过程，该过程主要从 _Views_（视图）中获取数据。
+
 ## 部署脚本 <a href="#deployment-scripts" id="deployment-scripts"></a>
 
 有一些特定的方式来构建部署脚本。这些标准的目标是确保脚本可以重新运行。我们从不打算在一个环境中多次运行脚本，但脚本应该支持它。
@@ -23,6 +27,15 @@ BEGIN
         CONSTRAINT [PK_{table_name}] PRIMARY KEY CLUSTERED ([Id] ASC)
     );
 END
+GO
+```
+
+#### 删除表 <a href="#deleting-a-table" id="deleting-a-table"></a>
+
+删除表时，使用 `IF EXISTS` 以避免当表不存在时出现错误。
+
+```sql
+DROP IF EXISTS [dbo].[{table_name}]
 GO
 ```
 
@@ -109,7 +122,9 @@ GO
 EXECUTE sp_refreshview N'[dbo].[{view_name}]
 ```
 
-### 创建或修改视图 <a href="#create-or-modify-a-view" id="create-or-modify-a-view"></a>
+### 视图 <a href="#views" id="views"></a>
+
+#### 创建或修改视图 <a href="#create-or-modify-a-view" id="create-or-modify-a-view"></a>
 
 我们建议使用 `CREATE OR ALTER` 语法来添加或修改视图。
 
@@ -120,6 +135,15 @@ SELECT
     *
 FROM
     [dbo].[{table_name}]
+GO
+```
+
+#### 删除视图 <a href="#deleting-a-view" id="deleting-a-view"></a>
+
+删除视图时，使用 `IF EXISTS` 以避免当表不存在时出现错误。
+
+```sql
+DROP IF EXISTS [dbo].[{view_name}]
 GO
 ```
 
@@ -135,13 +159,24 @@ END
 GO
 ```
 
-### 创建或修改函数或存储过程 <a href="#create-or-modify-a-function-or-stored-procedure" id="create-or-modify-a-function-or-stored-procedure"></a>
+### 函数和存储过程 <a href="#functions-and-stored-procedures" id="functions-and-stored-procedures"></a>
+
+#### 创建或修改函数或存储过程 <a href="#create-or-modify-a-function-or-stored-procedure" id="create-or-modify-a-function-or-stored-procedure"></a>
 
 我们建议使用 `CREATE OR ALTER` 语法来添加或修改函数或存储过程。
 
 ```sql
 CREATE OR ALTER {PROCEDURE|FUNCTION} [dbo].[{sproc_or_func_name}]
 '...
+GO
+```
+
+#### 删除函数或存储过程 <a href="#deleting-a-function-or-stored-procedure" id="deleting-a-function-or-stored-procedure"></a>
+
+删除函数或存储过程时，请使用 I`F EXISTS` 以避免其不存在时出现错误。
+
+```sql
+DROP IF EXISTS [dbo].[{sproc_or_func_name}]
 GO
 ```
 

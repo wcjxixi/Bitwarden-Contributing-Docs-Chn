@@ -31,15 +31,3 @@ Bitwarden 的一项工程计划是[组件库](https://github.com/bitwarden/clien
 #### Storybook
 
 我们使用 [Storybook](https://storybook.js.org/) 来独立开发组件。要启动 Storybook 开发独立的组件，请在 `client` 存储库的根目录中运行 `npm run storybook` 命令。
-
-#### Chromatic
-
-{% hint style="info" %}
-本部分仅适用于 Bitwarden 开发人员。
-{% endhint %}
-
-对组件库的更改有一个额外的审查过程，设计师需要批准视觉更改。我们使用一个叫做 [Chromatic](https://www.chromatic.com/builds?appId=622b79f994de1f003a54ce6f) 的工具来跟踪这些变化，GitHub Bitwarden 组织的成员可以使用 GitHub 登录到 Chromatic 来查看视觉变化。
-
-如果您的 PR 将 **UI Review** 审核为待处理或被拒绝，请联系 Design 以使您的更改获得批准。
-
-<figure><img src="../.gitbook/assets/Tailwind.png" alt=""><figcaption></figcaption></figure>

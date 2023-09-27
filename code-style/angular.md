@@ -52,7 +52,7 @@ npm run lint:fix
 
 ### 变量命名 <a href="#variable-naming" id="variable-naming"></a>
 
-对于 `boolean` 变量，使用基本词，**不要**包含前缀，如 `is`、`has` 等，除非没有它就无法传达含义，例如避免与其他属性混淆。
+* 对于 `boolean` 变量，使用基本词，**不要**包含前缀，如 `is`、`has` 等，除非没有它就无法传达含义，例如避免与其他属性混淆。
 
 ## RxJS
 
