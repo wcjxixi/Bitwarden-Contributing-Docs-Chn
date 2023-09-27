@@ -1,7 +1,7 @@
 # 数据模型
 
 {% hint style="info" %}
-对应的[官方页面地址](https://contributing.bitwarden.com/architecture/clients/data-model)
+对应的[官方页面地址](https://contributing.bitwarden.com/architecture/clients/overview)
 {% endhint %}
 
 ## 域模型 <a href="#domain" id="domain"></a>

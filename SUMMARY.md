@@ -103,7 +103,7 @@
 * [服务器架构](architecture/server.md)
 * [深度剖析](architecture/deep-dives/README.md)
   * [身份验证](architecture/deep-dives/authentication/README.md)
-    * [双因素身份验证](architecture/deep-dives/authentication/two-factor-auth.md)
+    * [双因重身份验证](architecture/deep-dives/authentication/two-factor-auth.md)
   * [浏览器自动填充](architecture/deep-dives/autofill/README.md)
     * [收集页面详情](architecture/deep-dives/autofill/collecting-page-details.md)
     * [生成并执行填充脚本](architecture/deep-dives/autofill/generating-fill-scripts.md)
@@ -114,3 +114,8 @@
   * [推送通知](architecture/deep-dives/push-notifications/README.md)
     * [移动端推送通知](architecture/deep-dives/push-notifications/mobile.md)
     * [其他客户端推送通知](architecture/deep-dives/push-notifications/non-mobile.md)
+
+## 社区开发者 <a href="#community-developer" id="community-developer"></a>
+
+* [社区开发者](community-developer/community-developer.md)
+* [Bitwarden 开发者](community-developer/bitwarden-developer.md)
