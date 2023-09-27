@@ -78,10 +78,10 @@ ENV=cloud npm run build:oss:watch
 ```
 
 * `dev`：来自前面的 `/api -> <http://your-api-url>` 的代理流量。
-* `urls`：直接调用远程服务 注1[^1]。注意：这可能会导致 CORS 标头出现问题。
+* `urls`：直接调用远程服务 [<mark style="background-color:green;">注1</mark>](#user-content-fn-1)[^1]。注意：这可能会导致 CORS 标头出现问题。
 
 ***
 
-1. `urls`：遵守 `EnvironmentService` 中的类型定义。
+<mark style="background-color:green;">注1</mark>：`urls`：遵守 [`EnvironmentService` 中的类型定义](https://github.com/bitwarden/clients/blob/master/libs/common/src/abstractions/environment.service.ts)。
 
 [^1]: `urls`：遵守 [`EnvironmentService` 中的类型定义](https://github.com/bitwarden/clients/blob/master/libs/common/src/abstractions/environment.service.ts)。

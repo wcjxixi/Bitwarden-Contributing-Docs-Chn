@@ -28,11 +28,13 @@ Webpack 默认通过阻止主机名来防止 DNS 重新绑定攻击。但是，�
 }
 ```
 
-！！！注意：如果您正在运行应用程序，则必须重新启动它才能使配置更改生效。
+{% hint style="info" %}
+如果您正在运行此应用程序，则必须重新启动它才能使配置更改生效。
+{% endhint %}
 
 ### 主机文件 <a href="#hosts-file" id="hosts-file"></a>
 
-{% hint style="warning" %}
+{% hint style="info" %}
 您需要管理员权限才能编辑此文件。
 {% endhint %}
 

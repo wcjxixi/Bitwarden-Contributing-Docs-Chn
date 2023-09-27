@@ -16,6 +16,8 @@ _支持：_
 * Firefox 87 及更高版本
 * Safari 14 及更高版本
 * 从 [download](https://bitwarden.com/download) 获取的侧面加载的 Windows 桌面应用程序
+* 从 Mac Apple Store 下载 Mac 应用程序
+* 使用 Windows Hello 的 Windows 桌面应用程序
 
 _不支持：_
 
@@ -51,19 +53,19 @@ _不支持：_
 
 {% tabs %}
 {% tab title="Windows" %}
-```
+```bash
 %APPDATA%\Bitwarden\browsers\chrome.json
 ```
 {% endtab %}
 
 {% tab title="macOS" %}
-```
+```bash
 ~/Library/Application Support/Google/Chrome/NativeMessagingHosts/com.8bit.bitwarden.jso
 ```
 {% endtab %}
 
 {% tab title="Linux" %}
-```
+```bash
 ~/.config/google-chrome/NativeMessagingHosts/com.8bit.bitwarden.json
 ```
 {% endtab %}
@@ -81,4 +83,4 @@ _不支持：_
 
 * 在桌面应用程序的首选项菜单中，开启 `Enable browser integration`。
 * 在浏览器扩展中，访问设置菜单，然后启用 `Unlock with biometrics` 选项。
-* 浏览器会要求您允许该操作，但随后会锁定扩展。当您解锁密码库并再次启用生物识别解锁时，系统会要求您在桌面应用程序中确认此选择，并开启本地生物识别解锁功能。
+  * 浏览器会询问您要求您允许该操作，但随后会锁定扩展。当您解锁密码库并再次启用生物识别解锁时，系统会要求您在桌面应用程序中确认此选择，并开启本地生物识别解锁功能。

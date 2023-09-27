@@ -19,6 +19,18 @@ npm run build:watch
 
 2、使用下一节中的说明在浏览器中加载已解压的浏览器扩展。
 
+## 环境设置 <a href="#environment-setup" id="environment-setup"></a>
+
+默认情况下，浏览器扩展将运行指向生产服务器的端点。要覆盖此设置以进行本地开发和测试，有多种选项。
+
+### Using `managedEnvironment` <a href="#using-managedenvironment" id="using-managedenvironment"></a>
+
+#### 运行 Web Vault 的 **`managedEnvironment`** <a href="#managedenvironment-with-web-vault-running" id="managedenvironment-with-web-vault-running"></a>
+
+#### 未运行 Web Vault 的 **`managedEnvironment`** <a href="#managedenvironment-without-web-vault-running" id="managedenvironment-without-web-vault-running"></a>
+
+### 手动设置自定义环境 URL <a href="#manually-setting-the-custom-environment-urls" id="manually-setting-the-custom-environment-urls"></a>
+
 ## 测试和调试 <a href="#testing-and-debugging" id="testing-and-debugging"></a>
 
 ### Chrome 和基于 Chromium 的浏览器 <a href="#chrome-and-chromium-based-browsers" id="chrome-and-chromium-based-browsers"></a>
@@ -56,51 +68,26 @@ npm run build:watch
 
 ### Safari
 
-#### 重置扩展引用路径 <a href="#resetting-the-extension-reference-paths" id="resetting-the-extension-reference-paths"></a>
+Safari WebExtensions 必须通过 Mac App Store 分发，并与常规 Mac App Store 应用程序捆绑在一起。因此，与其他浏览器相比，构建和调试过程略有不同。
 
-在 MacOS 上，浏览器扩展与桌面客户端打包在一起。 如果您之前构建、安装或运行过桌面客户端（包括官方版本），Safari 可能会继续加载官方的浏览器扩展，而不是您从源代码构建的版本。
+#### 卸载以前的版本 <a href="#uninstall-previous-versions" id="uninstall-previous-versions"></a>
 
-要避免这种情况，请按照以下说明来「重置」Safari 的扩展引用路径：
+如果您已构建、已安装或运行过桌面客户端（包括官方版本），Safari 很可能会继续加载官方浏览器扩展，而不是加载从源代码构建的版本。
+
+要避免这种情况，请按照以下说明卸载 Safari 扩展：
 
 1. 打开 Safari
-2. 点击「偏好设置」，然后点击「扩展程序」选项卡
-3. 卸载 Bitwarden 扩展程序
-4. 退出并完全关闭 Safari 浏览器
-5. 如果您已安装了官方的桌面客户端，卸载它
-6. 如果您之前从源码构建了桌面客户端，删除 `PlugIns` 目录（如果存在的话）和 `.dmg`（如果你运行了 Mac Apple Store 的构建）。
-7. 重新打开 Safari 浏览器，检查偏好设置，确认没有安装 Bitwarden 浏览器扩展。
-8. 退出并完全关闭 Safari 浏览器
+2. 点击「设置」，然后点击「扩展程序」选项卡
+3. 单击 Bitwarden 扩展旁边的「卸载」
+4. 使用扩展删除此应用程序
+5. 重新打开 Safari 并检查「设置」以确认没有安装 Bitwarden 浏览器扩展。如果仍有 Bitwarden 扩展，请重复步骤 3-4。
+6. 退出并完全关闭 Safari 浏览器
 
 如果您要从不同来源加载浏览器扩展（例如，在本地构建和官方版本之间切换），您可能需要定期执行此操作。
 
-#### 测试 <a href="#testing" id="testing"></a>
-
-要构建并加载浏览器扩展：
-
-1、为 Safari 构建扩展
-
-```bash
-npm run dist:safari:dmg
-```
-
-2、打开 Safari 并检偏好设置以确认扩展已安装且已启用
-
-{% hint style="warning" %}
-您可能需要[在 macOS 中配置 Safari 以运行未签名的扩展](https://developer.apple.com/documentation/safariservices/safari\_web\_extensions/running\_your\_safari\_web\_extension#3744467)。
-{% endhint %}
-
-要启用调试
-
-1. 点击「偏好设置」，然后点击「高级」选项卡
-2. 启用「在菜单栏中显示开发菜单」
-
-您可以通过点击 `Develop -> Web Extension Background Pages`，然后选择 Bitwarden 来调试浏览器扩展的背景页面。您可以在弹出窗口打开时右键点击它并点击「检查元素」来调试它。
-
-对于大多数调试和测试来说，这应该足够了，除非您使用的是本机代码。
-
 #### 在 Xcode 中开发 <a href="#developing-in-xcode" id="developing-in-xcode"></a>
 
-您还可以使用 Xcode 进行构建和调试，这允许使用更迭代的方法，而无需等待很长时间来编译构建。
+开发扩展的最简单方法是使用 Xcode 构建和调试它。
 
 1、构建扩展：
 
@@ -110,4 +97,39 @@ npm run build
 
 2、编辑 `build/manifest.json`。将 `nativeMessaging` 权限从 `optional_permissions` 部分移至 `permissions` 部分
 
+3、编辑 `build/index.html` 文件，将 `<html class="__BROWSER__">` 替换为 `<html class="browser_safari">`。
+
 3、在 Xcode 中打开 `src/safari/desktop.xcodeproj`
+
+4、运行「设桌面」目标。
+
+{% hint style="info" %}
+每当对源文件进行任何更改时，请记住通过 Xcode 重新运行它。它不会自动重新加载。
+{% endhint %}
+
+#### 生产构建 <a href="#production-build" id="production-build"></a>
+
+另一种方法是通过 gulp 使用「正确的」构建流程。这种方法不需要对输出进行任何手动处理，因为 gulp 会为我们完成这些工作。不过，我们必须为每次更改完全重建扩展，这会比较慢。
+
+要构建并加载浏览器扩展：
+
+1、为 Safari 构建扩展
+
+```bash
+npm run dist:safari:dmg
+```
+
+2、打开 Safari 并检「设置」以确认扩展已安装且已启用
+
+{% hint style="warning" %}
+您可能需要[在 macOS 中配置 Safari 以运行未签名的扩展](https://developer.apple.com/documentation/safariservices/safari\_web\_extensions/running\_your\_safari\_web\_extension#3744467)。
+{% endhint %}
+
+要启用调试
+
+1. 点击「设置」，然后点击「高级」选项卡
+2. 启用「在菜单栏中显示开发菜单」
+
+您可以通过点击 `Develop -> Web Extension Background Pages`，然后选择 Bitwarden 来调试浏览器扩展的背景页面。您可以在弹出窗口打开时右键点击它并点击「检查元素」来调试它。
+
+对于大多数调试和测试来说，这应该足够了，除非您使用的是本机代码。
