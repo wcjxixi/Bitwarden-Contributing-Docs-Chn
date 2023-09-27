@@ -10,7 +10,7 @@
 
 ## 表单提交检测涉及什么？ <a href="#what-is-involved-in-form-submission-detection" id="what-is-involved-in-form-submission-detection"></a>
 
-### 发起收集 <a href="#initial-collection" id="initial-collection"></a>
+### 初始化收集 <a href="#initial-collection" id="initial-collection"></a>
 
 ### DOM 操作 <a href="#dom-manipulation" id="dom-manipulation"></a>
 
