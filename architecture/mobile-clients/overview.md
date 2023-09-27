@@ -3,3 +3,5 @@
 {% hint style="info" %}
 对应的[官方页面地址](https://contributing.bitwarden.com/architecture/mobile-clients/overview)
 {% endhint %}
+
+## 表示层 <a href="#presentation" id="presentation"></a>

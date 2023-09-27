@@ -29,7 +29,7 @@ echo "export GPG_TTY=$(tty)" >> ~/.zshrc
 
 <figure><img src="https://contributing.bitwarden.com/assets/images/commit-signing-bd1537917a2ce059f7bdff988017b829.png" alt=""><figcaption></figcaption></figure>
 
-### 命令行上的 git <a href="#git-on-the-command-line" id="git-on-the-command-line"></a>
+### 命令行 <a href="#command-line" id="command-line"></a>
 
 配置提交签名后，您可以使用 `-S` 标志对提交进行签名：
 

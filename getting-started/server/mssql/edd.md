@@ -14,19 +14,17 @@
 
 ## 设计 <a href="#design" id="design"></a>
 
-### Nullable
+### 非破坏性改更改 <a href="#non-destructive-changes" id="non-destructive-changes"></a>
 
-数据库表、视图和存储过程几乎都应该使用空字段或具有一个默认值。因为这将允许存储过程省略列，这在运行新代码和旧代码时的一个要求。
+### 破坏性更改 <a href="#destructive-changes" id="destructive-changes"></a>
 
-### EDD 过程 <a href="#edd-process" id="edd-process"></a>
+### 迁移 <a href="#migrations" id="migrations"></a>
 
-EDD 将每个数据库迁移分为三个阶段。_开始_、_过渡_和_结束_。
+#### 初始化迁移 <a href="#initial-migration" id="initial-migration"></a>
 
-{% embed url="https://contributing.bitwarden.com/assets/images/stages_refactoring-4e6864b672648dcd79589749db600cd5.jpg" %}
+#### 过渡迁移 <a href="#transition-migration" id="transition-migration"></a>
 
-{% embed url="https://www.martinfowler.com/articles/evodb.html#TransitionPhase" %}
-
-这需要两次不同的数据库迁移。第一次迁移增加了新的内容，并与现有的代码向后兼容。第二次迁移删除了内容，并且与第一次迁移之前的相同代码不向后兼容。
+#### 结束迁移 <a href="#finalization-migration" id="finalization-migration"></a>
 
 ### 示例 <a href="#example" id="example"></a>
 
@@ -49,7 +47,7 @@ EDD 将每个数据库迁移分为三个阶段。_开始_、_过渡_和_结束_�
 {% endhint %}
 
 {% tabs %}
-{% tab title="第一次迁移" %}
+{% tab title="初始迁移" %}
 ```sql
 -- Add Column
 IF COL_LENGTH('[dbo].[Customer]', 'FirstName') IS NULL
@@ -95,7 +93,7 @@ END
 ```
 {% endtab %}
 
-{% tab title="数据迁移" %}
+{% tab title="过渡迁移" %}
 ```sql
 UPDATE [dbo].Customer SET
     FirstName=FName
@@ -103,7 +101,7 @@ WHERE FirstName IS NULL
 ```
 {% endtab %}
 
-{% tab title="第二次迁移" %}
+{% tab title="结束迁移" %}
 ```sql
 -- Remove Column
 IF COL_LENGTH('[dbo].[Customer]', 'FName') IS NOT NULL
@@ -145,27 +143,15 @@ END
 {% endtab %}
 {% endtabs %}
 
-## 工作流程 <a href="#workflow" id="workflow"></a>
+## 部署编排 <a href="#deployment-orchestration" id="deployment-orchestration"></a>
 
-下面将介绍 Bitwarden 编写迁移的具体工作流程。
+***
 
-### 开发者 <a href="#developer" id="developer"></a>
+***
 
-在[迁移](broken-reference)中描述了开发流程。
+### 在线环境 <a href="#online-environments" id="online-environments"></a>
 
-### 开发运维 <a href="#devops" id="devops"></a>
-
-#### **On `rc` cut**
-
-创建一个 PR 来移动未来的脚本。
-
-* `DbScripts_future` 到 `DbScripts`，在脚本前面加上当前日期，但保留现有日期。
-* `dbo_future` 到 `dbo`。
-
-#### 服务器发布后 <a href="#after-server-release" id="after-server-release"></a>
-
-1. 运行任何可能需要的数据迁移脚本。(这可能需要分批执行，直到所有的数据都被迁移完毕）
-2. 在服务器运行一段时间后，执行未来的迁移脚本来清理数据库。
+### 离线环境 <a href="#offline-environments" id="offline-environments"></a>
 
 ## 回滚 <a href="#rollbacks" id="rollbacks"></a>
 

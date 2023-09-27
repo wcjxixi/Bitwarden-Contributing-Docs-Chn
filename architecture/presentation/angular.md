@@ -35,6 +35,8 @@
 
 摘要比实现更频繁地被引用，摘要使用简化类型，而实现必须指定它们是实现，例如，`.service` 用于摘要，`.service.implementation` 用于植入。
 
+## 按功能组织 ([ADR-0011](https://contributing.bitwarden.com/architecture/adr/angular-folder-structure)) <a href="#organize-by-feature-adr-0011" id="organize-by-feature-adr-0011"></a>
+
 ## 可观察对象 ([ADR-0003](../adr/0003-adopt-observable-data-services-for-angular.md)) <a href="#observables-adr-0003" id="observables-adr-0003"></a>
 
 ## 响应式表单 ([ADR-0001](../adr/reactive-forms.md)) <a href="#reactive-forms-adr-0001" id="reactive-forms-adr-0001"></a>

@@ -19,7 +19,7 @@ mono-repository 根目录包含三个主要文件夹：
 * `Components` - Angular 组件库。
 * `Node` - 曾经是 CLI 和目录连接器 CLI 共享的代码，但由于目录连接器不再使用相同版本的库，因此该模块被弃用。
 
-## 包图解 <a href="#package-diagram" id="package-diagram"></a>
+## 软件包图解 <a href="#package-diagram" id="package-diagram"></a>
 
 下面是客户端存储库的简化的包图解。
 
