@@ -1,7 +1,7 @@
 # 进化的数据库设计
 
 {% hint style="info" %}
-对应的[官方页面地址](https://contributing.bitwarden.com/getting-started/server/mssql/edd)
+对应的[官方页面地址](https://contributing.bitwarden.com/contributing/database-migrations/edd)
 {% endhint %}
 
 在 Bitwarden，我们遵循[进化数据库设计 (EDD)](https://en.wikipedia.org/wiki/Evolutionary\_database\_design)。EDD 描述了一个过程，在这个过程中，数据库架构被持续更新，同时通过使用数据库过渡阶段仍然确保与旧版本的兼容性。
