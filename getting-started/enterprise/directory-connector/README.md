@@ -10,7 +10,7 @@ Bitwarden 目录连接器是一个桌面应用程序，用于将您的 Bitwarden
 
 ## 要求 <a href="#requirements" id="requirements"></a>
 
-* [Node.js](https://nodejs.org/) v16.13.1 (LTS)
+* [Node.js](https://nodejs.org/) v18 (LTS)
 * Windows 用户：要编译应用程序中使用的本机节点模块，您需要 Visual C++ 工具集，可通过标准 Visual Studio 安装程序（推荐）或通过 `npm` 安装 `windows-build-tools` 获得。在[编译本机组件模块](https://github.com/Microsoft/nodejs-guidelines/blob/master/windows-environment.md#compiling-native-addon-modules)中查看更多信息。
 
 ## 构建说明 <a href="#build-instructions" id="build-instructions"></a>

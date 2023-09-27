@@ -1,4 +1,4 @@
-# 安卓移动应用程序
+# Android
 
 {% hint style="info" %}
 对应的[官方页面地址](https://contributing.bitwarden.com/getting-started/clients/mobile/android/)
@@ -50,6 +50,35 @@
 
 {% embed url="https://contributing.bitwarden.com/assets/images/android-sdk-529574bf6a67ae6500b23196a6843ec5.png" %}
 
-## 使用安卓模拟器测试和调试 <a href="#testing-and-debugging-using-the-android-emulator" id="testing-and-debugging-using-the-android-emulator"></a>
+## 测试与调试 <a href="#testing-and-debugging" id="testing-and-debugging"></a>
+
+### 使用安卓模拟器 <a href="#using-the-android-emulator" id="using-the-android-emulator"></a>
 
 为了使用本地 Mac 上的 Xamarin Studio 进行调试时访问 Android 模拟器中的 `localhost:<port>` 资源，您需要使用 `<http://10.0.2.2:<port>` 配置端点地址，以访问 `localhost`，它被设计为映射 Android 代理。
+
+### 使用服务器隧道 <a href="#using-server-tunneling" id="using-server-tunneling"></a>
+
+您可以使用一个[到本地服务器的代理隧道](../../server/tunnel.md)并让您的应用程序直接连接到它，而不是配置设备或模拟器。
+
+### 推送通知 <a href="#push-notifications" id="push-notifications"></a>
+
+Android 应用程序的默认配置是将自身注册到与 Bitwarden 的 QA Cloud 相同的环境。这意味着，如果您尝试使用生产端点调试应用程序，您将无法接收实时同步更新或无密码登录请求。
+
+### 本地测试无密码 <a href="#testing-passwordless-locally" id="testing-passwordless-locally"></a>
+
+在开始测试和调试无密码登录之前，请确保本地服务器设置运行正常（[服务器设置](../../server/guide.md)）。您还应该能够将 Android 应用程序部署到您的设备或模拟器上。
+
+{% hint style="info" %}
+调试和测试无密码身份验证受到推送通知的限制。
+{% endhint %}
+
+测试无密码通知：
+
+1. 启动本地服务器（`Api`、`Identity`、`Notifications`）
+2. 确保您的移动设备可以[连接到您的本地服务器](android.md#using-server-tunneling)
+3. [启动 Web 客户端](../web-vault/)，因为您需要它来发出登录请求
+4. 将 Android 应用程序部署到您的设备或模拟器
+5. 部署后，打开应用程序，登录您的 QA 账户然后在设置中激活无密码登录请求
+6. 使用您喜欢的浏览器打开 web vault（例如：http://localhost:8080）
+7. 输入之前已在该设备（即「已知设备」）上进行了身份验证的账户的电子邮件地址，然后单击「继续」。当出现登录选项时，单击「设备登录」。
+8. 检查移动设备是否有通知

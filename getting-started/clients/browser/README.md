@@ -25,11 +25,68 @@ npm run build:watch
 
 ### Using `managedEnvironment` <a href="#using-managedenvironment" id="using-managedenvironment"></a>
 
+浏览器扩展具有「代管式环境」的概念，它是存储在 `devFlags` 对象内的 [`development.json`](https://github.com/bitwarden/clients/blob/master/apps/browser/config/development.json) 中的 JSON 配置。
+
+`managedEnvironment` 设置允许贡献者覆盖服务器的任何或所有 URL。 `managedEnvironment` 在 [`BrowserEnvironmentService`](https://github.com/bitwarden/clients/blob/master/apps/browser/src/services/browser-environment.service.ts) 中被读取，并为任何提供的 URL 覆盖默认的（生产）设置。
+
+有两种使用 `managedEnvironment` 的方法，具体取决于您是否同时运行 web vault。
+
 #### 运行 Web Vault 的 **`managedEnvironment`** <a href="#managedenvironment-with-web-vault-running" id="managedenvironment-with-web-vault-running"></a>
+
+如果您还同时运行 web vault，则只需在 `managedEnvironment` 中设置 `base` URL：
+
+```json
+{
+   "devFlags":{
+      "managedEnvironment":{
+         "base":"https://localhost:8080"
+      }
+      ...
+   }
+   ...
+}
+```
+
+这是因为 web vault 在其 [`webpack.config.js`](https://github.com/bitwarden/clients/blob/master/apps/web/webpack.config.js) 中包含了 `webpack-dev-server` 软件包。当它运行时，它根据自己的 [`development.json`](https://github.com/bitwarden/clients/blob/master/apps/web/config/development.json) 配置文件中的配置设置代理每一个端点：
+
+```json
+  "dev": {
+    "proxyApi": "http://localhost:4000",
+    "proxyIdentity": "http://localhost:33656",
+    "proxyEvents": "http://localhost:46273",
+    "proxyNotifications": "http://localhost:61840"
+  },
+```
+
+这意味着当 web vault 运行时，浏览器 `managedEnvironment` **无需**逐个覆盖每一个 URL。浏览器会将每个 URL 格式化为 `{base}/{endpoint}`，例如 http://localhost:8080/api，但 webpack DevServer 会将该 URL 代理到正确的端口，例如 http://localhost:4000。
 
 #### 未运行 Web Vault 的 **`managedEnvironment`** <a href="#managedenvironment-without-web-vault-running" id="managedenvironment-without-web-vault-running"></a>
 
+如果您在没有运行 web vault 的情况下测试浏览器扩展，您将无法利用 webpack DevServer 来代理 URL。这意味着您的 `managedEnvironment` 设置必须显式覆盖您要在本地进行通信的所有 URL。
+
+```json
+{
+    "devFlags": {
+        "managedEnvironment": {
+            "webVault": "http://localhost:8080",
+            "api": "http://localhost:4000",
+            "identity": "http://localhost:33656",
+            "notifications": "http://localhost:61840",
+            "icons": "http://localhost:50024"
+        }
+        ...
+    }
+    ...
+}
+```
+
 ### 手动设置自定义环境 URL <a href="#manually-setting-the-custom-environment-urls" id="manually-setting-the-custom-environment-urls"></a>
+
+加载扩展后，您可能需要调整服务器 URL 以指向本地服务器，而不是在 `managedEnvironment` 中覆盖它们。您可以通过浏览器设置更改。有关如何配置 URL 的说明，请点击[此处](https://help.ppgg.in/self-hosting/connect-clients-to-your-instance)。
+
+配置完成后，您的本地自定义环境看上去应该像这样：
+
+{% embed url="https://contributing.bitwarden.com/assets/images/custom-local-environment-2c78fa111af8dc5186b8da9d12b7fdea.png" %}
 
 ## 测试和调试 <a href="#testing-and-debugging" id="testing-and-debugging"></a>
 

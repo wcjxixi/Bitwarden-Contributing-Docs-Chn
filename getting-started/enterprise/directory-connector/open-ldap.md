@@ -31,19 +31,19 @@ LDIF 文件包含目录的配置（例如用户、群组等）。
 
 或者，您可以使用以下说明生成您自己的 LDIF 文件。除非您有特殊要求，否则您不需要这样做。
 
-1. 下载 [LDIF 生成器](https://ldapwiki.com/wiki/LDIF%20Generator)
+1. 下载 [LDIF 生成器](https://ldapwiki.com/wiki/LDIF%20Generator)。
 2. 将 `Data/mail-hosts.txt` 文件替换为我们自己的 [mail-hosts.txt](https://contributing.bitwarden.com/enterprise/directory-connector/mail-hosts.txt) 文件。这包含大量唯一主机名，以避免生成重复的电子邮件地址。
-3. 运行 `java -jar LDIFGen.jar`
+3. 运行 `java -jar LDIFGen.jar`。
 4. 使用以下设置：
    * Base Added: dc=bitwarden, dc=com
    * Generate OUs: Generic
    * Generate People: add
-5. 点击 Run
+5. 点击「Run」。
 6. LDIF 输出可能在电子邮件地址中包含非法字符（例如空格和撇号） - 您应该在使用前手动检查。
 
 ## 启动 Open LDAP <a href="#start-open-ldap" id="start-open-ldap"></a>
 
-1、在本地服务器存储库中打开终端
+1、在本地服务器存储库中打开终端。
 
 2、转到 `dev` 文件夹：
 
@@ -57,7 +57,7 @@ cd dev
 cp path/to/file.ldif ./directory.ldif
 ```
 
-4、启动 OpenLDAP Docker 容器
+4、启动 OpenLDAP Docker 容器：
 
 ```bash
 docker-compose --profile ldap up -d
@@ -67,9 +67,9 @@ docker-compose --profile ldap up -d
 
 ## 配置目录连接器 <a href="#configure-directory-connector" id="configure-directory-connector"></a>
 
-1. 运行 Directory Connector Electron 应用程序（请参阅[构建说明](./#build-instructions)）
-2. 使用[组织 API 密钥](https://help.ppgg.in/organizations/bitwarden-public-api#authentication)登录
-3. 使用下面的配置设置
+1. 运行 Directory Connector Electron 应用程序（请参阅[构建说明](./#build-instructions)）。
+2. 使用[组织 API 密钥](https://help.ppgg.in/organizations/bitwarden-public-api#authentication)登录。
+3. 使用下面的配置设置。
 
 ### 目录设置 <a href="#directory-settings" id="directory-settings"></a>
 
@@ -98,5 +98,5 @@ docker-compose --profile ldap up -d
 当您进行真正的同步时，邀请电子邮件将发送给所有已同步的用户。确保您使用的是 [Mailcatcher](../../server/guide.md#mailcatcher)，这样您就不会发送实时电子邮件。
 {% endhint %}
 
-1. 点击目录连接器中的「Test Now」按钮。你应该会得到一个用户列表
-2. 准备好后，点击「Sync Now」以执行真正的同步。您应该会在 Directory Connector 中收到确认消息，并在 Web 密码库中看到新的被邀请的用户
+1. 点击目录连接器中的「Test Now」按钮。你应该会得到一个用户列表。
+2. 准备好后，点击「Sync Now」以执行真正的同步。您应该会在 Directory Connector 中收到确认消息，并在 Web 密码库中看到新的被邀请的用户。

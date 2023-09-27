@@ -4,7 +4,7 @@
 对应的[官方页面地址](https://contributing.bitwarden.com/getting-started/clients/desktop/native-messaging-test-runner)
 {% endhint %}
 
-Native Messaging Test Runner 是一个 Node 应用程序，用于测试桌面端中的 Native Messaging 功能，特别是从 DuckDuckGo 浏览器接收到的命令。它使用进程间通信 (IPC) 与桌面应用程序进行通信。它的创建是为了支持对本机消息传递本身进行开发，并使 QA 能够测试这些命令。 它被放置于 `bitwarden/clients` 存储库中桌面应用程序的根目录的[此处](https://github.com/bitwarden/clients/tree/master/apps/desktop/native-messaging-test-runner)。
+Native Messaging Test Runner 是一个 Node 应用程序，用于测试桌面端中的 Native Messaging 功能，特别是从 DuckDuckGo 浏览器接收到的命令。它使用进程间通信 (IPC) 与桌面应用程序进行通信。它的创建是为了支持对本机消息传递本身进行开发，并使 QA 能够测试这些命令。它被放置于 `bitwarden/clients` 存储库中桌面应用程序的根目录的[此处](https://github.com/bitwarden/clients/tree/master/apps/desktop/native-messaging-test-runner)。
 
 ## 入门 <a href="#getting-started" id="getting-started"></a>
 
@@ -16,9 +16,9 @@ Native Messaging Test Runner 是一个 Node 应用程序，用于测试桌面端
 
 {% embed url="https://user-images.githubusercontent.com/8926729/191100543-208fa2f4-8859-4bbf-86f6-5ea0795f504c.png" %}
 
-4、在单独的终端中，导航到 `apps/desktop/native-messaging-test-runner`
+4、在另一个终端中，导航到 `apps/desktop/native-messaging-test-runner`
 
-5、运行 `npm i`
+5、运行 `npm ci`
 
 6、选择一个命令然后运行它！一个好的开始是 `status`。完整的命令列表可以在本文档的 `Commands` 部分中看到。有的命令带有参数，例如 `create`。运行这些命令时，通过在所有参数前加上两个破折号的方式传递参数：`npm run create -- --name NewLogin!` **注意**，您需要在每个命令之前接受桌面应用程序中的提示。这肯定是一个需要改进的地方。
 

@@ -4,7 +4,7 @@
 对应的[官方页面地址](https://contributing.bitwarden.com/getting-started/clients/troubleshooting)
 {% endhint %}
 
-## 构建错误/npm 依赖错误 <a href="#build-errors-npm-dependency-errors" id="build-errors-npm-dependency-errors"></a>
+## 构建错误 / npm 依赖错误 <a href="#build-errors-npm-dependency-errors" id="build-errors-npm-dependency-errors"></a>
 
 如果您在尝试构建客户端应用程序时收到 npm 依赖错误，请确保您仅在存储库的根目录中运行了 `npm ci`。您不应该在任何其他目录（例如客户端应用程序目录）中运行 `npm i` 或 `npm ci`。
 

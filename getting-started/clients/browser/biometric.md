@@ -4,7 +4,7 @@
 对应的[官方页面地址](https://contributing.bitwarden.com/getting-started/clients/browser/biometric)
 {% endhint %}
 
-目前，移动端、桌面端和浏览器扩展支持生物识别解锁。Bitwarden 的生物识别解锁功能与本机消息传递 API 集成以发挥其功能。
+当前，移动端、桌面端和浏览器扩展支持生物识别解锁。Bitwarden 的生物识别解锁功能与本机消息传递 API 集成以发挥其功能。
 
 ## 哪些设备支持生物识别解锁？ <a href="#which-devices-support-biometric-unlock" id="which-devices-support-biometric-unlock"></a>
 
@@ -37,8 +37,8 @@ _不支持：_
 
 ### 构建并运行浏览器扩展 <a href="#build-and-run-the-browser-extension" id="build-and-run-the-browser-extension"></a>
 
-* 在本地浏览器项目中，运行 `npm install`。
-* 要在 Safari 上使用本地浏览器扩展，请使用以下命令：`npm run dist:safari:dmg`。构建完成后，您应该会在 Safari 的「偏好设置」中的「扩展」菜单下看到 Bitwarden 扩展。如果没有，打开并构建相关的 Xcode 项目（通常位于 `$HOME/browser/dist/Safari/dmg/desktop.xcodeproj`）。然后它会出现在「偏好设置」菜单中，您就可以启用它了。
+* 在本地浏览器项目中，运行 `npm ci`。
+* 要在 Safari 上使用本地浏览器扩展，请使用以下命令：`npm run dist:safari:dmg`。构建完成后，您应该会在 Safari 的「偏好设置」中的「扩展」菜单下看到 Bitwarden 扩展。如果没有，打开并构建相关的 Xcode 项目（通常位于 `$HOME/browser/dist/Safari/dmg/desktop.xcodeproj`）。然后它会出现在「设置」菜单中，您就可以启用它了。
 * 对于其他浏览器，使用 `npm run build:watch` 然后使用[此处](./#testing-and-debugging)描述的方法加载本地构建的扩展。
 
 ### 为本机消息添加扩展 ID <a href="#add-the-extension-id-for-native-messaging" id="add-the-extension-id-for-native-messaging"></a>

@@ -19,9 +19,11 @@
 
 macOS 需要更新 SSL 库，否则您将收到「No usable version of libssl was found」的错误。
 
+{% tabs %}
+{% tab title="Intel" %}
 1、安装 [Homebrew](https://brew.sh/)
 
-2、安装 OpenSSL 包：
+2、安装 OpenSSL 软件包：
 
 ```bash
 brew install openssl
@@ -34,6 +36,40 @@ echo 'DYLD_LIBRARY_PATH="/usr/local/opt/openssl@1.1/lib"' >> ~/.zshrc
 ```
 
 4、如果您是从终端运行的 Key Connector，请重新启动终端以确保更新的 `.zshrc` 设置被应用
+{% endtab %}
+
+{% tab title="ARM" %}
+鉴于 Key Connector 项目基于 NET 5，那么我们需要使用 x86\_64 版本的 OpenSSL，从而使用 Homebrew 安装 x86\_64 软件包（可以在[此处](https://www.wisdomgeek.com/development/installing-intel-based-packages-using-homebrew-on-the-m1-mac/)找到包含多种方法的指南）。
+
+1、安装 Rosetta：
+
+```bash
+softwareupdate --install-rosetta
+```
+
+2、将终端设置为使用 Rosetta 打开（创建终端应用程序的副本 -> 转到「获取信息」 -> 选中「使用 Rosetta 打开」）。
+
+3、安装 [Homebrew](https://brew.sh/)
+
+4、使用 x86\_64 Homebrew 安装 OpenSSL 包：
+
+```bash
+arch -x86_64 /usr/local/homebrew/bin/brew install openssl
+```
+
+5、设置所需的环境变量以指向 OpenSSL 库：
+
+```bash
+echo 'export DYLD_LIBRARY_PATH="/usr/local/opt/openssl@1.1/lib"' >> ~/.zshrc
+```
+
+6、如果您从终端运行 Key Connector，请重新启动终端以确保应用或运行已更新的 `.zshrc` 设置：
+
+```bash
+source ~/.zshrc
+```
+{% endtab %}
+{% endtabs %}
 
 ## 设置和配置 <a href="#setup-and-configuration" id="setup-and-configuration"></a>
 
@@ -112,6 +148,14 @@ pwsh setup_secrets.ps1
 ```bash
 dotnet run --project src/KeyConnector --configuration Development
 ```
+
+{% hint style="info" %}
+如果在基于 ARM 的 Mac 上运行，您可能需要使用 `/usr/local/share/dotnet/x64/dotnet`
+
+```bash
+/usr/local/share/dotnet/x64/dotnet run --project src/KeyConnector --configuration Development
+```
+{% endhint %}
 
 macOS 需要 `--configuration` 标志才能使用正确的 SSL 库。
 

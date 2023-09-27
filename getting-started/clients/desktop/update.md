@@ -16,7 +16,7 @@
 
 2、添加一个名为 `update` 的只读存储桶，通过访问 `http://localhost:9001` 并使用 `minioadmin/minioadmin` 登录，点击 `Create bucket` 填写详细信息。然后点击 `Manage`、`Access Rules` 并填写以下详细信息。
 
-{% embed url="https://contributing.bitwarden.com/clients/desktop/minio-access-rule.png" %}
+{% embed url="https://contributing.bitwarden.com/assets/images/minio-access-rule-1e1cc705d067202f7e4edbafbb681955.png" %}
 
 3、使用以下的 `publish` 设置修改 `package.json`
 

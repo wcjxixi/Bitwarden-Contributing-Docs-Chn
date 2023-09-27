@@ -14,6 +14,7 @@
   * [事件记录](getting-started/server/events.md)
   * [系统管理门户](getting-started/server/admin.md)
   * [故障排除](getting-started/server/troubleshooting.md)
+  * [\*Ingress 隧道](getting-started/server/tunnel.md)
   * [\*Secrets.json](getting-started/server/secrets.md)
   * [\*自托管指南](getting-started/server/self-hosted.md)
   * [\*单点登录 (SSO)](getting-started/server/sso/README.md)
