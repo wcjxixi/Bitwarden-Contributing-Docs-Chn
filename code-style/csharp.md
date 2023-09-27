@@ -46,7 +46,7 @@ private readonly IUserService _userService;
 ## 构造函数 <a href="#constructors" id="constructors"></a>
 
 * 多个**构造函数**应使用换行符分隔（之间有空行）
-* 具有多个参数的构造函数应每行 1 个参数
+* 具有多个参数的构造函数应每行列出 1 个参数
 * 必要时，空的构造函数应全位于为 1 行，即 `public ClassName() { }`
 
 ## 控制块 <a href="#control-blocks" id="control-blocks"></a>
