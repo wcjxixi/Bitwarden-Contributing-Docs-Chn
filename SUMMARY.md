@@ -56,6 +56,7 @@
 * [提交签名](tools/commit-signing.md)
 * [拉取请求](contributing/pull-requests/README.md)
   * [代码审查指南](contributing/pull-requests/code-review.md)
+  * [\*分支](contributing/pull-requests/branching.md)
 * [无障碍](contributing/accessibility.md)
 * [测试](contributing/testing/README.md)
   * [单元测试](contributing/testing/unit/README.md)

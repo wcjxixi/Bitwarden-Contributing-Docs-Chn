@@ -4,7 +4,11 @@
 对应的[官方页面地址](https://contributing.bitwarden.com/contributing/commit-signing)
 {% endhint %}
 
-为了防止提交欺骗，所有 Bitwarden 开发人员都必须对他们的提交进行数字签名。这是可选的，但鼓励社区贡献者使用。
+可以使用任何名称和电子邮件配置 git，从而使不良行为者能够欺骗提交并冒充他们想要的任何人。 GitHub 支持多种对 git 提交进行数字签名的方法，验证它们是否来自有权访问先前配置的私钥的人。
+
+例如，2022 年 8 月 3 日，Stephen Lacy [在 Twitter 上分享了](https://twitter.com/stephenlacy/status/1554697080718823424)他如何通过注意到未经验证的提交（即未经数字签名的提交）来发现 GitHub 上的大规模恶意软件攻击。
+
+为了防止提交欺骗，我们鼓励所有 Bitwarden 贡献者对他们的提交进行数字签名。
 
 ## 设置提交签名 <a href="#setting-up-commit-signing" id="setting-up-commit-signing"></a>
 
@@ -18,6 +22,8 @@ Github 支持使用 GPG、SSH 和 S/MIME 方式的提交签名。如果您不确
 brew install gnupg
 echo "export GPG_TTY=$(tty)" >> ~/.zshrc
 ```
+
+重新启动打开的终端以使其生效。
 {% endtab %}
 {% endtabs %}
 
@@ -67,4 +73,4 @@ git config --global commit.gpgSign true
 
 ## 故障排除 <a href="#troubleshooting" id="troubleshooting"></a>
 
-如果您收到此错误消息「error: gpg failed to sign the data」，请确保将 `export GPG_TTY=$(tty)` 添加到您的 `~/.zshrc`（或 `~/.bashrc`，如果您使用 bash）并重新启动您的终端。有关此错误的更多帮助，请参阅[此故障排除文档](https://gist.github.com/paolocarrasco/18ca8fe6e63490ae1be23e84a7039374)。
+* 如果您收到此错误消息「error: gpg failed to sign the data」，请确保将 `export GPG_TTY=$(tty)` 添加到您的 `~/.zshrc`（或 `~/.bashrc`，如果您使用 bash）并重新启动您的终端。有关此错误的更多帮助，请参阅[此故障排除文档](https://gist.github.com/paolocarrasco/18ca8fe6e63490ae1be23e84a7039374)。
