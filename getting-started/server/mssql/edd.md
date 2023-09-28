@@ -1,22 +1,39 @@
-# 进化的数据库设计
+# 进化数据库设计
 
 {% hint style="info" %}
-对应的[官方页面地址](https://contributing.bitwarden.com/contributing/database-migrations/edd)
+开始对应的[官方页面地址](https://contributing.bitwarden.com/contributing/database-migrations/edd)
 {% endhint %}
 
 在 Bitwarden，我们遵循[进化数据库设计 (EDD)](https://en.wikipedia.org/wiki/Evolutionary\_database\_design)。EDD 描述了一个过程，在这个过程中，数据库架构被持续更新，同时通过使用数据库过渡阶段仍然确保与旧版本的兼容性。
 
-简而言之，Bitwarden 服务器的数据库架构必须**支持**以前的服务器版本。数据库迁移将在代码部署前进行，在版本回滚的情况下，数据库架构将**不会**被更新。
+Bitwarden 还需要支持：
 
-{% hint style="info" %}
-有关此决定的背景，请参阅[进化数据库设计 RFD](https://bitwarden.atlassian.net/wiki/spaces/PIQ/pages/177701412/Adopt+Evolutionary+database+design)。
-{% endhint %}
+* **零停机部署**：这意味着应用程序的多个版本将在部署窗口期间同时运行。
+* **代码回滚**：代码中的严重缺陷应该能够回滚到以前的版本。
+
+为了满足这些附加要求，数据库架构必须支持以前版本的服务器。
 
 ## 设计 <a href="#design" id="design"></a>
 
+数据库更改可以分为两类：破坏性更改和非破坏性更改\[1]。如果没有相应的代码更改，破坏性更改会阻止现有功能按预期工作。非破坏性更改则相反：数据库更改不需要更改代码即可允许非应用程序继续按预期工作。
+
 ### 非破坏性改更改 <a href="#non-destructive-changes" id="non-destructive-changes"></a>
 
+通过在数据库表、视图和存储过程中混合使用可空字段和默认值，可以以向后兼容的方式设计许多数据库更改。这确保了可以在没有新列的情况下调用存储过程，并允许它们同时使用旧代码和新代码运行。
+
 ### 破坏性更改 <a href="#destructive-changes" id="destructive-changes"></a>
+
+任何不能以非破坏性方式完成的更改都是破坏性更改。这可以像添加一个不可为空的列一样简单，其中需要从现有字段计算值，或者重命名现有列。为了处理破坏性更改，有必要将它们分为三个阶段：开始、过渡和结束，如下图所示。
+
+{% embed url="https://contributing.bitwarden.com/assets/images/transitions-b5d691da2f06e34d8a4e13a3ab25a4b8.png" %}
+
+值得注意的是，_重构阶段_通常是滚动的，一个重构的_结束阶段_是另一个重构的_过渡阶段_。下表详细说明了在哪个数据库阶段需要支持哪些应用程序版本。
+
+| Database Phase                   | Release X | Release X+1 | Release X+2 |
+| -------------------------------- | --------- | ----------- | ----------- |
+| b7d28821bbaf47a6a67a74b15772b0bf | ✅         | ❌           | ❌           |
+| Transition                       | ✅         | ✅           | ❌           |
+| End                              | ❌         | ✅           | ✅           |
 
 ### 迁移 <a href="#migrations" id="migrations"></a>
 

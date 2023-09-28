@@ -52,7 +52,7 @@
   * [T-SQL](code-style/t-sql.md)
   * [Tailwind](code-style/tailwind.md)
 * [数据库迁移](contributing/database-migrations/README.md)
-  * [进化的数据库设计](getting-started/server/mssql/edd.md)
+  * [进化数据库设计](getting-started/server/mssql/edd.md)
 * [提交签名](tools/commit-signing.md)
 * [拉取请求](contributing/pull-requests/README.md)
   * [代码审查指南](contributing/pull-requests/code-review.md)
