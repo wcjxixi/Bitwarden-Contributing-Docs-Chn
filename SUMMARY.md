@@ -63,7 +63,7 @@
     * [测试结构](contributing/testing/unit/structure.md)
 * [修改用户机密](contributing/user-secrets.md)
 
-## 架构 <a href="#architecture" id="architecture"></a>
+## =架构 <a href="#architecture" id="architecture"></a>
 
 * [架构](architecture/architecture.md)
 * [架构决策记录](architecture/adr/README.md)
