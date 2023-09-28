@@ -6,7 +6,7 @@
 
 在 Bitwarden，我们鼓励每个人都参与代码审查。团队将主要关注他们自己的代码审查，但如果您看到一些有趣的内容，请随时加入并讨论。
 
-为了进行高效的代码审查，需要记住以下几点（来自 [Best Practices for Code Review | SmartBear](https://smartbear.com/learn/code-review/best-practices-for-peer-code-review/)）：
+要进行高效的代码审查，需要记住以下几点（来自 [Best Practices for Code Review | SmartBear](https://smartbear.com/learn/code-review/best-practices-for-peer-code-review/)）：
 
 * 拉取请求应该是可管理的。如果 PR 太大（明显超过几百行），请询问贡献者是否可以在审查之前将其拆分为多个 PR。
   * 这在我们的代码库中可能很棘手，因为许多事情都是紧密耦合的。
@@ -58,16 +58,59 @@
 * 您已验证链接的 Jira 问题描述是否与 PR 中所做的更改匹配。
 * 您已阅读并理解 PR 建议的更改的全部影响。
 * 您证明这些变化
-  * 解决预期的问题，
-  * 以最好的方式解决需求，
+  * 解决了明显的问题，
+  * 以最好的方式解决了需求，
   * 代码结构良好，
-  * 遵循我们最新的、公认的模式，
+  * 遵循了我们最新的、公认的模式，
   * 并且没有意外的副作用。
 
-## 审查技巧 <a href="#reviewing-techniques" id="reviewing-techniques"></a>
+如果您对上述任何内容不确定，请考虑使用不同的状态或先与作者联系以做讨论。另外，请毫不犹豫地请求其他人进行第二次审查。
+
+如果 PR 影响多个团队，则需要所有受影响团队的批准。生成 PR 的团队（或者管理 PR 的团队（如果它源自社区））的审查者负责批准整个更改，而受影响的团队仅负责他们的代码库部分。
+
+## 审查技术 <a href="#reviewing-techniques" id="reviewing-techniques"></a>
+
+没有一种放之四海而皆准的代码审查技术。然而，有一些技术、工具和其他资源可以帮助您更有效地审查代码。
 
 ### 多个重点领域 <a href="#multiple-focus-areas" id="multiple-focus-areas"></a>
 
+将代码审查分为多个重点领域会很有帮助。并一次专注于一个视角。
+
+* 宏观视角——关注整个 PR。
+  * 问题解决了吗？
+  * 通过在适当的地方使用适当的抽象进行更改，是否可以有效地解决该问题？
+  * PR 是否改变了您期望改变的领域？
+    * 有缺失的吗？
+    * 有没有意想不到的收获？
+* 微观视角 - 专注于单个文件。
+  * 是否遵守代码样式？
+  * 代码可读吗？
+  * 是否遵循了以前的模式？
+  * 以前的模式仍然是正确的选择吗？
+
 ### GitHub 功能 <a href="#github-features" id="github-features"></a>
 
+GitHub 界面有一些方便的工具可以帮助您审查代码。有关更多信息，请参阅下面的内容。
+
+* [评论拉取请求 - GitHub 文档](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/reviewing-changes-in-pull-requests/commenting-on-a-pull-request)。如何评论 PR，包括：
+  * 对多行进行评论
+  * 建议作者通过 GitHub 界面对代码更改立即接受并合并
+    * 小心这个！您没有享受到 IDE 的好处。这很容易破坏语法或格式。
+* [关于比较拉取请求中的分支 - GitHub Docs](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-comparing-branches-in-pull-requests)。查看差异的不同方式，包括：
+  * 隐藏空格（如果有大量缩进更改，则非常有用）
+  * 分别显示旧代码和新代码（这样您就可以在没有任何干扰的情况下阅读新代码） - 或将它们组合起来（这样您可以准确地看到发生了哪些更改）
+
 ### 本地运行 <a href="#running-locally" id="running-locally"></a>
+
+许多更改可以在 GitHub 上在线查看。然而，有时在本地运行代码有助于提高您的理解 - 例如：
+
+* 使用 IDE 功能（例如跳转到定义或查找引用）
+* 重现您认为在代码中发现的错误
+* 运行解决方案以了解它们如何组合在一起（宏观视角）。
+
+要在本地运行代码，我们建议使用 GitHub CLI。这使您可以直接签出 PR，而无需管理远程分支 - 例如：
+
+```bash
+// From within the repo:
+gh pr checkout <GitHub PR number>
+```
