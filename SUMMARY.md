@@ -88,7 +88,7 @@
   * [0019 - Adoption of Web Push](architecture/adr/0019-adoption-of-web-push.md)
   * [0020 - Observability with OpenTelemetry](architecture/adr/0020-observability-with-opentelemetry.md)
   * [0021 - Logging to Standard Output](architecture/adr/0021-logging-to-standard-output.md)
-* [Web 客户端架构](architecture/clients/README.md)
+* [网络客户端架构](architecture/clients/README.md)
   * [概述](architecture/clients/overview.md)
   * [数据模型](architecture/clients/data-model.md)
   * [表示层](architecture/presentation/README.md)
