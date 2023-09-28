@@ -1,10 +1,10 @@
-# Secrets.json
+# \*用户秘密
 
 {% hint style="info" %}
 对应的[官方页面地址](https://contributing.bitwarden.com/getting-started/server/secrets/)
 {% endhint %}
 
-服务器存储库带有它自己的 `dev/secrets.json` 文件，供社区贡献者使用。内部 Bitwarden 开发人员将需要不同的用户机密文件，以便正确模拟云端环境。
+服务器存储库带有它自己的 `dev/secrets.json` 文件，供社区贡献者使用。Bitwarden 内部开发人员将需要不同的用户机密文件，以便正确模拟云端环境。
 
 我们用于开发的用户机密文件可以在 Bitwarden 应用程序的开发集合中找到。如果您无权访问此集合，请联系您的管理员。
 

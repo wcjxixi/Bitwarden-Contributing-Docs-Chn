@@ -4,7 +4,7 @@
 对应的[官方页面地址](https://contributing.bitwarden.com/getting-started/server/self-hosted/)
 {% endhint %}
 
-{% hint style="warning" %}
+{% hint style="info" %}
 此页面仅在您需要测试自托管功能时才与您相关。大多数开发工作都**不**需要它。 如果您只有本地服务器，请转至[服务器设置指南](guide.md)部分。
 {% endhint %}
 
@@ -39,22 +39,22 @@ git clone git@github.com:bitwarden/server.git server-selfhost
 * 作为用户机密存储在自托管实例中，以及
 * 在您的云端配置实例的 `Installations` 表中，以便它可以验证来自您的自托管服务器的请求
 
-要获取 ID 和 Key，可以
+要获取 ID 和 Key，可以：
 
 * 从 [https://bitwarden.com/host/](https://bitwarden.com/host/) 获取它们，或者
 * 生成一个 Guid (ID) 和随机字母数字字符串 (Key)
 
-记录下它们以便在接下来的步骤中使用。
+记录下记录这些信息，以便在接下来的步骤中使用。
 
 ### 从云端实例复制文件 <a href="#copy-files-from-cloud-instance" id="copy-files-from-cloud-instance"></a>
 
-您需要从云配置的存储库中复制两个文件（这俩个文件您应该已经设置好了）。它们将被复制到您的自托管存储库。它们都位于 `dev` 文件夹中。我们将它们复制过来以节省时间和精力；如果它们具有几乎所有相同的值时，则无需完成重新生成它们的工作。复制到自托管存储库后，我们将在下面的后续步骤中修改它们。
+您需要从云配置的存储库中复制两个文件（这俩个文件您应该已经设置好了）。它们将被复制到您的自托管存储库。它们都位于 `dev` 文件夹中。我们将它们复制过来以节省时间和精力；既然它们的值几乎都一样，就没必要重新生成了。复制到自托管存储库后，我们将在下面的后续步骤中修改它们。
 
 #### `secrets.json` 文件 <a href="#secretsjson-file" id="secretsjson-file"></a>
 
 将 `secrets.json` 文件复制到您刚刚克隆的自托管存储库的 `dev` 文件夹中。
 
-{% hint style="warning" %}
+{% hint style="success" %}
 `.gitignore` 配置将阻止将 `dev` 文件夹中的 `secrets.json` 签入源代码管理。在任何情况下都不应将 `secrets.json` 推送到源。
 {% endhint %}
 
