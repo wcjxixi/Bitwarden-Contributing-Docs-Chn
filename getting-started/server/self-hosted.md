@@ -1,4 +1,4 @@
-# 自托管指南
+# \*自托管指南
 
 {% hint style="info" %}
 对应的[官方页面地址](https://contributing.bitwarden.com/getting-started/server/self-hosted/)
@@ -69,7 +69,7 @@ git clone git@github.com:bitwarden/server.git server-selfhost
 我们必须配置用户机密的 `Dev:SelfHostOverride:GlobalSettings` 部分。本节指定的设置将覆盖本地自托管开发实例的设置。被覆盖部分中的任何内容都将被应用，而不是 `GlobalSettings` 中给出的值。
 
 {% hint style="success" %}
-如果您忘记了什么是用户机密，请回顾[用户机密](user-secrets.md)。
+如果您忘记了什么是用户机密，请回顾[用户机密](../../contributing/user-secrets.md)。
 {% endhint %}
 
 我们需要在此处执行此操作，因为我们需要能够定义在 Docker 容器中的环境变量中指定的真实的自托管实例的设置值。我们使用机密文件来执行此操作，而不是在我们的机器上设置环境变量以及让 .NET Core 配置中的构建为我们构建我们的设置。

@@ -62,7 +62,7 @@ C:\Windows\System32\drivers\etc\hosts
 
 ### 用户机密 <a href="#user-secrets" id="user-secrets"></a>
 
-除了修改主机文件外，还需要创建或更新服务器中 API 和 Identity 项目的[用户机密](../../server/user-secrets.md) `globalSettings:baseServiceUri:vault` 以映射域名。例如：
+除了修改主机文件外，还需要创建或更新服务器中 API 和 Identity 项目的[用户机密](../../../contributing/user-secrets.md) `globalSettings:baseServiceUri:vault` 以映射域名。例如：
 
 ```json
 {

@@ -26,7 +26,7 @@
 
 * 一个正常运行的本地开发服务器
 * Docker
-* 一种在服务器项目中管理用户机密的方法 - 请参阅[用户机密参考](../user-secrets.md)
+* 一种在服务器项目中管理用户机密的方法 - 请参阅[用户机密参考](../../../contributing/user-secrets.md)
 * 数据库管理软件（参阅[工具推荐](../../tools.md)）
 * `dotnet` cli
 * `dotnet` cli [实体框架核心工具](https://learn.microsoft.com/zh-cn/ef/core/cli/dotnet)

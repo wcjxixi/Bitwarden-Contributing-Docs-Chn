@@ -119,7 +119,7 @@ pwsh setup_secrets.ps1
 ```
 
 {% hint style="info" %}
-如果您在设置用户机密时需要帮助，请参阅[用户机密参考](../server/user-secrets.md)。
+如果您在设置用户机密时需要帮助，请参阅[用户机密参考](../../contributing/user-secrets.md)。
 {% endhint %}
 
 ### 配置组织 <a href="#configure-organization" id="configure-organization"></a>

@@ -66,7 +66,7 @@ dotnet run
 如果还没有，请立即返回然后配置它。
 
 {% hint style="success" %}
-有关如何配置用户机密的信息，请参阅[用户机密](../../contributing/user-secrets.md)。
+有关如何配置用户机密的信息，请参阅[用户机密](broken-reference)。
 {% endhint %}
 
 ## 登录 <a href="#logging-in" id="logging-in"></a>
