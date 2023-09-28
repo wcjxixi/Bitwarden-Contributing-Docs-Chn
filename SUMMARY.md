@@ -17,7 +17,7 @@
   * [\*Ingress 隧道](getting-started/server/tunnel.md)
   * [\*用户秘密](getting-started/server/secrets.md)
   * [\*自托管指南](getting-started/server/self-hosted.md)
-  * [\*单点登录 (SSO)](getting-started/server/sso/README.md)
+  * [\*=单点登录 (SSO)](getting-started/server/sso/README.md)
     * [=本地 IdP](getting-started/server/sso/local.md)
     * [=Okta](getting-started/server/sso/okta.md)
 * [客户端](getting-started/clients/README.md)
