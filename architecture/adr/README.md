@@ -4,13 +4,15 @@
 对应的[官方页面地址](https://contributing.bitwarden.com/architecture/adr/)
 {% endhint %}
 
-[架构决策 (AD)](https://en.wikipedia.org/wiki/Architectural\_decision) 是一种软件设计选择，用于解决在架构上具有重要意义的功能性或非功能性需求。例如，对于实例，这可能是技术选择（例如 Java 与 JavaScript）、IDE 的选择（例如 IntelliJ 与 Eclipse IDE）、库之间的选择（例如 [SLF4J](https://www.slf4j.org/) 与 [java.util.logging](https://docs.oracle.com/javase/8/docs/api/java/util/logging/package-summary.html)），或功能上的决定（例如，无限撤消与有限撤消）。
+> 架构决策记录：Architectural Decision Records，简称 ADR。
+
+[架构决策 (AD)](https://en.wikipedia.org/wiki/Architectural\_decision) 是一种软件设计选择，用于解决在架构上具有重要意义的功能性或非功能性需求。例如，对于实例，这可能是技术选择（例如 Java 与 JavaScript）、IDE 的选择（例如 IntelliJ 与 Eclipse IDE）、库之间的选择（例如 [SLF4J](https://www.slf4j.org/) 与 [java.util.logging](https://docs.oracle.com/javase/8/docs/api/java/util/logging/package-summary.html)），或功能上的决策（例如，无限撤消与有限撤消）。
 
 ## @Bitwarden
 
-在 Bitwarden 的工程团队中引入架构决策 (AD) 的目的是引导开发朝着可维护和可扩展的代码库方向发展。同时努力实现所有团队的统一性。
+在 Bitwarden 的工程团队中引入架构决策 (AD) 的目的是引导开发朝着可维护和可扩展的代码库方向发展。同时努力确保所有团队的一致性。
 
-AD 还将作为提出和规划技术债务的基础。
+AD 还将作为提议和规划技术债务的基础。
 
 ### 状态定义 <a href="#status-definition" id="status-definition"></a>
 
