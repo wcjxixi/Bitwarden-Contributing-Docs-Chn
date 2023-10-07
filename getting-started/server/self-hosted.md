@@ -250,4 +250,4 @@ dotnet run --launch-profile Api-SelfHost
 
 * [个人许可证](https://help.ppgg.in/self-hosting/licensing-for-paid-features#individual-license)
 * [通过网络密码库获得的组织许可证](https://help.ppgg.in/self-hosting/licensing-for-paid-features#organization-license)
-* 通过提供商门户获得的组织许可证
+* [通过提供商门户获得的组织许可证](https://help.ppgg.in/provider-portal/get-started-with-provider-portal#enabling-the-self-hosted-instances)
