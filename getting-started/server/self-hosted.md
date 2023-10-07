@@ -232,10 +232,22 @@ dotnet run --launch-profile Api-SelfHost
 
 <details>
 
-<summary>配置 sausage 是如何生成的</summary>
+<summary>sausage 配置是如何生成的</summary>
 
 我们的 Web 配置位于 `config/` 中。每一个都有一个名为 `dev` 的子对象。为此，config 对象将 `dev` 对象重新定义为 `dev: {cloud: {}, selfHosted: {}}`。在我们的 webpack 配置文件中，我们根据这些值更新代理和端口设置。
 
 `dev` 对象同时包含云端和自托管开发环境的配置。
 
 </details>
+
+## 许可证功能 <a href="#licensed-features" id="licensed-features"></a>
+
+如果您需要在自托管实例上重新实现[许可证功能](https://help.ppgg.in/self-hosting/licensing-for-paid-features)，则需要使用在云端配置实例中已注册的许可证文件来解锁这些功能。
+
+为此，您应该首先启动本地云端配置和自托管 Web 客户端，要获取和应用许可证，这两个环境都是必需的。
+
+您现在可以选择要申请的许可证类型。每个指令的说明各不相同，但最好的资源是 Bitwarden 帮助中心文档：
+
+* [个人许可证](https://help.ppgg.in/self-hosting/licensing-for-paid-features#individual-license)
+* [通过网络密码库获得的组织许可证](https://help.ppgg.in/self-hosting/licensing-for-paid-features#organization-license)
+* 通过提供商门户获得的组织许可证
