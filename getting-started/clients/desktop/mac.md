@@ -8,7 +8,7 @@
 
 ### Xcode
 
-### 钥匙链 <a href="#keychain" id="keychain"></a>
+### 钥匙串 <a href="#keychain" id="keychain"></a>
 
 ### 配置配置文件 <a href="#provisioning-profile" id="provisioning-profile"></a>
 

@@ -6,6 +6,10 @@
 
 Bitwarden 严格遵守 [WCAG AA 要求](https://www.w3.org/WAI/WCAG2AA-Conformance)。以下介绍了在实现功能和内容时应考虑的无障碍的常见方面。此列表并不全面，但它提供了一个起点，让您了解可能会限制无障碍新功能的常见「陷阱」。有关无障碍的全面指南，请访问 [WCAG 官方网站](https://www.w3.org/WAI/WCAG21/Understanding/)。
 
+{% hint style="info" %}
+有关 Bitwarden 无障碍的其他资源可以在 [Confluence](https://bitwarden.atlassian.net/wiki/spaces/EN/pages/193953973) 上找到。
+{% endhint %}
+
 ## 视觉呈现 <a href="#visual-presentation" id="visual-presentation"></a>
 
 | WCAG 成功规范                                                                                                                                                                                                                      | 描述                                                                                                                                                                                                                                                                                                                              |
