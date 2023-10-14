@@ -37,11 +37,11 @@
 1. 将相关的 `.sql` 文件从 `src/Sql/dbo` 复制到 `src/Sql/dbo_finalization` 。
 2. 移除不再需要的向后兼容性。
 3. 编写一个新的 Migration 并将其放置在 `src/Migrator/DbScripts_finalization` 中。将其命名为 `YYYY-0M-FinalizationMigration.sql` 。
-   * 通常，迁移被设计为按顺序运行。但是，由于 DbScripts\_future 中的迁移可能会无序运行，因此必须小心确保它们与 DbScripts 的更改保持兼容。为了实现这一目标，我们只保留一个迁移，它执行所有向后不兼容的架构更改。
+   * 通常情况下，迁移是被设计为按顺序运行的。然而，由于 DbScripts\_finalization中 的迁移可以不按顺序运行，因此必须注意确保它们与 DbScripts 的变更保持兼容。为了做到这一点，我们只保留了一个迁移，用于执行所有向后不兼容的架构变更。
 
 ### EF 迁移 <a href="#ef-migrations" id="ef-migrations"></a>
 
-如果更改数据库架构，则必须创建 EF 迁移脚本以确保 EF 数据库跟上这些更改。开发人员必须这样做，并将迁移包含在他们的 PR 中。
+如果要更改数据库架构，则必须创建 EF 迁移脚本，以确保 EF 数据库与这些更改保持同步。开发人员必须这样做，并将迁移包含在他们的 PR 中。
 
 要创建这些脚本，您必须首先根据需要更新 `Core/Entities` 中的数据模型。这将用于为我们的每个 EF 目标生成迁移。
 
