@@ -8,7 +8,7 @@
 * [工具](getting-started/tools.md)
 * [服务器](getting-started/server/README.md)
   * [设置指南](getting-started/server/guide.md)
-  * [=高级服务器设置](getting-started/server/advanced-setup.md)
+  * [\*高级服务器设置](getting-started/server/advanced-setup.md)
   * [数据库](getting-started/server/database/README.md)
     * [MSSQL](getting-started/server/mssql/README.md)
     * [实体框架](getting-started/server/ef/README.md)
