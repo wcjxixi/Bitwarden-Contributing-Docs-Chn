@@ -36,7 +36,7 @@
   * [CLI](getting-started/clients/cli.md)
   * [移动端](getting-started/clients/mobile/README.md)
     * [Android](getting-started/clients/mobile/android.md)
-    * [=\*iOS](getting-started/clients/mobile/ios.md)
+    * [\*iOS](getting-started/clients/mobile/ios.md)
     * [=\*watchOS](getting-started/clients/mobile/watchos.md)
   * [故障排除](getting-started/clients/troubleshooting.md)
 * [企业](getting-started/enterprise/README.md)
