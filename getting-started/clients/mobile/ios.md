@@ -27,7 +27,7 @@
 
 1、打开 Visual Studio for Mac
 
-2、转到首选项 > 发布 > Apple 开发者账户
+2、转到「首选项」->「发布」->「Apple 开发者账户」
 
 3、点击「添加」，选择「企业账户」，然后使用之前配置的 Apple 开发者账户登录
 
@@ -39,7 +39,7 @@
 
 4、点击「查看详细信息...」
 
-5、如果您没有有效的 Apple 开发证书，请点击创建证书 > Apple 开发
+5、如果您没有有效的 Apple 开发证书，请点击「创建证书」->「Apple 开发」
 
 6、点击「下载所有配置文件」
 
@@ -75,7 +75,7 @@ sudo xcode-select -s /Applications/Xcode_14_2.app
 
 2、接受所有默认设置，确保已安装所有扩展/附加组件等
 
-3、创建新的项目... >「iOS」>「App」
+3、创建新的项目... ->「iOS」->「App」
 
 4、对您的新项目使用以下选项：
 
@@ -102,7 +102,7 @@ sudo xcode-select -s /Applications/Xcode_14_2.app
 
 {% embed url="https://contributing.bitwarden.com/assets/images/signing-and-capabilities-241bc2966623419ab15ef49a36c2a153.png" %}
 
-8、从菜单栏中，点击「产品」>「构建」
+8、从菜单栏中，点击「产品」->「构建」
 
 9、重复步骤 3-8，并在步骤 4 中进行以下更改：
 
@@ -140,7 +140,7 @@ sudo xcode-select -s /Applications/Xcode_14_2.app
 {% tabs %}
 {% tab title="Windows" %}
 1. 连接到您刚刚完成上述步骤的 Mac
-2. 打开 Visual Studio 然后点击「工具」>「iOS」>「与 Mac 配对」
+2. 打开 Visual Studio 然后点击「工具」->「iOS」->「与 Mac 配对」
 3. 扫描并选择您的机器。如果看不到，请点击「添加 Mac... 」按钮并输入 Mac 名称或 IP 地址。如果不知道 Mac 名称（或 Mac 上有 Windows 虚拟机），请进入 Mac，打开「系统偏好设置」>「共享」，查找机器的「.local」地址。
 4. 出现提示时提供您的 MacOS 用户名和密码
 5. 配对后，关闭「配对 Mac」窗口
@@ -152,11 +152,11 @@ sudo xcode-select -s /Applications/Xcode_14_2.app
 {% tab title="macOS" %}
 1. 检查是否安装了命令行工具：
    * 打开 Xcode
-   * 从菜单栏中，点击「Xcode」>「首选项」>「位置」
+   * 从菜单栏中，点击「Xcode」->「首选项」->「位置」
    * 确保在「命令行工具」下选择了 Xcode 版本
 2. 打开 Visual Studio for Mac
 3. 打开本地移动存储库根目录中的移动解决方案文件 (`bitwarden-mobile.sln`)
-4. 在顶部栏中，您应该能够选择「iOS」>「iPhoneSimulator」> 选择您的型号然后点击「运行」（如果您设置了物理设备，则选择您的物理设备）
+4. 在顶部栏中，您应该能够选择「iOS」->「iPhoneSimulator」->选择您的型号然后点击「运行」（如果您设置了物理设备，则选择您的物理设备）
 {% endtab %}
 {% endtabs %}
 
