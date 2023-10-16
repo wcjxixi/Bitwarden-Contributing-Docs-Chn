@@ -64,7 +64,7 @@
 * [=\*功能标志](contributing/feature-flags.md)
 * [\*模板库](contributing/template-repository.md)
 * [测试](contributing/testing/README.md)
-  * [=\*负载测试](contributing/testing/load.md)
+  * [\*负载测试](contributing/testing/load.md)
   * [单元测试](contributing/testing/unit/README.md)
     * [命名约定](contributing/testing/unit/naming-conventions.md)
     * [测试结构](contributing/testing/unit/structure.md)
