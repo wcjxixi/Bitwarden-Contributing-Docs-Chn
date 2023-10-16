@@ -14,7 +14,7 @@
     * [实体框架](getting-started/server/ef/README.md)
   * [事件记录](getting-started/server/events.md)
   * [\*Ingress 隧道](getting-started/server/tunnel.md)
-  * [=\*SCIM](getting-started/server/scim.md)
+  * [\*SCIM](getting-started/server/scim.md)
   * [\*自托管指南](getting-started/server/self-hosted.md)
   * [系统管理门户](getting-started/server/admin.md)
   * [\*单点登录 (SSO)](getting-started/server/sso/README.md)
