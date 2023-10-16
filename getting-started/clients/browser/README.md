@@ -121,7 +121,7 @@ npm run build:watch
 1. 使用上面的说明检查背景页面
 2. 点击调试器右上角的「三点」，然后点击「禁用弹出式自动隐藏」
 3. 打开扩展弹出窗口
-4. 单击「iframe」按钮（「三点」旁边）然后选择「/popup/index.html」
+4. 点击「iframe」按钮（「三点」旁边）然后选择「/popup/index.html」
 
 ### Safari
 
@@ -135,7 +135,7 @@ Safari WebExtensions 必须通过 Mac App Store 分发，并与常规 Mac App St
 
 1. 打开 Safari
 2. 点击「设置」，然后点击「扩展程序」选项卡
-3. 单击 Bitwarden 扩展旁边的「卸载」
+3. 点击 Bitwarden 扩展旁边的「卸载」
 4. 使用扩展删除此应用程序
 5. 重新打开 Safari 并检查「设置」以确认没有安装 Bitwarden 浏览器扩展。如果仍有 Bitwarden 扩展，请重复步骤 3-4
 6. 退出并完全关闭 Safari 浏览器

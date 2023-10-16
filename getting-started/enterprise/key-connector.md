@@ -139,7 +139,7 @@ pwsh setup_secrets.ps1
 {% tab title="Visual Studio" %}
 使用 Visual Studio 打开解决方案文件 (`bitwarden-key-connector.sln`)，然后点击「Play」按钮。
 
-启动 Key Connector 后，使用非管理员或所有者的帐户使用 SSO 登录。新用户将自动加入 Key Connector，现有用户将被提示删除其主密码。
+启动 Key Connector 后，使用非管理员或所有者的账户使用 SSO 登录。新用户将自动加入 Key Connector，现有用户将被提示删除其主密码。
 {% endtab %}
 
 {% tab title="CLI" %}
