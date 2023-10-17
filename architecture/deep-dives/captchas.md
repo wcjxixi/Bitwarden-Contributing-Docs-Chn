@@ -30,14 +30,18 @@ Bitwarden 代码库中的两个位置需要 Captcha：
 
 身份服务中的 `/identity/connect/token` 的请求通过 `ResourceOwnerPasswordValidator` 进行验证。在此验证器中，我们执行不同的检查以查看是否需要 Captcha，因为端点已通过身份验证并且我们从请求中了解用户（假设他们已成功通过身份验证）。
 
-对于已知设备，不需要 Captcha。此检查是在应用以下任何规则之前执行的。
+{% hint style="info" %}
+对于已知设备，不要求 Captcha。此检查是在应用以下任何规则之前执行的。
+{% endhint %}
 
 对于这些请求，如果满足以下任一条件，则服务器需要 Captcha：
 
 * CloudFlare `x-Cf-Is-Bot` 标头出现在请求中
 * `ForceCaptchaRequired` 设置已启用
-* 此实例是云托管的，并且用户的电子邮件地址未经验证
 * 登录失败次数大于 `MaximumFailedLoginAttempts` 的设置
+* 该请求针对的是云托管用户，其电子邮件未经验证，且在过去 24 小时内未进行过注册
+
+CLI 会对 `bw login` 命令执行相同的 Captcha 检查，但不会提示 Captcha，而是接受 API 客户端机密。在下面的逻辑中，服务器会将 API 客户端机密作为「Captcha 响应」来处理。
 
 ## Captcha 在我们的代码中如何工作？ <a href="#how-do-captchas-work-in-our-code" id="how-do-captchas-work-in-our-code"></a>
 
