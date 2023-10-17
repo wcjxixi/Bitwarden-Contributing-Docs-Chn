@@ -105,7 +105,7 @@
     * [Vision](architecture/clients/services/vision.md)
     * [=实现](architecture/clients/services/implementation.md)
 * [=移动客户端架构](architecture/mobile-clients/README.md)
-  * [=概览](architecture/mobile-clients/overview.md)
+  * [概述](architecture/mobile-clients/overview.md)
   * [=watchOS](architecture/mobile-clients/watchos.md)
 * [服务器架构](architecture/server.md)
 * [深度剖析](architecture/deep-dives/README.md)

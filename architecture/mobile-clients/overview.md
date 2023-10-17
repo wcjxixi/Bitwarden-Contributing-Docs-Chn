@@ -1,10 +1,10 @@
-# =概览
+# 概述
 
 {% hint style="info" %}
 对应的[官方页面地址](https://contributing.bitwarden.com/architecture/mobile-clients/overview)
 {% endhint %}
 
-移动应用程序的整体架构与遵循分层架构的网络客户端非常相似：
+移动应用程序的整体架构与遵循分层架构的[网络客户端](../clients/overview.md)非常相似：
 
 * 状态层
 * 服务层
