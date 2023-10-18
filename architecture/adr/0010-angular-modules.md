@@ -4,7 +4,7 @@
 对应的[官方页面地址](https://contributing.bitwarden.com/architecture/adr/angular-ngmodules)
 {% endhint %}
 
-| ID:  | ADR-0010   |
+| ID：  | ADR-0010   |
 | ---- | ---------- |
 | 状态：  | 进行中        |
 | 发表于： | 2022-07-25 |

@@ -4,7 +4,7 @@
 对应的[官方页面地址](https://contributing.bitwarden.com/architecture/adr/refactor-state-service)
 {% endhint %}
 
-| ID:  | ADR-0004   |
+| ID：  | ADR-0004   |
 | ---- | ---------- |
 | 状态：  | 进行中        |
 | 发表于： | 2022-06-30 |

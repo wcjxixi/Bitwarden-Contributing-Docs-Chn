@@ -4,7 +4,7 @@
 对应的[官方页面地址](https://contributing.bitwarden.com/architecture/adr/feature-management)
 {% endhint %}
 
-| ID:  | ADR-0018   |
+| ID：  | ADR-0018   |
 | ---- | ---------- |
 | 状态：  | 完成         |
 | 发表于： | 2023-02-01 |

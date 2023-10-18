@@ -4,7 +4,7 @@
 对应的[官方页面地址](https://contributing.bitwarden.com/architecture/adr/angular-folder-structure)
 {% endhint %}
 
-| ID:  | ADR-0011   |
+| ID：  | ADR-0011   |
 | ---- | ---------- |
 | 状态：  | 进行中        |
 | 发表于： | 2022-07-25 |

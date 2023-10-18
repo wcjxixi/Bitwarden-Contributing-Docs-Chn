@@ -4,7 +4,7 @@
 对应的[官方页面地址](https://contributing.bitwarden.com/architecture/adr/typescript-strict)
 {% endhint %}
 
-| ID:  | ADR-0014   |
+| ID：  | ADR-0014   |
 | ---- | ---------- |
 | 状态：  | 进行中        |
 | 发表于： | 2022-09-02 |

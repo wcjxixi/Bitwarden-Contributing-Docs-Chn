@@ -4,7 +4,7 @@
 对应的[官方页面地址](https://contributing.bitwarden.com/architecture/adr/public-module-npm-packages)
 {% endhint %}
 
-| ID:  | ADR-0002   |
+| ID：  | ADR-0002   |
 | ---- | ---------- |
 | 状态：  | 进行中        |
 | 发表于： | 2022-06-02 |

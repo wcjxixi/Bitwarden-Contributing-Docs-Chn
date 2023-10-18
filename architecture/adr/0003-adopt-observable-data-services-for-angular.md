@@ -4,7 +4,7 @@
 对应的[官方页面地址](https://contributing.bitwarden.com/architecture/adr/observable-data-services)
 {% endhint %}
 
-| ID:  | ADR-0003   |
+| ID：  | ADR-0003   |
 | ---- | ---------- |
 | 状态：  | 进行中        |
 | 发表于： | 2022-06-30 |

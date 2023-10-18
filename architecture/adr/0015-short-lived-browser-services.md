@@ -4,7 +4,7 @@
 对应的[官方页面地址](https://contributing.bitwarden.com/architecture/adr/short-lived-browser-services)
 {% endhint %}
 
-| ID:  | ADR-0015   |
+| ID：  | ADR-0015   |
 | ---- | ---------- |
 | 状态：  | 进行中        |
 | 发表于： | 2022-12-09 |

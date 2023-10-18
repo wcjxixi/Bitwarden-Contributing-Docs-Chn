@@ -4,7 +4,7 @@
 对应的[官方页面地址](https://contributing.bitwarden.com/architecture/adr/manifest-v3-browser-memory-caching)
 {% endhint %}
 
-| ID:  | ADR-0007   |
+| ID：  | ADR-0007   |
 | ---- | ---------- |
 | 状态：  | 进行中        |
 | 发表于： | 2022-07-12 |

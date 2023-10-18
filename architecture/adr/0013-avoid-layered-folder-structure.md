@@ -4,7 +4,7 @@
 对应的[官方页面地址](https://contributing.bitwarden.com/architecture/adr/avoid-layered-folder-structure)
 {% endhint %}
 
-| ID:  | ADR-0013   |
+| ID：  | ADR-0013   |
 | ---- | ---------- |
 | 状态：  | 进行中        |
 | 发表于： | 2022-09-16 |

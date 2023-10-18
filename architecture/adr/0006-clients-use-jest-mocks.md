@@ -4,7 +4,7 @@
 对应的[官方页面地址](https://contributing.bitwarden.com/architecture/adr/clients-use-jest-mocks)
 {% endhint %}
 
-| ID:  | ADR-0006   |
+| ID：  | ADR-0006   |
 | ---- | ---------- |
 | 状态：  | 完成         |
 | 发表于： | 2022-07-18 |

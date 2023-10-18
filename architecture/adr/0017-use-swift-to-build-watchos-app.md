@@ -4,7 +4,7 @@
 对应的[官方页面地址](https://contributing.bitwarden.com/architecture/adr/watchOS-use-swift)
 {% endhint %}
 
-| ID:  | ADR-0017   |
+| ID：  | ADR-0017   |
 | ---- | ---------- |
 | 状态：  | 完成         |
 | 发表于： | 2022-12-30 |

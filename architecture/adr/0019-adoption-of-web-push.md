@@ -4,7 +4,7 @@
 对应的[官方页面地址](https://contributing.bitwarden.com/architecture/adr/adopt-web-push)
 {% endhint %}
 
-| ID:  | ADR-0019   |
+| ID：  | ADR-0019   |
 | ---- | ---------- |
 | 状态：  | 进行中        |
 | 发表于： | 2023-02-06 |

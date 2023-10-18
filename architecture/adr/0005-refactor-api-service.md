@@ -4,7 +4,7 @@
 对应的[官方页面地址](https://contributing.bitwarden.com/architecture/adr/refactor-api-service)
 {% endhint %}
 
-| ID:  | ADR-0005   |
+| ID：  | ADR-0005   |
 | ---- | ---------- |
 | 状态：  | 进行中        |
 | 发表于： | 2022-07-08 |

@@ -4,7 +4,7 @@
 对应的[官方页面地址](https://contributing.bitwarden.com/architecture/adr/server-CQRS-pattern)
 {% endhint %}
 
-| ID:  | ADR-0008   |
+| ID：  | ADR-0008   |
 | ---- | ---------- |
 | 状态：  | 进行中        |
 | 发表于： | 2022-07-15 |

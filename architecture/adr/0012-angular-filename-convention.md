@@ -4,7 +4,7 @@
 对应的[官方页面地址](https://contributing.bitwarden.com/architecture/adr/angular-filename-convention)
 {% endhint %}
 
-| ID:  | ADR-0012   |
+| ID：  | ADR-0012   |
 | ---- | ---------- |
 | 状态：  | 进行中        |
 | 发表于： | 2022-08-23 |

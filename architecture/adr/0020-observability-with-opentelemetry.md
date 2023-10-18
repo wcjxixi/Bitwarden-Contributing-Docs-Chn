@@ -4,7 +4,7 @@
 对应的[官方页面地址](https://contributing.bitwarden.com/architecture/adr/observability-with-opentelemetry)
 {% endhint %}
 
-| ID:  | ADR-0020   |
+| ID：  | ADR-0020   |
 | ---- | ---------- |
 | 状态：  | 进行中        |
 | 发表于： | 2023-07-13 |

@@ -4,7 +4,7 @@
 对应的[官方页面地址](https://contributing.bitwarden.com/architecture/adr/standard-output-logging)
 {% endhint %}
 
-| ID:  | ADR-0021   |
+| ID：  | ADR-0021   |
 | ---- | ---------- |
 | 状态：  | 进行中        |
 | 发表于： | 2023-07-13 |
