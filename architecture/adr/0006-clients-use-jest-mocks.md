@@ -6,7 +6,7 @@
 
 | ID:  | ADR-0006   |
 | ---- | ---------- |
-| 状态：  | 进行中        |
+| 状态：  | 完成         |
 | 发表于： | 2022-07-18 |
 
 ## 背景和问题陈述​ <a href="#context-and-problem-statement" id="context-and-problem-statement"></a>
