@@ -34,6 +34,7 @@ git clone https://github.com/bitwarden/clients.git
 2、安装依赖：
 
 ```bash
+cd clients
 npm ci
 ```
 
