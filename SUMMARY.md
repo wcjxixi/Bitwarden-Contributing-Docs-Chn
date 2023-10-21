@@ -61,7 +61,7 @@
   * [\*UI 审查 - Chromatic](contributing/pull-requests/chromatic.md)
   * [代码审查指南](contributing/pull-requests/code-review.md)
 * [无障碍](contributing/accessibility.md)
-* [=\*功能标志](contributing/feature-flags.md)
+* [\*功能标志](contributing/feature-flags.md)
 * [\*模板库](contributing/template-repository.md)
 * [测试](contributing/testing/README.md)
   * [\*负载测试](contributing/testing/load.md)
