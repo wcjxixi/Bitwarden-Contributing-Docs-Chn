@@ -29,7 +29,7 @@
 * [NPM](https://www.npmjs.com/) v8（包含在 Node 中）
 * [Rust](https://www.rust-lang.org/tools/install) - 用于本地桌面组件
 * [Git](https://git-scm.com/)
-  * 所有 _Bitwarden 贡献者_都需要[提交签名](../tools/commit-signing.md)，特别鼓励_社区贡献者_提交签名
+  * 强烈建议[提交签名](../tools/commit-signing.md)
 
 ### 移动端 <a href="#mobile" id="mobile"></a>
 
