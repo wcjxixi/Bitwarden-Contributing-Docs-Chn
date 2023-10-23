@@ -15,7 +15,7 @@
 
 ### Typescript 严格模式插件​ <a href="#typescript-strict-mode-plugin" id="typescript-strict-mode-plugin"></a>
 
-## 考虑的选项​ <a href="#considered-options" id="considered-options"></a>
+## 考虑的方案​ <a href="#considered-options" id="considered-options"></a>
 
 ## 决策结果​ <a href="#decision-outcome" id="decision-outcome"></a>
 

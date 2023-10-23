@@ -11,7 +11,7 @@
 
 ## 背景和问题陈述​ <a href="#context-and-problem-statement" id="context-and-problem-statement"></a>
 
-## 考虑的选项​ <a href="#considered-options" id="considered-options"></a>
+## 考虑的方案​ <a href="#considered-options" id="considered-options"></a>
 
 ## 决策结果​ <a href="#decision-outcome" id="decision-outcome"></a>
 
@@ -19,7 +19,7 @@
 
 ### 消极的后果​ <a href="#negative-consequences" id="negative-consequences"></a>
 
-## 选项的优点和缺点​ <a href="#pros-and-cons-of-the-options" id="pros-and-cons-of-the-options"></a>
+## 方案的优点和缺点​ <a href="#pros-and-cons-of-the-options" id="pros-and-cons-of-the-options"></a>
 
 ### 使用 Xamarin 的 .Net  <a href="#net-using-xamarin" id="net-using-xamarin"></a>
 

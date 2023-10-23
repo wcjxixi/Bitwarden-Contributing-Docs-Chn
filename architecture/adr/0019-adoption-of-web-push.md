@@ -17,7 +17,7 @@
 
 ### 成本和可靠性​ <a href="#cost-and-reliability" id="cost-and-reliability"></a>
 
-## 考虑的选项​ <a href="#considered-options" id="considered-options"></a>
+## 考虑的方案​ <a href="#considered-options" id="considered-options"></a>
 
 ## 决策结果​ <a href="#decision-outcome" id="decision-outcome"></a>
 

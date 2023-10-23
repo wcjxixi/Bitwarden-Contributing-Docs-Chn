@@ -13,7 +13,7 @@
 
 ### 资源​ <a href="#resources" id="resources"></a>
 
-## 考虑的选项​ <a href="#considered-options" id="considered-options"></a>
+## 考虑的方案​ <a href="#considered-options" id="considered-options"></a>
 
 ### `SharedModule` & `CoreModule` <a href="#sharedmodule--coremodule" id="sharedmodule--coremodule"></a>
 
