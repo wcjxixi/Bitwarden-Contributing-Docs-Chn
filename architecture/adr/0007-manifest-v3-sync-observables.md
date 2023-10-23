@@ -20,11 +20,11 @@ Manifest v3 通过禁止长期活动的后台进程，为网络扩展带来了�
 ## 考虑的方案​ <a href="#considered-options" id="considered-options"></a>
 
 * **构造函数中的初始化和 UpdateObservables 中的更新** -- 这种方法简单明了，但无法保证我们始终更新存储并发出信息。此外，如果打开侧边栏并通过内容脚本保存密码，也无法实时同步数据。我们可以构建一个计时器来定期从内存中同步这些项目。
-* **装饰器模式** -- 使用装饰器来包装服务构造函数。这个装饰器将
+* **装饰器模式** -- 使用装饰器来包装服务构造函数。这个装饰器将：
   * 从 `LocalBackedMemoryStorage` 初始化
-  * 订阅观察者以更新 `LocalBackedMemoryStorage`，并将事件推送给 worker 以从内存中更新可观察值
+  * 订阅观察者以更新 `LocalBackedMemoryStorage`，并将事件推送给 worker 以从内存中更新可观察值。
   * 在更新事件上推送 `observable.next`
-  * 在这里避免循环事件循环？ （循环发生在消息和可观察对象上）
+  * 在这里避免循环事件循环？（循环发生在消息和可观察对象上）
     * 消息可以通过 guid 来修复
     * TODO：消息问题 -> `observable.next` -> 订阅 -> 存储服务未知
 
