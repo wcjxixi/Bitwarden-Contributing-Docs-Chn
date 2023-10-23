@@ -22,8 +22,8 @@ Angular 鼓励创建许多小型 NgModule，人们提倡每个功能一个模块
 ## 考虑的方案​ <a href="#considered-options" id="considered-options"></a>
 
 * **什么都不做** -- 维持现状，在单一模块中定义大多数组件。这意味着每个组件本质上仍然是全局的。
-* **Angular 模块** -- 在我们的桶形文件旁边添加 NgModules。这样可以对内部组件进行适当的封装。
-* **独立组件** -- 提供 NgModule 的优点，而无需大部分额外的样板。目前仍处于预览阶段，因此依赖它有一定风险。
+* [**Angular 模块**](https://angular.io/guide/architecture-modules) -- 在我们的桶形文件旁边添加 NgModules。这样可以对内部组件进行适当的封装。
+* [**独立组件**](https://angular.io/guide/standalone-components) -- 提供 NgModule 的优点，而无需大部分额外的样板。目前仍处于预览阶段，因此依赖它有一定风险。
 
 ## 决策结果​ <a href="#decision-outcome" id="decision-outcome"></a>
 
@@ -48,7 +48,7 @@ Angular 鼓励创建许多小型 NgModule，人们提倡每个功能一个模块
 
 ### 实施 <a href="#implementation" id="implementation"></a>
 
-功能模块的一个例子是报告。我们知道报告既可用于个人用户，也可用于组织。
+功能模块的一个例子是**报告**。我们知道报告既可用于个人用户，也可用于组织。
 
 ```
 reports
