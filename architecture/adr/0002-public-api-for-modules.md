@@ -15,8 +15,8 @@
 
 ## 考虑的方案​ <a href="#considered-options" id="considered-options"></a>
 
-* **直接引用** - 我们可以决定继续原样。没有公共 API。
-* **使用 index.ts 定义公共模块** - 我们将 `index.ts` 添加到定义了「公共」接口的每一个文件夹中。然后其他包导入根索引文件，并禁止直接引用内部文件。
+* **直接引用** -- 我们可以决定继续原样。没有公共 API。
+* **使用 index.ts 定义公共模块** -- 我们将 `index.ts` 添加到定义了「公共」接口的每一个文件夹中。然后其他包导入根索引文件，并禁止直接引用内部文件。
 
 ## 决策结果​ <a href="#decision-outcome" id="decision-outcome"></a>
 

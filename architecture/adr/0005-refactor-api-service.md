@@ -15,8 +15,8 @@
 
 ## 考虑的方案​ <a href="#considered-options" id="considered-options"></a>
 
-* **提取类** - 我们应该使用提取类重构来分解类，其中每个域上下文应该有自己的 API 服务。 `ApiService` 应被转换为通用服务，该服务不关心请求或响应是什么，只能在其他 API 服务中使用。
-* **什么也不做** - 保持原样。
+* **提取类** -- 我们应该使用提取类重构来分解类，其中每个域上下文应该有自己的 API 服务。 `ApiService` 应被转换为通用服务，该服务不关心请求或响应是什么，只能在其他 API 服务中使用。
+* **什么也不做** -- 保持原样。
 
 ## 决策结果​ <a href="#decision-outcome" id="decision-outcome"></a>
 

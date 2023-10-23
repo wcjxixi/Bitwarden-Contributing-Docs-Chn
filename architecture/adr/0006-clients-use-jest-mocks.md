@@ -25,9 +25,9 @@
 
 ## 考虑的方案​ <a href="#considered-options" id="considered-options"></a>
 
-* **使用 Substitute 并禁止开发人员使用 Jest 模拟** - 我们保留这两个库并继续同时使用它们。在这种情况下，我们应该为开发人员提供明确的指导和培训，让他们在所有模拟和参数匹配中使用 Substitute（而不是 Jest）。
-* **弃用 Substitute，改用带有 jest-mock-extend 的 Jest** - 我们弃用 Substitute，并更新所有现有测试以改用 Jest 模拟。我们使用 [jest-mock-extended](https://github.com/marchaos/jest-mock-extended/)，以方便的模拟语法并更好地与 Typescript 集成。此更改不应导致任何功能损失。
-* **使用不同的模拟库和/或测试运行器** - 我们完全更改为其他东西。这实际上并没有摆在桌面上，但也是一种选择。Jest 到目前为止运行良好，所以我不建议我们更换它。
+* **使用 Substitute 并禁止开发人员使用 Jest 模拟** -- 我们保留这两个库并继续同时使用它们。在这种情况下，我们应该为开发人员提供明确的指导和培训，让他们在所有模拟和参数匹配中使用 Substitute（而不是 Jest）。
+* **弃用 Substitute，改用带有 jest-mock-extend 的 Jest** -- 我们弃用 Substitute，并更新所有现有测试以改用 Jest 模拟。我们使用 [jest-mock-extended](https://github.com/marchaos/jest-mock-extended/)，以方便的模拟语法并更好地与 Typescript 集成。此更改不应导致任何功能损失。
+* **使用不同的模拟库和/或测试运行器** -- 我们完全更改为其他东西。这实际上并没有摆在桌面上，但也是一种选择。Jest 到目前为止运行良好，所以我不建议我们更换它。
 
 ## 决策结果​ <a href="#decision-outcome" id="decision-outcome"></a>
 
