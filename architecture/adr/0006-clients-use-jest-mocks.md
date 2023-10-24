@@ -37,10 +37,10 @@
 
 ### 积极的后果​ <a href="#positive-consequences" id="positive-consequences"></a>
 
-* 相比 Substitute，前端开发人员可能更熟悉 Jest
-* Jest 有更多的文档和资源（Medium 文章、StackOverflow 答案等）
-* 它是 Jest 的一个组成部分
-* 不需要混合不同的库或语法
+* 相比 Substitute，前端开发人员可能更熟悉 Jest。
+* Jest 有更多的文档和资源（Medium 文章、StackOverflow 答案等）。
+* 它是 Jest 的一个组成部分。
+* 不需要混合不同的库或语法。
 
 ### 消极的后果​ <a href="#negative-consequences" id="negative-consequences"></a>
 

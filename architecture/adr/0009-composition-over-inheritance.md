@@ -24,9 +24,9 @@
 
 ### 积极的后果​ <a href="#positive-consequences" id="positive-consequences"></a>
 
-* 更轻巧的组件
-* 更好地理解变更所产生的影响，因为它现在仅被隔离到单个组件
+* 更轻巧的组件。
+* 更好地理解变更所产生的影响，因为它现在仅被隔离到单个组件。
 
 ### 消极的后果​ <a href="#negative-consequences" id="negative-consequences"></a>
 
-* 继承性更容易理解
+* 继承性更容易理解。

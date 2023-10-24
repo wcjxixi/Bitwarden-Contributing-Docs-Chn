@@ -24,7 +24,7 @@
 
 ## 决策结果​ <a href="#decision-outcome" id="decision-outcome"></a>
 
-选择的方案：**短暂主题**。
+选择的方案：**短期主题**。
 
 这种方案最为灵活，既能保留 Observables 的优点，又能避免与页面可见性事件相关的不稳定性。
 
@@ -32,9 +32,9 @@
 
 ### 积极的后果​ <a href="#positive-consequences" id="positive-consequences"></a>
 
-* 对编写组件级代码没有影响
-* 无论如何都会将我们引向 Manifest V3 所需的方向
-* 绕过由于悬空订阅而导致的潜在内存泄漏
+* 对编写组件级代码没有影响。
+* 无论如何都会将我们引向 Manifest V3 所需的方向。
+* 绕过由于悬空订阅而导致的潜在内存泄漏。
 
 ### 消极的后果​ <a href="#negative-consequences" id="negative-consequences"></a>
 

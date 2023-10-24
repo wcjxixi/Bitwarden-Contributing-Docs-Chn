@@ -34,9 +34,9 @@ Manifest v3 通过禁止长期活动的后台进程，为网络扩展带来了�
 
 ### 积极的后果​ <a href="#positive-consequences" id="positive-consequences"></a>
 
-* 可重用、简洁的解决方案
-* 遵循可观察到的最佳实践
+* 可重用、简洁的解决方案。
+* 遵循可观察到的最佳实践。
 
 ### 消极的后果​ <a href="#negative-consequences" id="negative-consequences"></a>
 
-* 一些未知的实施细节可能会导致开发过程中出现障碍
+* 一些未知的实施细节可能会导致开发过程中出现障碍。
