@@ -90,7 +90,7 @@
   * [0014 - Adopt Typescript Strict flag](architecture/adr/0014-adopt-typescript-strict-flag.md)
   * [0015 - Short Lived Browser Services](architecture/adr/0015-short-lived-browser-services.md)
   * [0016 - Move Decryption and Encryption to Views](architecture/adr/0016-move-decryption-and-encryption-to-views.md)
-  * [=0017 - Use Swift to build watchOS app](architecture/adr/0017-use-swift-to-build-watchos-app.md)
+  * [0017 - Use Swift to build watchOS app](architecture/adr/0017-use-swift-to-build-watchos-app.md)
   * [=0018 - Feature management](architecture/adr/0018-feature-management.md)
   * [=0019 - Adoption of Web Push](architecture/adr/0019-adoption-of-web-push.md)
   * [=0020 - Observability with OpenTelemetry](architecture/adr/0020-observability-with-opentelemetry.md)
