@@ -31,7 +31,7 @@
 
 ## 决策结果​ <a href="#decision-outcome" id="decision-outcome"></a>
 
-选择的方案：**弃用 Substitute，改用带有 jest-mock-extend 的 Jest**
+选择的方案：**弃用 Substitute，改用带有 jest-mock-extend 的 Jest**。
 
 我们还应该举办培训/学习会议，以鼓励并授权开发人员对其代码进行单元测试。
 

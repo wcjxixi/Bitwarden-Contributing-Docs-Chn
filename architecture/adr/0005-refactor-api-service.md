@@ -20,7 +20,7 @@
 
 ## 决策结果​ <a href="#decision-outcome" id="decision-outcome"></a>
 
-选择的方案：**提取类**
+选择的方案：**提取类**。
 
 这些新类的命名应该表示为 `{Domain}ApiService` ，例如文件夹域应该命名为 `FolderApiService` 。
 

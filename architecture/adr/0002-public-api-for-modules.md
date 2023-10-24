@@ -20,7 +20,7 @@
 
 ## 决策结果​ <a href="#decision-outcome" id="decision-outcome"></a>
 
-选择的方案：**使用 index.ts 定义公共模块。**
+选择的方案：**使用 index.ts 定义公共模块**。
 
 ### 积极的后果​ <a href="#positive-consequences" id="positive-consequences"></a>
 

@@ -20,7 +20,7 @@
 
 ## 决策结果​ <a href="#decision-outcome" id="decision-outcome"></a>
 
-选择的方案：**优先选择组合而不是继承**
+选择的方案：**优先选择组合而不是继承**。
 
 ### 积极的后果​ <a href="#positive-consequences" id="positive-consequences"></a>
 

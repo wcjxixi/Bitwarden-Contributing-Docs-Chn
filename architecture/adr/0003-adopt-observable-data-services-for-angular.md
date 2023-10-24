@@ -15,12 +15,12 @@
 
 ## 考虑的方案​ <a href="#considered-options" id="considered-options"></a>
 
-* [可观察/反应数据服务](https://blog.angular-university.io/how-to-build-angular2-apps-using-rxjs-observable-data-services-pitfalls-to-avoid/)
-* [NGRX](https://ngrx.io/) - Angular 的反应状态（Redux 实现）
+* [可观察/反应数据服务](https://blog.angular-university.io/how-to-build-angular2-apps-using-rxjs-observable-data-services-pitfalls-to-avoid/)。
+* [NGRX](https://ngrx.io/) - Angular 的反应状态（Redux 实现）。
 
 ## 决策结果​ <a href="#decision-outcome" id="decision-outcome"></a>
 
-选择的方案：**可观察数据服务**，因为
+选择的方案：**可观察数据服务**，因为：
 
 * 使我们能够快速迭代到更具反应性的数据模型。
   * 反应式数据模型让我们摆脱事件消息。
