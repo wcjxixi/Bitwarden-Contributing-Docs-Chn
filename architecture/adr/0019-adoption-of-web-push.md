@@ -57,7 +57,7 @@
 * 需要关注 Safari 对 Web Push 的支持，该支持在撰写本文时刚刚发布。
 * 选择不同的服务提供商可能会增加成本。
 
-## 计划​ <a href="#plan" id="plan"></a>
+### 计划​ <a href="#plan" id="plan"></a>
 
 通知服务将继续存在，并支持 SignalR 连接的 API 以及 Web Push 的新 API。基于云的客户端将在可行的情况下连接到具有 Web Push 的统一服务提供商，并在无法利用 Web Push 时利用现有的 SignalR 实现。自托管客户端将利用通知服务提供的 Web Push 和 SignalR 类似组合。Web Push 所需的密钥交换和安全性 (VAPID) 可以使用现有的内部技术用于自托管，以及服务提供商用于云托管。随着时间的推移，客户端将大部分迁移到 Web Push 连接，SignalR 的负载也将大大减少，不过在可预见的未来，SignalR 仍计划为某些客户端提供支持。
 

@@ -43,7 +43,7 @@
 * 专有的分析器实现可能会提供 OpenTelemetry 无法提供的信号信息，包括自动插桩。
 * 有了在平台内捕获信号的能力，就需要维护不捕获敏感数据的明确策略。
 
-## 计划​ <a href="#plan" id="plan"></a>
+### 计划​ <a href="#plan" id="plan"></a>
 
 .NET Core 的 `System.Diagnostics` 库支持发出与 OpenTelemetry 兼容的指标，平台内的跟踪和指标将在控制台上并通过 OTLP 导出提供。将通过新的应用程序设置提供开启或关闭配置，例如：
 
