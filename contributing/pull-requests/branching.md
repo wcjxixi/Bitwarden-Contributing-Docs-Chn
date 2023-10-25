@@ -14,9 +14,9 @@
 
 为了将分支上的工作链接到我们的 Jira 议题，分支名称应由三部分组成，并用斜杠分隔：
 
-* 团队名称或缩写（例如 `vault` ），以及
-* Jira 议题标签（例如 `pm-1234` ）
-* 正在完成的工作的简短描述（例如 `update-csp-hashes` ）
+* 团队名称或缩写（例如 `vault`），以及
+* Jira 议题标签（例如 `pm-1234`）
+* 正在完成的工作的简短描述（例如 `update-csp-hashes`）
 
 在此示例中，完整的分支名称为 `vault/pm-1234/update-csp-hashes` 。
 
@@ -27,7 +27,7 @@
 
 ### 多个 Jira 议题的分支​ <a href="#branches-for-multiple-jira-issues" id="branches-for-multiple-jira-issues"></a>
 
-如果分支将包含多个 Jira 议题（很可能是因为它是[长期功能分支](branching.md#long-lived-feature-branch)）的工作，则名称应该是功能的描述性名称，用破折号分隔（例如 `my-long-lived-feature` ）。尽可能考虑简洁，因为我们的 QA 团队在对功能执行 QA 测试时需要使用此分支名称。
+如果分支将包含多个 Jira 议题（很可能是因为它是[长期功能分支](branching.md#long-lived-feature-branch)）的工作，则名称应该是功能的描述性名称，用破折号分隔（例如 `my-long-lived-feature`）。尽可能考虑简洁，因为我们的 QA 团队在对功能执行 QA 测试时需要使用此分支名称。
 
 ## 分支开发 <a href="#branching-for-development" id="branching-for-development"></a>
 
@@ -80,7 +80,7 @@
 
 当开发人员批准 PR 时，PR 应完成，并将整体更改的一部分合并到长期功能分支中。
 
-合并所有议题分支后， `needs-qa` 标签应应用于长期功能分支。
+合并所有议题分支后，`needs-qa` 标签应应用于长期功能分支。
 
 #### **同步长期功能分支​** <a href="#syncing-the-long-lived-feature-branch" id="syncing-the-long-lived-feature-branch"></a>
 
@@ -107,14 +107,14 @@ QA 团队在长期功能分支上进行测试（请注意，QA 在 PR 完成后�
 由于功能分支没有与主分支相同的保护，因此在技术上可以直接提交到分支或合并拉取请求，而无需进行最新的审查。然而，这不应该鼓励，并且应尽可能避免，唯一的例外是合并提交。
 {% endhint %}
 
-当功能分支上的所有开发和功能测试完成后， `master` 中的原始 PR 应移出草稿状态，并用适当的开发组标记它以供审查。
+当功能分支上的所有开发和功能测试完成后，`master` 中的原始 PR 应移出草稿状态，并用适当的开发组标记它以供审查。
 
 可以使用 GitHub 的 UI 打开 Pull 请求并单击 `Commits` 选项卡来执行最终审查。然后可以单独检查每个提交。
 
-* 通过点击拉取请求链接并验证提交 SHA 哈希匹配，验证提交是否具有现有审查。寻找 `Author merged commit {hash} into branch` 。
+* 通过点击拉取请求链接并验证提交 SHA 哈希匹配，验证提交是否具有现有审查。寻找 `Author merged commit {hash} into branch`。
 * 如果不执行提交的定期代码审查。
 
-合并提交也应该进行审查，GitHub UI 将自动简化合并提交并仅显示所做的更改。如果从命令行或通过其他工具进行审查，请使用命令 `git show <hash>` 。有关一些背景和更多信息，请阅读[如何审查合并提交](https://haacked.com/archive/2014/02/21/reviewing-merge-commits/)。
+合并提交也应该进行审查，GitHub UI 将自动简化合并提交并仅显示所做的更改。如果从命令行或通过其他工具进行审查，请使用命令 `git show <hash>`。有关一些背景和更多信息，请阅读[如何审查合并提交](https://haacked.com/archive/2014/02/21/reviewing-merge-commits/)。
 
 ### 短期功能分支​ <a href="#short-lived-feature-branch" id="short-lived-feature-branch"></a>
 
@@ -129,7 +129,7 @@ QA 团队在长期功能分支上进行测试（请注意，QA 在 PR 完成后�
 
 #### **开发** <a href="#development" id="development"></a>
 
-开发人员应创建一个以发起 Jira 议题命名的分支（例如 `PM-1234` ），并从该分支创建草稿 PR 到 `master` 中。
+开发人员应创建一个以发起 Jira 议题命名的分支（例如 `PM-1234`），并从该分支创建草稿 PR 到 `master` 中。
 
 {% hint style="info" %}
 分支名称应尽可能短，最好只是议题名称。这使得 QA 团队可以更轻松地将环境切换到各个分支，因为他们在执行此操作时必须多次输入分支名称。这对于短期功能分支尤其重要，其中测试可能要简短得多。
@@ -157,18 +157,18 @@ QA 团队应该在短期功能分支上进行测试。如果发现任何缺陷�
 
 `rc` 分支用于回归测试。然后将其用作每个已部署实体的生产发布和部署的源。每次发布时，都会创建一个 `vYYYY.MM.#-{component}` 格式的标签。这可用于稍后修复此版本。
 
-发布完成后， `rc` 分支将被删除。
+发布完成后，`rc` 分支将被删除。
 
 ### 修补程序版本​ <a href="#hotfix-releases" id="hotfix-releases"></a>
 
-对于修补程序版本，会根据应应用修补程序的版本的版本标记创建修补程序分支。分支命名取决于存储库。对于除 `clients` 之外的所有存储库，分支名称为 `hotfix-rc` 。但是，由于我们可以单独发布各个客户端，因此 `clients` 存储库中的每个客户端都有自己的已命名修补程序分支：
+对于修补程序版本，会根据应应用修补程序的版本的版本标记创建修补程序分支。分支命名取决于存储库。对于除 `clients` 之外的所有存储库，分支名称为 `hotfix-rc`。但是，由于我们可以单独发布各个客户端，因此 `clients` 存储库中的每个客户端都有自己的已命名修补程序分支：
 
 * 网页端： `hofix-rc-web`
 * 桌面端： `hotfix-rc-desktop`
 * 浏览器端： `hotfix-rc-browser`
 * CLI： `hotfix-rc-cli`
 
-创建修补程序分支后， `master` 中的各个提交将被精心挑选到修补程序分支中。对于客户端修复，这可能需要挑选多个修补程序分支。
+创建修补程序分支后，`master` 中的各个提交将被精心挑选到修补程序分支中。对于客户端修复，这可能需要挑选多个修补程序分支。
 
 部署修补程序后，修补程序分支将被删除。
 

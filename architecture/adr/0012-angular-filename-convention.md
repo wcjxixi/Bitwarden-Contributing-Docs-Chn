@@ -41,7 +41,7 @@
 * `.type` - 枚举
 * `.service.abstraction` - 服务的抽象类，用于 DI，并非所有服务都需要抽象类
 
-类名也应使用后缀作为其类名的一部分。例如，服务实现将被命名为 `FolderService` ，请求模型将被命名为 `FolderRequest` 。
+类名也应使用后缀作为其类名的一部分。例如，服务实现将被命名为 `FolderService`，请求模型将被命名为 `FolderRequest`。
 
 如果服务无法完全实现，则会创建带有 `Abstraction` 后缀的抽象类。如果 Angular 和 Node 实现由于某种原因必须有所不同，通常会发生这种情况。传统上会使用接口，但在 JavaScript 中，TypeScript 接口不能用于连接依赖注入。
 

@@ -22,11 +22,11 @@ Bitwarden 客户端的服务架构主要由三种不同类型的服务组成，�
 
 这些类及它们的职责详细信息如下：
 
-| 类型                        | 职责                                                                                                                    | 示例                      |
-| ------------------------- | --------------------------------------------------------------------------------------------------------------------- | ----------------------- |
-| `[Domain]Service`         | 通过 Observable 提供对域的读取访问，当本地状态通过 RxJS `BehaviorSubject` 更改时会被更新。该服务还提供与该域相关的帮助方法。                                      | `PolicyService`         |
-| `Internal[Domain]Service` | 在服务的 Observable 属性上提供公共更新方法，而无需更新服务器上的 `[Domain]` 。它作为扩展 `[Domain]Service` 的抽象类实现，但通常不与大多数类共享。                        | `InternalPolicyService` |
-| `[Domain]ApiService`      | 提供与服务器同步的写入功能。一般来说，如果要编辑一个 `[Domain]` ，则需要 `[Domain]ApiService` 。有关更多详细信息，请参阅[域更新](implementation.md#domain-updates)。 | `PolicyApiService`      |
+| 类型                        | 职责                                                                                                                  | 示例                      |
+| ------------------------- | ------------------------------------------------------------------------------------------------------------------- | ----------------------- |
+| `[Domain]Service`         | 通过 Observable 提供对域的读取访问，当本地状态通过 RxJS `BehaviorSubject` 更改时会被更新。该服务还提供与该域相关的帮助方法。                                    | `PolicyService`         |
+| `Internal[Domain]Service` | 在服务的 Observable 属性上提供公共更新方法，而无需更新服务器上的 `[Domain]`。它作为扩展 `[Domain]Service` 的抽象类实现，但通常不与大多数类共享。                       | `InternalPolicyService` |
+| `[Domain]ApiService`      | 提供与服务器同步的写入功能。一般来说，如果要编辑一个 `[Domain]`，则需要 `[Domain]ApiService`。有关更多详细信息，请参阅[域更新](implementation.md#domain-updates)。 | `PolicyApiService`      |
 
 ## 域更新 <a href="#domain-updates" id="domain-updates"></a>
 

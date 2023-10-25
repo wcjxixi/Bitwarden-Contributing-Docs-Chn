@@ -18,7 +18,7 @@ Shadow DOM API 允许将单独的、已封装的 DOM 树嵌入到页面中。
 
 Shadow DOM API 与我们的自动填充逻辑相关，因为常见的 DOM 查询方法（例如 `document.querySelector` 和 `document.querySelectorAll` ）不会返回位于 Shadow DOM 中的结果。
 
-Shadow 根节点有一个 `mode` 属性，可以设置为 `"open"` 或 `"closed"` 。 `mode` 旨在允许（禁止）主 DOM 访问 Shadow DOM 树，尽管某些浏览器提供了可以忽略此属性的特定 API。
+Shadow 根节点有一个 `mode` 属性，可以设置为 `"open"` 或 `"closed"` 。`mode` 旨在允许（禁止）主 DOM 访问 Shadow DOM 树，尽管某些浏览器提供了可以忽略此属性的特定 API。
 
 ## 我们如何处理 Shadow DOM <a href="#how-we-handle-shadow-doms" id="how-we-handle-shadow-doms"></a>
 

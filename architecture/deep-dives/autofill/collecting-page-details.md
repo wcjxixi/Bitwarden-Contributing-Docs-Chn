@@ -55,7 +55,7 @@
 
 Bitwarden 扩展用户可以通过右键单击页面然后选择「Bitwarden / 自动填充」，然后从与当前页面 URI 匹配的项目中选择一个密码库项目，从而从上下文菜单中触发自动填充。
 
-当用户在上下文菜单中选择一个项目时，浏览器的 `contextMenu.OnClicked()` 事件就会被触发。该事件由 `contextMenus.background.js` 后台页面处理。该页面会发送一条发送方为 `contextMenus` 的 `collectPageDetails` 命令。 `autofill.js` 内容脚本捕获此请求，并在完成后发送一条发发送方为 `contextMenus` 的 `collectPageDetailsResponse` 消息，此消息由 `runtime.background.js` 后台页面处理。
+当用户在上下文菜单中选择一个项目时，浏览器的 `contextMenu.OnClicked()` 事件就会被触发。该事件由 `contextMenus.background.js` 后台页面处理。该页面会发送一条发送方为 `contextMenus` 的 `collectPageDetails` 命令。`autofill.js` 内容脚本捕获此请求，并在完成后发送一条发发送方为 `contextMenus` 的 `collectPageDetailsResponse` 消息，此消息由 `runtime.background.js` 后台页面处理。
 
 <div align="left">
 

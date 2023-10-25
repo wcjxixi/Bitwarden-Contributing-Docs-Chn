@@ -21,8 +21,8 @@
 ## 考虑的方案​ <a href="#considered-options" id="considered-options"></a>
 
 * **`<<Entity>>Services`** -- 上面讨论过了。
-* **查询和命令** -- 从根本上来说，我们的问题是 `<<Entity>>Service` 名称完全封装了您可以对该实体执行的任何操作，并且排除了不同实体之间的任何代码重用。 CQRS 模式根据对实体采取的操作创建类。这就自然而然地限制了类的范围，并在两个实体需要实现相同的命令行为时允许重复使用。[https://docs.microsoft.com/en-us/azure/architecture/patterns/cqrs](https://docs.microsoft.com/en-us/azure/architecture/patterns/cqrs)。
-* **基于功能的小型服务** -- 这种设计会将 `<<Entity>>Service` 分解为 `<<Feature>>Service` ，但最终会遇到同样的问题。随着功能的增加，该服务将变得臃肿，并与其他服务紧密耦合。
+* **查询和命令** -- 从根本上来说，我们的问题是 `<<Entity>>Service` 名称完全封装了您可以对该实体执行的任何操作，并且排除了不同实体之间的任何代码重用。CQRS 模式根据对实体采取的操作创建类。这就自然而然地限制了类的范围，并在两个实体需要实现相同的命令行为时允许重复使用。[https://docs.microsoft.com/en-us/azure/architecture/patterns/cqrs](https://docs.microsoft.com/en-us/azure/architecture/patterns/cqrs)。
+* **基于功能的小型服务** -- 这种设计会将 `<<Entity>>Service` 分解为 `<<Feature>>Service`，但最终会遇到同样的问题。随着功能的增加，该服务将变得臃肿，并与其他服务紧密耦合。
 
 ## 决策结果​ <a href="#decision-outcome" id="decision-outcome"></a>
 

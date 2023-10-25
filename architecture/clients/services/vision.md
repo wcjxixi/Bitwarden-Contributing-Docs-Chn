@@ -17,11 +17,11 @@
 
 ### `StorageService` <a href="#storageservice" id="storageservice"></a>
 
-在账户切换之前，客户端状态完全通过直接调用 `StorageService` 对象和魔术字符串键来处理。设置以及获取的值是分布在整个应用程序中的，而不是本地化的。如果一个类需要一些已存储的数据，它会使用带有特定键的 `StorageService` 上的 `get()` 方法。当键相对较少且存储模型不太复杂时，这种方法效果很好。对于账户切换，状态模型对于这种分布式方法来说过于复杂，我们需要一个集中位置来跟踪要获取的几个相似键中的哪一个。那就是 `StateService` 。
+在账户切换之前，客户端状态完全通过直接调用 `StorageService` 对象和魔术字符串键来处理。设置以及获取的值是分布在整个应用程序中的，而不是本地化的。如果一个类需要一些已存储的数据，它会使用带有特定键的 `StorageService` 上的 `get()` 方法。当键相对较少且存储模型不太复杂时，这种方法效果很好。对于账户切换，状态模型对于这种分布式方法来说过于复杂，我们需要一个集中位置来跟踪要获取的几个相似键中的哪一个。那就是 `StateService`。
 
 ### `StateService` <a href="#stateservice" id="stateservice"></a>
 
-`StateService` 的工作原理是维护一个已验证状态的数组，并跟踪该数组中在任何给定时间要使用的实体。始终假定当前活动用户是 `get()` 或 `set()` 所指的用户，因此使用该用户存储/检索实体。此外， `StateService` 通常用于保存解密项目的内存缓存，因为它能够跨上下文同步数据。
+`StateService` 的工作原理是维护一个已验证状态的数组，并跟踪该数组中在任何给定时间要使用的实体。始终假定当前活动用户是 `get()` 或 `set()` 所指的用户，因此使用该用户存储/检索实体。此外，`StateService` 通常用于保存解密项目的内存缓存，因为它能够跨上下文同步数据。
 
 #### **`StateService` 痛点** <a href="#stateservice-pain-points" id="stateservice-pain-points"></a>
 

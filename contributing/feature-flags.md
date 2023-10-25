@@ -73,7 +73,7 @@
 
 将 `example-boolean-key` 和 `example-string-key` 替换为您的标记名称，并相应地更新标记值。
 
-默认情况下，LaunchDarkly 启动将在根项目目录中查找此文件（例如 `Api` 项目的 `/src/Api/` ），并将其部署到构建输出目录。但是，如果您希望将文件存储在其他位置，则可以使用 `FlagDataFilePath` 配置设置来覆盖它。该文件必须在构建解决方案之前存在，但一旦存在，您就可以更改文件内容并在运行/调试代码时立即查看结果。
+默认情况下，LaunchDarkly 启动将在根项目目录中查找此文件（例如 `Api` 项目的 `/src/Api/`），并将其部署到构建输出目录。但是，如果您希望将文件存储在其他位置，则可以使用 `FlagDataFilePath` 配置设置来覆盖它。该文件必须在构建解决方案之前存在，但一旦存在，您就可以更改文件内容并在运行/调试代码时立即查看结果。
 
 ### 本地配置：代码修改​ <a href="#local-configuration-code-modification" id="local-configuration-code-modification"></a>
 
@@ -91,7 +91,7 @@ return new Dictionary<string, string>()
 {% hint style="success" %}
 **客户端中使用的标记的本地数据源**
 
-为了在客户端中使用功能标记，上述设置应在 `Api` 项目中定义 - 这是因为客户端用来查询功能标记的 `/config` 端点位于 `Api` 。这样做将确保检索到正确的标记值并将其发送到客户端。
+为了在客户端中使用功能标记，上述设置应在 `Api` 项目中定义 - 这是因为客户端用来查询功能标记的 `/config` 端点位于 `Api`。这样做将确保检索到正确的标记值并将其发送到客户端。
 {% endhint %}
 
 ## 创建一个新标记​ <a href="#creating-a-new-flag" id="creating-a-new-flag"></a>
@@ -100,8 +100,8 @@ return new Dictionary<string, string>()
 
 一旦您确定需要一个功能标记，第一步就是确定一个名称。命名的建议是：
 
-* 使用短横线命名该标记（小写字母和破折号分隔，例如 `enable-feature` ）。
-* 对于布尔标记，不必包含 `enable` 动词，因为它暗示它是一个功能标记。例如，建议使用 `new-feature` 而不是 `enable-new-feature` 。
+* 使用短横线命名该标记（小写字母和破折号分隔，例如 `enable-feature`）。
+* 对于布尔标记，不必包含 `enable` 动词，因为它暗示它是一个功能标记。例如，建议使用 `new-feature` 而不是 `enable-new-feature`。
 * 保持键名简洁。
 
 名称确定后，将功能标记添加到服务器上的 [`FeatureFlagKeys`](https://github.com/bitwarden/server/blob/master/src/Core/Constants.cs) 常量文件中。这将允许通过您在下面配置的任何数据源从 LaunchDarkly 检索标记。
@@ -176,12 +176,12 @@ return new Dictionary<string, string>()
 
 ### 服务器​ <a href="#server" id="server"></a>
 
-1. 在需要功能标记的地方注入 `IFeatureService` 。请注意，访问功能状态时您还需要 `ICurrentContext` 。
+1. 在需要功能标记的地方注入 `IFeatureService`。请注意，访问功能状态时您还需要 `ICurrentContext`。
 2. 在 [`FeatureFlagKeys`](https://github.com/bitwarden/server/blob/master/src/Core/Constants.cs) 列表中查找您计划使用的密钥的常量。它应该在[创建新标记时](https://contributing.bitwarden.com/contributing/feature-flags/#creating-a-new-flag)添加。
 3. 在要素服务上通过适当的方法使用上述关键常量：
-   * `IsEnabled` 用于布尔值， `false` 为假定的默认值。
-   * `GetIntVariation` 用于整数， `0` 为假定的默认值。
-   * `GetStringVariation` 用于字符串， `null` 为假定的默认值。
+   * `IsEnabled` 用于布尔值，`false` 为假定的默认值。
+   * `GetIntVariation` 用于整数，`0` 为假定的默认值。
+   * `GetStringVariation` 用于字符串，`null` 为假定的默认值。
 
 ## 功能标志生命周期​ <a href="#feature-flag-lifecycle" id="feature-flag-lifecycle"></a>
 

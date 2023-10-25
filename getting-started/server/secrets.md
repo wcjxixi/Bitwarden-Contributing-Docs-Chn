@@ -1,4 +1,4 @@
-# \*用户秘密
+# \*用户机密
 
 {% hint style="info" %}
 对应的[官方页面地址](https://contributing.bitwarden.com/getting-started/server/secrets/)
@@ -8,7 +8,11 @@
 
 我们用于开发的用户机密文件可以在 Bitwarden 应用程序的开发集合中找到。如果您无权访问此集合，请联系您的管理员。
 
+<div align="left">
+
 <figure><img src="../../.gitbook/assets/server-user-secrets.png" alt=""><figcaption></figcaption></figure>
+
+</div>
 
 此安全说明拥有 2 个附件：
 

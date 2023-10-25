@@ -13,9 +13,9 @@
 
 ## 为什么表单提交检测很难？ <a href="#why-is-form-submission-detection-difficult" id="why-is-form-submission-detection-difficult"></a>
 
-表单检测及其提交之所以困难，是因为现代渐进式 Web 应用程序 (Progressive Web App - PWA) 和单页应用程序 (Single-page Application - SPA) 具有很大的灵活性。在经典 HTML 中， `<form>` 元素与将所有表单数据提交给用户的 `<submit>` 一起定义。
+表单检测及其提交之所以困难，是因为现代渐进式 Web 应用程序 (Progressive Web App - PWA) 和单页应用程序 (Single-page Application - SPA) 具有很大的灵活性。在经典 HTML 中，`<form>` 元素与将所有表单数据提交给用户的 `<submit>` 一起定义。
 
-另一方面，在现代应用程序中， `<form>` 元素可用于收集用户数据，但完全独立的 API 请求将表单数据发送到服务器。要全面了解其复杂性，请参阅[这篇](https://developer.mozilla.org/en-US/docs/Learn/Forms/Sending\_forms\_through\_JavaScript)优秀的文档。
+另一方面，在现代应用程序中，`<form>` 元素可用于收集用户数据，但完全独立的 API 请求将表单数据发送到服务器。要全面了解其复杂性，请参阅[这篇](https://developer.mozilla.org/en-US/docs/Learn/Forms/Sending\_forms\_through\_JavaScript)优秀的文档。
 
 ## 表单提交检测涉及什么？ <a href="#what-is-involved-in-form-submission-detection" id="what-is-involved-in-form-submission-detection"></a>
 

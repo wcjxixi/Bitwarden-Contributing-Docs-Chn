@@ -11,7 +11,7 @@
 
 ## 背景和问题陈述​ <a href="#context-and-problem-statement" id="context-and-problem-statement"></a>
 
-[ADR-003](0003-adopt-observable-data-services-for-angular.md) 将 Observables 的使用引入到了我们的 TypeScript 代码库中。该 ADR 描述了使用 `ngDestroy` 触发取消订阅所有已订阅的 `Observables` 。但是，只有当使用 Angular 路由器离开页面时才会调用 `ngDestroy` 。在 SPA 中，这不是问题。如果没有使用路由器，则意味着您关闭了页面，SPA 已失效。在浏览器扩展中，我们有一个持久的背景，可以在此类关闭事件中存活下来。这意味着观察者队列中存在的订阅不再存在。
+[ADR-003](0003-adopt-observable-data-services-for-angular.md) 将 Observables 的使用引入到了我们的 TypeScript 代码库中。该 ADR 描述了使用 `ngDestroy` 触发取消订阅所有已订阅的 `Observables`。但是，只有当使用 Angular 路由器离开页面时才会调用 `ngDestroy`。在 SPA 中，这不是问题。如果没有使用路由器，则意味着您关闭了页面，SPA 已失效。在浏览器扩展中，我们有一个持久的背景，可以在此类关闭事件中存活下来。这意味着观察者队列中存在的订阅不再存在。
 
 特别是在 Firefox 中，这是一个灾难性的失败。Firefox 将用 `DeadObject` 替换为属于不再存在的 DOM 对象的所有对象。当在 `Subject` 上调用 `next()` 时， `DeadObject` 会被视为观察者并抛出错误，从而阻止向后续观察者发出任何进一步的通知，并导致扩展中出现灾难性的中断。
 
@@ -96,7 +96,7 @@ export class BrowserFolderService extends FolderService {
 }
 ```
 
-`@sessionSync` 装饰器负责注册要同步的属性，并提供有关如何在需要序列化数据时初始化数据的信息。 `@browserSession` 装饰器读取注册的属性并在给定类的所有实例之间设置同步。
+`@sessionSync` 装饰器负责注册要同步的属性，并提供有关如何在需要序列化数据时初始化数据的信息。`@browserSession` 装饰器读取注册的属性并在给定类的所有实例之间设置同步。
 
 #### 依赖注入​ <a href="#dependency-injection" id="dependency-injection"></a>
 

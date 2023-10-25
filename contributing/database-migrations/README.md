@@ -34,9 +34,9 @@
 
 #### 非向后兼容迁移 <a href="#non-backwards-compatible-migration" id="non-backwards-compatible-migration"></a>
 
-1. 将相关的 `.sql` 文件从 `src/Sql/dbo` 复制到 `src/Sql/dbo_finalization` 。
+1. 将相关的 `.sql` 文件从 `src/Sql/dbo` 复制到 `src/Sql/dbo_finalization`。
 2. 移除不再需要的向后兼容性。
-3. 编写一个新的 Migration 并将其放置在 `src/Migrator/DbScripts_finalization` 中。将其命名为 `YYYY-0M-FinalizationMigration.sql` 。
+3. 编写一个新的 Migration 并将其放置在 `src/Migrator/DbScripts_finalization` 中。将其命名为 `YYYY-0M-FinalizationMigration.sql`。
    * 通常情况下，迁移是被设计为按顺序运行的。然而，由于 DbScripts\_finalization中 的迁移可以不按顺序运行，因此必须注意确保它们与 DbScripts 的变更保持兼容。为了做到这一点，我们只保留了一个迁移，用于执行所有向后不兼容的架构变更。
 
 ### EF 迁移 <a href="#ef-migrations" id="ef-migrations"></a>
@@ -58,4 +58,4 @@ pwsh ef_migrate.ps1 [NAME_OF_MIGRATION]
 可能需要在正常更新过程之外运行迁移。这些类型的迁移应该出于非常特殊的目的而保留。其中一个原因可能是索引重建。
 
 1. 编写一个带有当前日期前缀的新迁移并将其放置在 `src/Migrator/DbScripts_manual` 中
-2. 在我们的云环境中运行它并且我们对结果感到满意后，创建一个 PR 将其移动到 `DbScripts` 。这将使其能够由我们的迁移器进程在全新安装的云和自托管环境，以及自托管中运行
+2. 在我们的云环境中运行它并且我们对结果感到满意后，创建一个 PR 将其移动到 `DbScripts`。这将使其能够由我们的迁移器进程在全新安装的云和自托管环境，以及自托管中运行

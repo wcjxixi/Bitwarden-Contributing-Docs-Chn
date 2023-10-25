@@ -8,10 +8,10 @@
 
 watchOS 应用程序的结构如下：
 
-* `src/watchOS` ：特定于 watchOS 平台的所有代码
-  * `bitwarden` ：存根 iOS 应用程序，以便 watchOS 应用程序在 XCode 上有一个配套应用程序
-  * `bitwarden WatchKit App` ：我们设置资产的主 Watch 应用程序
-  * `bitwarden WatchKit Extension` ：Watch 应用程序的所有逻辑和表示逻辑都在这里
+* `src/watchOS`：特定于 watchOS 平台的所有代码
+  * `bitwarden`：存根 iOS 应用程序，以便 watchOS 应用程序在 XCode 上有一个配套应用程序
+  * `bitwarden WatchKit App`：我们设置资产的主 Watch 应用程序
+  * `bitwarden WatchKit Extension`：Watch 应用程序的所有逻辑和表示逻辑都在这里
 
 因此，几乎所有与 Watch 应用程序相关的内容都将放在 **WatchKit 扩展**中，而 WatchKit 应用中将只包含资产和一些配置。
 
@@ -20,7 +20,7 @@ watchOS 应用程序的结构如下：
 * 状态（这是 iOS 状态的一个非常简化的版本）
 * 持久化（这里我们使用 `CoreData` 与数据库交互）
 * 服务（顶级生成、加密服务和业务逻辑）
-* 表示（对于具有 MVVM 模式的 UI 使用 `SwiftUI` ）
+* 表示（对于具有 MVVM 模式的 UI 使用 `SwiftUI`）
 
 ## 与 iOS 集成 <a href="#integration-with-ios" id="integration-with-ios"></a>
 
@@ -56,7 +56,7 @@ watchOS 应用程序是使用 `XCode` 和 `Swift` 开发的，我们需要将其
 </Target>
 ```
 
-因此，在 `PropertyGroup` 上， `WatchAppBundleFullPath` 会根据配置和平台以及 XCode watchOS 应用程序构建的输出结果组装在一起。然后，根据 Watch 应用程序是否存在和配置情况，在一些 `ItemGroup` 中加入 Watch 应用程序。任务 `_ResolvedWatchAppReferences` 负责查看由 XCode 构建的 `Bitwarden.app` ，如果它找到 Watch 应用程序，就会将其捆绑到 Xamarin iOS 应用程序。最后，如果 Watch 应用程序已捆绑，则会启用深度签名并打印构建路径。
+因此，在 `PropertyGroup` 上，`WatchAppBundleFullPath` 会根据配置和平台以及 XCode watchOS 应用程序构建的输出结果组装在一起。然后，根据 Watch 应用程序是否存在和配置情况，在一些 `ItemGroup` 中加入 Watch 应用程序。任务 `_ResolvedWatchAppReferences` 负责查看由 XCode 构建的 `Bitwarden.app`，如果它找到 Watch 应用程序，就会将其捆绑到 Xamarin iOS 应用程序。最后，如果 Watch 应用程序已捆绑，则会启用深度签名并打印构建路径。
 
 {% hint style="warning" %}
 正如我们在 csproj 中看到的那样，要将 watchOS 应用程序捆绑到 iOS 应用程序中，我们需要以正确的平台为目标。因此，如果要使用设备，可在 XCode 上以设备为目标构建 watchOS 应用程序，构建完成后可转到 VS4M 构建 iOS 应用程序（该程序将捆绑 watchOS 应用程序）并在设备上运行。

@@ -20,7 +20,7 @@ Native Messaging Test Runner 是一个 Node 应用程序，用于测试桌面端
 
 5、运行 `npm ci`
 
-6、选择一个命令然后运行它！一个好的开始是 `status`。完整的命令列表可以在本文档的 `Commands` 部分中看到。有的命令带有参数，例如 `create`。运行这些命令时，通过在所有参数前加上两个破折号的方式传递参数：`npm run create -- --name NewLogin!` **注意**，您需要在每个命令之前接受桌面应用程序中的提示。这肯定是一个需要改进的地方。
+6、选择一个命令然后运行它！一个好的开始是 `status`。完整的命令列表可以在本文档的 `Commands` 部分中看到。有的命令带有参数，例如 `create`。运行这些命令时，通过在所有参数前加上两个破折号的方式传递参数：`npm run create -- --name NewLogin!`。**注意**，您需要在每个命令之前接受桌面应用程序中的提示。这肯定是一个需要改进的地方。
 
 {% embed url="https://user-images.githubusercontent.com/8926729/191779284-dfce1764-c92a-4728-8aa5-994607741eef.png" %}
 

@@ -196,7 +196,7 @@ END
 
 在具有始终在线应用程序的环境中，必须在推出新代码后运行 _Transition_ 脚本。要执行完整部署，将运行 `DbScripts` 中的所有新迁移，推出新代码，然后在所有新代码服务上线后立即运行 `DbScripts_transition` 目录中的所有转换迁移。如果新代码推出后出现严重故障，将进行回滚（请参阅下面的回滚）。_Finalization_ 迁移将在下一次部署开始时才会运行，并将其移至 `DbScripts` 中。
 
-在此部署之后，为了准备下一个版本， `DbScripts_transition` 中的所有迁移都会移至 `DbScripts` ，然后 `DbScripts_finalization` 中的所有迁移都会移至 `DbScripts`，保留其执行顺序以进行全新安装。对于当前的分支策略，当 `rc` 被削减以准备此版本时，PR 将针对 `master` 开放。此 PR 自动化还将处理重命名迁移文件并将 `[dbo_finalization]` 的任何引用更新为 `[dbo]` 。
+在此部署之后，为了准备下一个版本，`DbScripts_transition` 中的所有迁移都会移至 `DbScripts` ，然后 `DbScripts_finalization` 中的所有迁移都会移至 `DbScripts`，保留其执行顺序以进行全新安装。对于当前的分支策略，当 `rc` 被削减以准备此版本时，PR 将针对 `master` 开放。此 PR 自动化还将处理重命名迁移文件并将 `[dbo_finalization]` 的任何引用更新为 `[dbo]`。
 
 下一次部署将选取 `DbScripts` 中新添加的迁移，并将之前可重复的 _Transition_ 迁移设置为不再可重复，执行 _Finalization_ 迁移，然后执行与以下代码更改相关的任何新迁移出去。
 

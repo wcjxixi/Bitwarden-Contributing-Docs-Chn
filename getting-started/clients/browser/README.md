@@ -29,11 +29,11 @@ npm run build:watch
 
 `managedEnvironment` 设置允许贡献者覆盖服务器的任何或所有 URL。 `managedEnvironment` 在 [`BrowserEnvironmentService`](https://github.com/bitwarden/clients/blob/master/apps/browser/src/services/browser-environment.service.ts) 中被读取，并为任何提供的 URL 覆盖默认的（生产）设置。
 
-有两种使用 `managedEnvironment` 的方法，具体取决于您是否同时运行 web vault。
+有两种使用 `managedEnvironment` 的方法，具体取决于您是否同时运行 Web Vault。
 
 #### 运行 Web Vault 的 **`managedEnvironment`** <a href="#managedenvironment-with-web-vault-running" id="managedenvironment-with-web-vault-running"></a>
 
-如果您还同时运行 web vault，则只需在 `managedEnvironment` 中设置 `base` URL：
+如果您还同时运行 Web Vault，则只需在 `managedEnvironment` 中设置 `base` URL：
 
 ```json
 {
@@ -47,7 +47,7 @@ npm run build:watch
 }
 ```
 
-这是因为 web vault 在其 [`webpack.config.js`](https://github.com/bitwarden/clients/blob/master/apps/web/webpack.config.js) 中包含了 `webpack-dev-server` 软件包。当它运行时，它根据自己的 [`development.json`](https://github.com/bitwarden/clients/blob/master/apps/web/config/development.json) 配置文件中的配置设置代理每一个端点：
+这是因为 Web Vault 在其 [`webpack.config.js`](https://github.com/bitwarden/clients/blob/master/apps/web/webpack.config.js) 中包含了 `webpack-dev-server` 软件包。当它运行时，它根据自己的 [`development.json`](https://github.com/bitwarden/clients/blob/master/apps/web/config/development.json) 配置文件中的配置设置代理每一个端点：
 
 ```json
   "dev": {
@@ -58,11 +58,11 @@ npm run build:watch
   },
 ```
 
-这意味着当 web vault 运行时，浏览器 `managedEnvironment` **无需**逐个覆盖每一个 URL。浏览器会将每个 URL 格式化为 `{base}/{endpoint}`，例如 http://localhost:8080/api，但 webpack DevServer 会将该 URL 代理到正确的端口，例如 http://localhost:4000。
+这意味着当 Web Vault 运行时，浏览器 `managedEnvironment` **无需**逐个覆盖每一个 URL。浏览器会将每个 URL 格式化为 `{base}/{endpoint}`，例如 http://localhost:8080/api，但 webpack DevServer 会将该 URL 代理到正确的端口，例如 http://localhost:4000。
 
 #### 未运行 Web Vault 的 **`managedEnvironment`** <a href="#managedenvironment-without-web-vault-running" id="managedenvironment-without-web-vault-running"></a>
 
-如果您在没有运行 web vault 的情况下测试浏览器扩展，您将无法利用 webpack DevServer 来代理 URL。这意味着您的 `managedEnvironment` 设置必须显式覆盖您要在本地进行通信的所有 URL。
+如果您在没有运行 Web Vault 的情况下测试浏览器扩展，您将无法利用 webpack DevServer 来代理 URL。这意味着您的 `managedEnvironment` 设置必须显式覆盖您要在本地进行通信的所有 URL。
 
 ```json
 {

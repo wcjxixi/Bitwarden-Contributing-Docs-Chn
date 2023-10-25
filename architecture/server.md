@@ -12,9 +12,9 @@
 
 ### 命令与查询 <a href="#commands-vs-queries" id="commands-vs-queries"></a>
 
-**命令**是写入操作，例如 `RotateOrganizationApiKeyCommand` 。他们永远不应该从数据库中读取数据。
+**命令**是写入操作，例如 `RotateOrganizationApiKeyCommand`。他们永远不应该从数据库中读取数据。
 
-**查询**是读取操作，例如 `GetOrganizationApiKeyQuery` 。他们永远不应该写入数据到数据库。
+**查询**是读取操作，例如 `GetOrganizationApiKeyQuery`。他们永远不应该写入数据到数据库。
 
 数据库是我们处理的最常见的数据源，但其他数据源也是可能的。例如，查询还可以从远程服务器获取数据。
 
@@ -76,7 +76,7 @@ await _rotateOrganizationApiKeyCommand.RotateApiKeyAsync(currentApiKey);
 
 ### 避免 [Primitive Obsession](https://refactoring.guru/smells/primitive-obsession) <a href="#avoid-primitive-obsession" id="avoid-primitive-obsession"></a>
 
-在实际情况下，您的命令和查询应该获取并返回整个对象（例如 `User` ）而不是单个属性（例如 `userId` ）。
+在实际情况下，您的命令和查询应该获取并返回整个对象（例如 `User` ）而不是单个属性（例如 `userId`）。
 
 ### 避免过多的可选参数 <a href="#avoid-excessive-optional-parameters" id="avoid-excessive-optional-parameters"></a>
 

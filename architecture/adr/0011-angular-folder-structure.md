@@ -29,7 +29,7 @@
 
 ### `SharedModule` & `CoreModule` <a href="#sharedmodule--coremodule" id="sharedmodule--coremodule"></a>
 
-[Angular 文档](https://angular.io/guide/module-types#shared-ngmodules)规定应该有一个 `SharedModule` 。它进一步指定共享模块不应提供提供程序。常见的做法是创建一个 `CoreModule` 来负责设置核心提供程序。
+[Angular 文档](https://angular.io/guide/module-types#shared-ngmodules)规定应该有一个 `SharedModule`。它进一步指定共享模块不应提供提供程序。常见的做法是创建一个 `CoreModule` 来负责设置核心提供程序。
 
 ### 建议的文件夹结构​ <a href="#proposed-folder-structure" id="proposed-folder-structure"></a>
 
@@ -70,8 +70,8 @@ web/src/app
 该结构将分多个步骤实施：
 
 1. 从 `src/app` 中提取不相关的文件。[https://github.com/bitwarden/clients/pull/3127](https://github.com/bitwarden/clients/pull/3127)
-2. 创建 `CoreModule` 。[https://github.com/bitwarden/clients/pull/3149](https://github.com/bitwarden/clients/pull/3149)
-3. 创建 `SharedModule` 。[https://github.com/bitwarden/clients/pull/3222](https://github.com/bitwarden/clients/pull/3222)
+2. 创建 `CoreModule`。[https://github.com/bitwarden/clients/pull/3149](https://github.com/bitwarden/clients/pull/3149)
+3. 创建 `SharedModule`。[https://github.com/bitwarden/clients/pull/3222](https://github.com/bitwarden/clients/pull/3222)
 4. 将所有现有的松散组件迁移到 `SharedModule`
    * 根中的任何剩余功能都应该提供一个模块
 

@@ -22,9 +22,9 @@
 
 选择的方案：**提取类**。
 
-这些新类的命名应该表示为 `{Domain}ApiService` ，例如文件夹域应该命名为 `FolderApiService` 。
+这些新类的命名应该表示为 `{Domain}ApiService`，例如文件夹域应该命名为 `FolderApiService`。
 
 重构示例：
 
-* [`folder-api.service.ts`](https://github.com/bitwarden/clients/pull/3011/files#diff-11b3488b9977f06625349680f81554505613715cfcc9890ebb356a74579c236a) ：创建一个新的服务，将方法从 `ApiService` 移动到新服务。在此重构期间，我们还将服务器知识从 `FolderService` 中移出，因为它应该只负责维护其状态。
+* [`folder-api.service.ts`](https://github.com/bitwarden/clients/pull/3011/files#diff-11b3488b9977f06625349680f81554505613715cfcc9890ebb356a74579c236a)：创建一个新的服务，将方法从 `ApiService` 移动到新服务。在此重构期间，我们还将服务器知识从 `FolderService` 中移出，因为它应该只负责维护其状态。
 * 从 [`ApiService`](https://github.com/bitwarden/clients/pull/3011/files#diff-6c8f3163b688c01f589d1e9ee5b7998aea4a0aedde8333c3939fb6181c301bed) 中删除旧方法。

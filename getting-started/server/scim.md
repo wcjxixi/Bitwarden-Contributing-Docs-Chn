@@ -21,7 +21,7 @@ SCIM 是跨域身份管理系统 (System for Cross-domain Identity Management) �
 
 ### 为您的组织启用 SCIM ​ <a href="#enable-scim-for-your-organization" id="enable-scim-for-your-organization"></a>
 
-1、登录到 Web 密码库然后导航到您的组织 -> 设置 -> SCIM 配置
+1、登录到 Web  Vault 然后导航到「{您的组织}」->「设置」->「SCIM 配置」
 
 2、勾选「启用 SCIM」然后点击保存。此时您的 SCIM URL 和 API 密钥应该会显示出来。保留此窗口打开以供后面参考
 
@@ -49,11 +49,11 @@ SCIM 要求 SCIM 项目和 IdP 之间的直接连接。因此，您需要将本�
 1. 创建一个 JumpCloud 账户然后登录 [JumpCloud 管理界面](https://console.jumpcloud.com/login/admin)
 2. 点击左侧的「SSO」，然后点击加号按钮以创建一个新应用程序
 3. 在应用程序列表中搜索「Bitwarden」，然后点击「配置」
-4. 在「常规信息」选项卡中，添加显示名称
+4. 在「常规信息」选项卡中，添加一个「显示名称」
 5. 在「身份管理」选项卡中，向下滚动到「配置设置」部分然后完成如下内容：
    * **API 类型**：SCIM API
    * **SCIM 版本**：SCIM 2.0
-   * **基本 URL**：使用 Web 密码库中的 SCIM URL，但要将 `localhost` 替换为您的 ngrok 转发 url。例如，`https://abcd-123-456-789.au.ngrok.io/v2/d24f1dcd-d3fb-4810-977e-adf00009f0ca`
+   * **基本 URL**：使用 Web 密码库中的 SCIM URL，但要将 `localhost` 替换为您的 ngrok 转发 URL。例如，`https://abcd-123-456-789.au.ngrok.io/v2/d24f1dcd-d3fb-4810-977e-adf00009f0ca`
    * **令牌密钥**：使用 Web 密码库中的 SCIM API 密钥
    * **测试用户电子邮件**：使用还没有关联用户账户的任何电子邮件地址。当您测试连接时，JumpCloud 将使用它来执行测试操作
 6. &#x20;点击「测试连接」并等待 JumpCloud 完成测试。您应该在 ngrok 窗口中看到 HTTP 请求。

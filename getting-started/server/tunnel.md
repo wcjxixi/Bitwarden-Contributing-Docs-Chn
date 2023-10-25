@@ -8,7 +8,7 @@
 
 ## 配置网络 <a href="#configure-web" id="configure-web"></a>
 
-如果目标是公开本地网络保险库（包括对大多数服务的访问），那么网络保险库就需要配置为不使用 `https` ，而是以未加密的方式提供内容。
+如果目标是公开本地网络保险库（包括对大多数服务的访问），那么网络保险库就需要配置为不使用 `https`，而是以未加密的方式提供内容。
 
 打开 `webpack.config.js` 并注释掉 `const devServer = {` 中的以下几行：
 
@@ -19,7 +19,7 @@ https: {
 },
 ```
 
-并将域添加到 `local.json` 中的 `allowedHosts` ：
+并将域添加到 `local.json` 中的 `allowedHosts`：
 
 ```json
 {
@@ -37,7 +37,7 @@ https: {
 2. 启动本地网络服务器，并注意其运行的 `$PORT`
 3. 使用 `cloudflared tunnel --url http://127.0.0.1:$PORT` 启动隧道
 
-Cloudflare 将为您建立一个隧道，并提供其 URL： `*.trycloudflare.com`。在尝试访问之前，请等待 DNS 开始解析。
+Cloudflare 将为您建立一个隧道，并提供其 URL：`*.trycloudflare.com`。在尝试访问之前，请等待 DNS 开始解析。
 
 **注意**：任何拥有此 URL 的人都可以在你的机器上访问转发的 URL。
 

@@ -31,7 +31,7 @@
 
 | 属性                       | 目的                                                                                                                         |
 | ------------------------ | -------------------------------------------------------------------------------------------------------------------------- |
-| `deviceType`             | 请求设备的 [`DeviceType`](https://github.com/bitwarden/clients/blob/master/libs/common/src/enums/device-type.enum.ts) 。         |
+| `deviceType`             | 请求设备的 [`DeviceType`](https://github.com/bitwarden/clients/blob/master/libs/common/src/enums/device-type.enum.ts)。          |
 | `deviceName`             | 请求设备的 [`DeviceType`](https://github.com/bitwarden/clients/blob/master/libs/common/src/enums/device-type.enum.ts) 的字符串表示形式。 |
 | `deviceIdentifier`       | 安装应用程序时在设备上生成的设备的唯一标识符。                                                                                                    |
 | `twoFactorToken`         | 对于启用了双因素身份验证的用户，包含 2FA 提供商生成的令牌。否则为空。详细信息，请参阅[双因素身份验证](two-factor-auth.md)。                                                |
@@ -120,7 +120,7 @@
 | Organization | 用于组织代表组织和非个人用户做更改。                                                         |
 | User         | 用于个人用户使用他们自己的 API 令牌执行操作。在这种情况下，用户的声明将添加到 `access_token` 中，就像用户通过密码流程登录一样。 |
 
-不同的 API 客户端类型都有不同的验证。`client_credentials` 授权类型验证的关键是内置于 IdentityServer 中的 `ClientStore`（并在我们的代码中重写）。.NET 请求中间件管道中的每个请求都会查询 `ClientStore` ，以从请求中查找给定了 `client_id` 的客户端。
+不同的 API 客户端类型都有不同的验证。`client_credentials` 授权类型验证的关键是内置于 IdentityServer 中的 `ClientStore`（并在我们的代码中重写）。.NET 请求中间件管道中的每个请求都会查询 `ClientStore`，以从请求中查找给定了 `client_id` 的客户端。
 
 | 客户端类型        | 验证逻辑                                                                                           |
 | ------------ | ---------------------------------------------------------------------------------------------- |
@@ -137,7 +137,7 @@
 该验证器负责颁发 `authorization_code` 授权类型的令牌。
 {% endhint %}
 
-请求中的 authorization\_code 中的代码验证由 IdentityServer 完成（请参阅[此处](https://identityserver4.readthedocs.io/en/latest/topics/grant\_types.html#interactive-clients)的文档）。该代码已通过 SSO 流获取，现在被提交给 IdentityServer 以交换 `access_token` 。
+请求中的 authorization\_code 中的代码验证由 IdentityServer 完成（请参阅[此处](https://identityserver4.readthedocs.io/en/latest/topics/grant\_types.html#interactive-clients)的文档）。该代码已通过 SSO 流获取，现在被提交给 IdentityServer 以交换 `access_token`。
 
 ### 生成响应 <a href="#generating-a-response" id="generating-a-response"></a>
 
@@ -151,7 +151,7 @@
 
 #### 身份验证信息 <a href="#authentication-information" id="authentication-information"></a>
 
-对于经过验证的密码和 SSO 令牌请求（授予类型为 `password` 和 `authorization_code` ），响应将包含 `access_token` ，它是具有以下声明的 JWT :
+对于经过验证的密码和 SSO 令牌请求（授予类型为 `password` 和 `authorization_code` ），响应将包含 `access_token`，它是具有以下声明的 JWT:
 
 * `device` - 设备标识符。
 * `premium` - 一个布尔值，指示他们是否有权访问高级功能。
@@ -160,14 +160,14 @@
 * `sstamp` - 用户的安全标记（存储在 `User` 表中的用户的唯一 GUID，并在生成新密码或密钥时重新生成）。`sstamp` 改变表示用户需要重新进行身份验证。
 * `name` - 用户名。
 * **组织声明**
-  * `orgowner` - 用户是其所有者的任何组织的 `ID` 。
-  * `orgadmin` - 用户是其管理员的任何组织的 `ID` 。
-  * `orgmanager` - 用户是其经理的组织的 `ID` 。
-  * `orguser` - 用户是其普通用户的组织的 `ID` 。
-  * `orgcustom` - 用户拥有自定义权限的组织的 `ID` 。在这种情况下，用户还将按照为该组织定义的方式添加自定义声明。
+  * `orgowner` - 用户是其所有者的任何组织的 `ID`。
+  * `orgadmin` - 用户是其管理员的任何组织的 `ID`。
+  * `orgmanager` - 用户是其经理的组织的 `ID`。
+  * `orguser` - 用户是其普通用户的组织的 `ID`。
+  * `orgcustom` - 用户拥有自定义权限的组织的 `ID`。在这种情况下，用户还将按照为该组织定义的方式添加自定义声明。
 * **提供商声明**
-  * `providerprovideradmin` - 用户是其管理员的提供商的 `ID` 。
-  * `providerserviceuser` - 用户是其普通用户的提供商的 `ID` 。
+  * `providerprovideradmin` - 用户是其管理员的提供商的 `ID`。
+  * `providerserviceuser` - 用户是其普通用户的提供商的 `ID`。
 
 对于 API 令牌请求（授权类型为 `client_credentials` ），响应因客户端类型而异，如下所示：
 
@@ -182,21 +182,21 @@
 
 该响应还将包含一个自定义 JSON 响应对象，该对象包含以下属性：
 
-| 属性                            | 目的                                                                                                                       |
-| ----------------------------- | ------------------------------------------------------------------------------------------------------------------------ |
-| `PrivateKey`                  | 用户的 RSA 私钥，使用用户的对称加密密钥进行加密。                                                                                              |
-| `Key`                         | 用户的对称加密密钥，使用用户的主密码加密。                                                                                                    |
-| `UserDecryptionOptions`       | 用户可以用来解密其对称密钥的方式。详细信息，请参阅[用户解密选项](./#appendix)。                                                                          |
-| `Kdf`                         | 用户定义的 KDF 类型。                                                                                                            |
-| `KdfIterations`               | 用户定义的 KDF 迭代。                                                                                                            |
-| `ForcePasswordReset`          | 指示用户是否必须立即重置密码的布尔值。                                                                                                      |
-| `MasterPasswordPolicy`        | 用户所属的任何组织的主密码策略。                                                                                                         |
-| `TwoFactorToken`              | 可用于绕过 2FA 的令牌。当用户选择「记住」他们的 2FA 响应时生成。                                                                                    |
-| `ResetMasterPassword` （_已过时_） | 指示用户是否需要设置主密码的布尔值。对于配置了 Key Connector 的用户，它被显式设置为 `false` 。它已被 `UserDecryptionOptions.HasMasterPassword` 取代，但保留它是为了向后兼容。 |
+| 属性                            | 目的                                                                                                                      |
+| ----------------------------- | ----------------------------------------------------------------------------------------------------------------------- |
+| `PrivateKey`                  | 用户的 RSA 私钥，使用用户的对称加密密钥进行加密。                                                                                             |
+| `Key`                         | 用户的对称加密密钥，使用用户的主密码加密。                                                                                                   |
+| `UserDecryptionOptions`       | 用户可以用来解密其对称密钥的方式。详细信息，请参阅[用户解密选项](./#appendix)。                                                                         |
+| `Kdf`                         | 用户定义的 KDF 类型。                                                                                                           |
+| `KdfIterations`               | 用户定义的 KDF 迭代。                                                                                                           |
+| `ForcePasswordReset`          | 指示用户是否必须立即重置密码的布尔值。                                                                                                     |
+| `MasterPasswordPolicy`        | 用户所属的任何组织的主密码策略。                                                                                                        |
+| `TwoFactorToken`              | 可用于绕过 2FA 的令牌。当用户选择「记住」他们的 2FA 响应时生成。                                                                                   |
+| `ResetMasterPassword` （_已过时_） | 指示用户是否需要设置主密码的布尔值。对于配置了 Key Connector 的用户，它被显式设置为 `false`。它已被 `UserDecryptionOptions.HasMasterPassword` 取代，但保留它是为了向后兼容。 |
 
 对于 API 令牌请求，以下附加属性将添加到响应中：
 
-* `ApiUseKeyConnector` - 如果用户设置为使用 Key Connector 进行主密码检索，则设置为 `true` 。
+* `ApiUseKeyConnector` - 如果用户设置为使用 Key Connector 进行主密码检索，则设置为 `true`。
 
 ## 客户端处理响应 <a href="#client-handles-the-response" id="client-handles-the-response"></a>
 
@@ -206,7 +206,7 @@
 
 ### 使用身份验证信息来设置用户账户 <a href="#use-the-authentication-information-to-set-up-the-users-account" id="use-the-authentication-information-to-set-up-the-users-account"></a>
 
-响应包含一个 JWT `access_token` ，其中包含用户声明，可以在后续 API 请求中提供以对用户进行身份验证，以及一个 `refresh_token` ，可用于请求新的 `access_token` 而不提示用户再次进行身份验证。
+响应包含一个 JWT `access_token`，其中包含用户声明，可以在后续 API 请求中提供以对用户进行身份验证，以及一个 `refresh_token`，可用于请求新的 `access_token` 而不提示用户再次进行身份验证。
 
 `access_token` 上的声明用于在状态中初始化用户的 `AccountProfile`，`access_token` 和 `refresh_token` 在状态中存储在 `AccountTokens` 中，用于后续 API 请求。
 
@@ -229,10 +229,10 @@
 每个登录策略中定义了如何设置用户密钥的具体细节：
 
 * **密码和设备登录策略**
-  * 令牌响应中的 `Key` 存储在帐户状态的 `userKeyMasterKey` 中，用户输入主密码时已处于状态的 `masterKey` 用于解密并存储 `userKey` 。
+  * 令牌响应中的 `Key` 存储在帐户状态的 `userKeyMasterKey` 中，用户输入主密码时已处于状态的 `masterKey` 用于解密并存储 `userKey`。
 * **API策略**
   * 令牌响应中的 `Key` 存储在账户状态的 `userKeyMasterKey` 中。
-  * 如果在令牌响应上设置了 `ApiUseKeyConnector` 属性，我们将从状态中检索 `masterKey` 并使用它来解密和存储 `userKey` 。
+  * 如果在令牌响应上设置了 `ApiUseKeyConnector` 属性，我们将从状态中检索 `masterKey` 并使用它来解密和存储 `userKey`。
 * **单点登录策略**
   * 受信任设备加密为我们提供了多种获取用户密钥的方法，这些方法都在 SSO 登录策略中进行处理。
   * 这些包括：
@@ -242,16 +242,16 @@
 
 #### 用户私钥 (`privateKey`) <a href="#user-private-key" id="user-private-key"></a>
 
-如果响应中提供了 `PrivateKey` ，它将存储在用户账户状态的 `privateKey.encrypted` 中。
+如果响应中提供了 `PrivateKey`，它将存储在用户账户状态的 `privateKey.encrypted` 中。
 
 ## 附录：`UserDecryptionOptions` <a href="#appendix" id="appendix"></a>
 
 令牌响应将包含 `UserDecryptionOptions` 的实例。该对象包含以下属性，这些属性描述用户如何解密其密码库。
 
-* `HasMasterPassword` - 如果用户在数据库中有主密码，则为 `true` 。
+* `HasMasterPassword` - 如果用户在数据库中有主密码，则为 `true`。
 * `TrustedDeviceOption` - 包含了定义用户是否可以使用受信任设备加密解密其对称密钥的属性。
-  * `HasAdminApproval` - 如果用户可以使用管理员批准来请求批准新的受信任设备，则为 `true` 。
-  * `HasLoginApprovingDevice` - 如果用户拥有任何可用于请求批准新的受信任设备的合格设备，则为 `true` 。
+  * `HasAdminApproval` - 如果用户可以使用管理员批准来请求批准新的受信任设备，则为 `true`。
+  * `HasLoginApprovingDevice` - 如果用户拥有任何可用于请求批准新的受信任设备的合格设备，则为 `true`。
   * `HasManageResetPasswordPermission` - 如果用户拥有 `ManageResetPassword` 权限，则为 `true` 。这是必需的，以便接收客户端可以知道是否要求用户设置主密码。
   * `EncryptedPrivateKey` - 如果发出请求的设备是可信的，则这将包含设备特定的私钥，并使用仅存在于受信任设备上的设备密钥进行加密。
   * `EncryptedUserKey` - 如果发出请求的设备是可信的，则这将包含用户的对称加密密钥，并使用与上面 `EncryptedPrivateKey` 中的私钥相对应的公钥进行加密。

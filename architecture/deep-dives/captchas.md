@@ -53,13 +53,13 @@ CLI 会对 `bw login` 命令执行相同的 Captcha 检查，但不会提示 Cap
 2. 然后，服务器响应包含 `HCaptcha_SiteKey` 的响应，客户端将其解释为「此请求需要 Captcha」。
 3. 前端使用 `CaptchaProtectedComponent` 上的 `showCaptcha()` 方法根据此响应显示 Captcha `<div>` 。
 4. `CaptchaProtectedComponent` 将 `CaptchaIFrame` 组件作为输入，其中包含实际的 Captcha UI。
-5. `CaptchaProtectedComponent` 通过将 `captchaToken` 属性设置为 Captcha 响应中的值来处理 `CaptchaIFrame` 的 `successCallback` 。
-6. 然后，用户可以再次发起操作（登录、注册等）。 `captchaToken` 将作为正文中的另一个元素与请求一起发送。
+5. `CaptchaProtectedComponent` 通过将 `captchaToken` 属性设置为 Captcha 响应中的值来处理 `CaptchaIFrame` 的 `successCallback`。
+6. 然后，用户可以再次发起操作（登录、注册等）。`captchaToken` 将作为正文中的另一个元素与请求一起发送。
 7. 服务器通过 `POST` 将包含令牌和我们的站点密钥的消息发送到 [https://hcaptcha.com/siteverify](https://hcaptcha.com/siteverify) 来验证 `HCaptchaValidationService` 中的请求。
 
 ### 什么是 Captcha 绕行令牌？ <a href="#what-is-a-captcha-bypass-token" id="what-is-a-captcha-bypass-token"></a>
 
-在某些情况下，同一用户向受 Captcha 保护的端点之一发出多个请求。我们希望基于后续请求之前已经填写过 Captcha 的事实来「绕过」Captcha 请求，即使根据上述规则的定义，这些后续请求需要 Captcha 。
+在某些情况下，同一用户向受 Captcha 保护的端点之一发出多个请求。我们希望基于后续请求之前已经填写过 Captcha 的事实来「绕过」Captcha 请求，即使根据上述规则的定义，这些后续请求需要 Captcha。
 
 我们使用 Captcha 绕行令牌来完成此操作。这是验证 Captcha 时在服务器上为第一个请求创建的令牌，它包含：
 

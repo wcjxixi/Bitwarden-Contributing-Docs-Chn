@@ -12,7 +12,7 @@
 
 以下是您可以参与的方式：
 
-* **请求新功能**：转到社区论坛的 [Feature Requests category](https://community.bitwarden.com/c/feature-requests/) 。请在创建新功能请求之前搜索现有功能请求
+* **请求新功能**：转到社区论坛的 [Feature Requests category](https://community.bitwarden.com/c/feature-requests/)。请在创建新功能请求之前搜索现有功能请求
 * **为新功能编写代码**：在社区论坛的 [Github Contributions category](https://community.bitwarden.com/c/github-contributions/) 中发布新帖子。包括对您提议的贡献的描述、截图和任何相关功能请求的链接。这有助于在您开始编写代码之前从社区和 Bitwarden 团队成员那里获得反馈
 * **报告错误或提交错误修复**：使用 Github 话题和拉取请求
 * **编写文档**：向 [Bitwarden 帮助存储库](https://github.com/bitwarden/help)提交拉取请求

@@ -10,21 +10,21 @@
 
 所有测试都使用两个环境变量：
 
-* `IDENTITY_URL` ：用于身份验证的 [Identity](https://github.com/bitwarden/server/tree/master/src/Identity) 实例的 URL。
-* `API_URL` ：经过身份验证后用于负载测试操作的 [API](https://github.com/bitwarden/server/tree/master/src/Api) 实例的 URL。
-* `CLIENT_ID` ：所有请求的 `X-ClientId` 标头值，用于跟踪唯一客户端并管理速率限制。
+* `IDENTITY_URL`：用于身份验证的 [Identity](https://github.com/bitwarden/server/tree/master/src/Identity) 实例的 URL。
+* `API_URL`：经过身份验证后用于负载测试操作的 [API](https://github.com/bitwarden/server/tree/master/src/Api) 实例的 URL。
+* `CLIENT_ID`：所有请求的 `X-ClientId` 标头值，用于跟踪唯一客户端并管理速率限制。
 
 根据所测试的 API，使用密码或客户端凭据授权。
 
 对于密码：
 
-* `AUTH_USER_EMAIL` ：用户电子邮件地址。
-* `AUTH_USER_PASSWORD_HASH` ：用户主密码的哈希值。
+* `AUTH_USER_EMAIL`：用户电子邮件地址。
+* `AUTH_USER_PASSWORD_HASH`：用户主密码的哈希值。
 
 对于客户端凭据：
 
-* `AUTH_CLIENT_ID` ：OAuth 客户端 ID。
-* `AUTH_CLIENT_SECRET` ：OAuth 客户端密钥。
+* `AUTH_CLIENT_ID`：OAuth 客户端 ID。
+* `AUTH_CLIENT_SECRET`：OAuth 客户端密钥。
 
 Grafana 的在线状态用于在云中托管脚本，并配置了上述所有内容。对于本地测试，您可能需要[生成](https://help.ppgg.in/admin-console/bitwarden-public-api#authentication)一组 ID 和密钥。
 
@@ -40,7 +40,7 @@ Grafana 的在线状态用于在云中托管脚本，并配置了上述所有内
 k6 run script.js
 ```
 
-如果您想将结果传输到云端，请添加 `--out=cloud` 参数。要传递环境变量，请使用 `-e` 参数，例如 `-e IDENTITY_URL="http://localhost:4000"` 。
+如果您想将结果传输到云端，请添加 `--out=cloud` 参数。要传递环境变量，请使用 `-e` 参数，例如 `-e IDENTITY_URL="http://localhost:4000"`。
 
 对于云，直接运行：
 

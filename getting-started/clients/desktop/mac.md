@@ -27,7 +27,11 @@
 
 2、点击「应用程序专用密码」
 
+<div align="left">
+
 <figure><img src="https://github.com/bitwarden/contributing-docs/blob/master/docs/getting-started/clients/desktop/mac/app-specific-passwords.png?raw=true" alt=""><figcaption></figcaption></figure>
+
+</div>
 
 3、然后点击 `Passwords` 旁边的 `+` 图标以添加新的应用程序专用密码
 
@@ -55,7 +59,7 @@ security find-identity -v | grep 'Apple Development'
 
 2、运行 `export CSC_NAME=""`，确保设置了 `CSC_NAME` 环境变量，其值应该是 `find-identity` 的输出，不带 `Apple Development:` 部分。
 
-3、运行 `npm run dist:mac:masdev` 。
+3、运行 `npm run dist:mac:masdev`。
 
 {% hint style="info" %}
 如果这是您第一次在本地运行桌面，请确保在运行 `npm run dist:mac:masdev` 之前先运行 `npm ci`。

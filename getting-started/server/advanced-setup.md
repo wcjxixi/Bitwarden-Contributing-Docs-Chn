@@ -8,7 +8,7 @@
 
 ## 高级功能​ <a href="#premium-features" id="premium-features"></a>
 
-用户机密文件包括一个 Stripe 测试密钥，它允许您「购买」高级功能而无需实际付费。
+用户机密文件包括一个 Stripe 测试密钥，它允许您「购买」高级功能而无需实际支付费用。
 
 1. 使用 Web 客户端连接到本地服务器
 2.  购买订阅或高级功能时，请使用 Stripe 文档中的测试数据所使用的信用卡付款方式：
@@ -42,7 +42,7 @@ Docker compose 将启动一个可以使用的本地 SMTP 服务器，但也可�
 使用两种方式之一来存储上传的文件：
 
 * 使用我们的生产环境云实例所使用的 Azure 存储。
-  * Docker 将创建一个模拟 Azure 存储 API 的本地 [Azurite](https://github.com/Azure/Azurite) 实例。并用于基本测试。
+  * Docker 将创建一个模拟 Azure 存储 API 的本地 [Azurite](https://github.com/Azure/Azurite) 实例。并用于基础测试。
   * 我们还有一个测试 Azure 存储账户供开发使用。此用户机密附加到“服务器用户机密”共享密码库项目。您需要将 `send` 密钥和 `attachment` 密钥复制到您自己的用户机密中。
 * 使用自托管实例所使用的直接上传用功能，将文件直接存储在服务器上。以下设置将允许您上传文件，但不允许下载它们。将以下设置放在 `globalSettings` 下（根据需要更新路径）：
 

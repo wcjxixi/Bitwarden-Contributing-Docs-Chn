@@ -119,7 +119,7 @@ Android 推送通知文档适用于从 Google Play 商店安装的 Bitwarden 应
 
 在 iOS 设备上，推送令牌注册是通过 Apple 推送通知服务 (APN) 进行的。
 
-当用户登录 iOS 应用程序或切换账户时，应用程序会加载 [`GroupingsPage`](https://github.com/bitwarden/mobile/blob/master/src/App/Pages/Vault/GroupingsPage/GroupingsPage.xaml.cs) 。在 [`GroupingsPage`](https://github.com/bitwarden/mobile/blob/master/src/App/Pages/Vault/GroupingsPage/GroupingsPage.xaml.cs) 初始化过程中会中，我们会首先检查以确保设备已接受到推送通知。如果没有，则会显示 Bitwarden 推送通知提示。该提示解释了 iOS 请求 Bitwarden 移动应用程序推送通知的原因。
+当用户登录 iOS 应用程序或切换账户时，应用程序会加载 [`GroupingsPage`](https://github.com/bitwarden/mobile/blob/master/src/App/Pages/Vault/GroupingsPage/GroupingsPage.xaml.cs)。在 [`GroupingsPage`](https://github.com/bitwarden/mobile/blob/master/src/App/Pages/Vault/GroupingsPage/GroupingsPage.xaml.cs) 初始化过程中会中，我们会首先检查以确保设备已接受到推送通知。如果没有，则会显示 Bitwarden 推送通知提示。该提示解释了 iOS 请求 Bitwarden 移动应用程序推送通知的原因。
 
 如果用户接受此提示，或者他们已经接受了该提示，则应用程序会检查当前用户是否在最近一天内注册过推送通知。如果他们之前从未注册过，或者已经过去一天以上，Bitwarden 应用程序会向 iOS 注册推送通知，并请求推送令牌。注册是在 [`iOSPushNotificationService`](https://github.com/bitwarden/mobile/blob/master/src/iOS/Services/iOSPushNotificationService.cs) 的 `RegisterAsync()` 方法中完成的。`RegisterAsync()` 会执行 iOS 平台特定的方法，以开始从 APN 请求令牌的过程。
 

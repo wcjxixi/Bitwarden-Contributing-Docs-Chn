@@ -32,5 +32,5 @@
 {% embed url="https://contributing.bitwarden.com/assets/images/devtools-a7381ad4c1c96a9bfac9f42e7a285236.png" %}
 
 1. 返回桌面客户端，打开开发工具
-2. 在控制台中粘贴以下命令并按回车键： `window.location.href = '<paste the URI here>'`
+2. 在控制台中粘贴以下命令并按回车键：`window.location.href = '<paste the URI here>'`
 3. 桌面客户端现在应该已完成了 SSO 登录

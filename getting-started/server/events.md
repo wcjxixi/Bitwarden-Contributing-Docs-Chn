@@ -23,7 +23,7 @@ Bitwarden 的云实例使用 Azure 队列和表存储来处理事件。以下是
 
 1. 确保您已安装并设置 Azurite，如[服务器设置指南](guide.md#azurite)中所述
 2. 确保未设置 `globalSettings:events:connectionString` 用户机密，或具有默认值 `UseDevelopmentStorage=true`
-3. 使用 `dotnet run` 或您的 IDE 启动 Events 和 EventsProcessor 项目。（还要确保您的 Api、Identity 和你的 Web 密码库处于运行状态。）
+3. 使用 `dotnet run` 或您的 IDE 启动 Events 和 EventsProcessor 项目。（还要确保您的 Api、Identity 和你的 Web Vault 处于运行状态。）
 
 您现在应该可以观察到您的企业组织正在记录事件（例如，当创建项目或邀请用户时）。这些出现在组织密码库的事件日志部分。
 

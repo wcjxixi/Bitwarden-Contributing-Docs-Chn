@@ -13,12 +13,12 @@
 1. Bitwarden 服务器已安装和配置，并运行以下服务器项目：
    * Identity
    * API
-   * SSO（位于 `server/bitwarden_license/src/Sso` )
+   * SSO（位于 `server/bitwarden_license/src/Sso`)
 2. 本地网络客户端正在运行
 
 ## 配置 IdP <a href="#configure-idp" id="configure-idp"></a>
 
-1、打开本地网络密码库然后导航至「组织」 → 「设置」 → 「单点登录」
+1、打开本地网络密码库然后导航至「组织」→「设置」→「单点登录」
 
 2、勾选「允许 SSO 身份验证」复选框
 
@@ -53,13 +53,13 @@ cp authsources.php.example authsources.php
 docker-compose --profile idp up -d
 ```
 
-9、您可以通过导航至 [http://localhost:8090/simplesaml](http://localhost:8090/simplesaml)，然后「身份验证」 → 「测试已配置的身份验证源」 → 「`example-userpass`」 来测试用户配置。您应该可以使用配置的用户登录了。
+9、您可以通过导航至 [http://localhost:8090/simplesaml](http://localhost:8090/simplesaml)，然后「身份验证」→「测试已配置的身份验证源」→「`example-userpass`」 来测试用户配置。您应该可以使用配置的用户登录了。
 
 ## 配置 Bitwarden <a href="#configure-bitwarden" id="configure-bitwarden"></a>
 
 1、回到打开 SSO 配置页面的窗口
 
-2、在「SAML 身份提供程序配置」（SAML Identity Provider Configuration）部分填写以下值：
+2、在「SAML 身份提供程序配置」(SAML Identity Provider Configuration) 部分填写以下值：
 
 * 实体 ID：
 
@@ -83,7 +83,7 @@ http://localhost:8090/simplesaml/saml2/idp/SSOService.php
 
 ### 用户 <a href="#users" id="users"></a>
 
-要添加或更改用户，只需编辑 `authsources.php` 。您的更改将立即生效，但当前已通过身份验证的用户必须退出登录，其账户更改才能生效。
+要添加或更改用户，只需编辑 `authsources.php`。您的更改将立即生效，但当前已通过身份验证的用户必须退出登录，其账户更改才能生效。
 
 要注销用户身份，请访问 [http://localhost:8090/simplesaml/module.php/core/authenticate.php?as=example-userpass](http://localhost:8090/simplesaml/module.php/core/authenticate.php?as=example-userpass) 并单击「注销」。或者，您也可以使用私密浏览会话。
 
