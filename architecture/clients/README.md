@@ -1,4 +1,4 @@
-# Web 客户端架构
+# 网络客户端架构
 
 {% hint style="info" %}
 对应的[官方页面地址](https://contributing.bitwarden.com/architecture/clients/)
@@ -27,4 +27,8 @@ mono-repository 根目录包含三个主要文件夹：
 为了便于阅读，所有应用程序都依赖的 `common` 项目被隐藏了起来。
 {% endhint %}
 
+<div align="left">
+
 <figure><img src="../../.gitbook/assets/simplified-package-diagram.svg" alt=""><figcaption></figcaption></figure>
+
+</div>

@@ -28,7 +28,11 @@
 
 下面是一个_域组件_和_域服务_如何与_状态服务_交互的例子。
 
+<div align="left">
+
 <figure><img src="../../.gitbook/assets/state-service.svg" alt=""><figcaption></figcaption></figure>
+
+</div>
 
 ## 服务层 <a href="#services" id="services"></a>
 
