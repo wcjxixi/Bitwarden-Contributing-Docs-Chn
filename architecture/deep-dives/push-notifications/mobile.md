@@ -6,15 +6,15 @@
 
 ## 概述 <a href="#overview" id="overview"></a>
 
-推送通知是一个有些复杂的领域，它们在服务器和客户端上的实施基于不同的维度而有所不同。
+推送通知是一个有些复杂的领域，它们在服务器和客户端上的实现基于不同的维度而有所不同。
 
-从服务器角度来看，Bitwarden 云托管实例和自托管实例的实施方式有所不同。主要区别在于自托管客户端需要通过 Bitwarden 云托管实例中继消息。这是必需的，因为 Bitwarden 只允许向商店分发的 Android 和 iOS 移动应用程序发送通知。
+从服务器角度来看，Bitwarden 云托管实例和自托管实例的实现方式有所不同。主要区别在于自托管客户端需要通过 Bitwarden 云托管实例中继消息。这是必需的，因为 Bitwarden 只允许向商店分发的 Android 和 iOS 移动应用程序发送通知。
 
-从客户端的角度来看，移动操作系统（Android 和 iOS）的实施方式有所不同。这是因为每个操作系统处理获取和刷新推送令牌的方式不同。
+从客户端的角度来看，移动操作系统（Android 和 iOS）的实现方式有所不同。这是因为每个操作系统处理获取和刷新推送令牌的方式不同。
 
-我们将首先了解服务器端的实施，然后再了解客户端获取推送令牌的情况。
+我们将首先了解服务器端的实现，然后再了解客户端获取推送令牌的情况。
 
-## 服务器实施 <a href="#server-implementations" id="server-implementations"></a>
+## 服务器实现 <a href="#server-implementations" id="server-implementations"></a>
 
 ### 发送推送令牌到 Azure 通知中心 <a href="#sending-the-push-token-to-azure-notification-hub" id="sending-the-push-token-to-azure-notification-hub"></a>
 
@@ -26,7 +26,7 @@
 必须认识到，此时我们已将令牌与用户**和**物理设备的组合关联起来了，因为这**两者**都被用作在 Azure 通知中心中注册为标记。这就是我们如何确保仅在相应的用户在其他设备上触发后续通知时，才会将后续通知发送到设备。
 {% endhint %}
 
-#### 云端实施 <a href="#cloud-implementation" id="cloud-implementation"></a>
+#### 云端实现 <a href="#cloud-implementation" id="cloud-implementation"></a>
 
 <div align="left">
 
@@ -36,7 +36,7 @@
 
 如果我们运行的是 Bitwarden 云实例，Bitwarden API 将负责直接与 Azure 通知中心通信以注册推送令牌。这是在 [`NotificationHubPushRegistrationService`](https://github.com/bitwarden/server/blob/master/src/Core/Services/Implementations/NotificationHubPushRegistrationService.cs) 上的 `CreateOrUpdateRegistrationAsync()` 方法中完成的。
 
-#### 自托管实施 <a href="#self-hosted-implementation" id="self-hosted-implementation"></a>
+#### 自托管实现 <a href="#self-hosted-implementation" id="self-hosted-implementation"></a>
 
 <div align="left">
 
@@ -46,17 +46,17 @@
 
 对于自托管实例，自托管实例无法直接与 Bitwarden 的 Azure 通知中心通信。为了向自托管实例提供推送通知，自托管 Bitwarden API 必须通过 [`RelayPushRegistrationService`](https://github.com/bitwarden/server/blob/master/src/Core/Services/Implementations/RelayPushRegistrationService.cs) 上的 `CreateOrUpdateRegistrationAsync()` 方法向 Azure 通知中心注册。
 
-此 [`IPushRegistrationService`](https://github.com/bitwarden/server/blob/master/src/Core/Services/IPushRegistrationService.cs) 的实施允许自托管 Bitwarden API 通过调用 Bitwarden Cloud API 中 [`PushController`](https://github.com/bitwarden/server/blob/master/src/Api/Controllers/PushController.cs) 上的 `/push/register` 端点来注册推送令牌。这将作为 [https://push.bitwarden.com](https://push.bitwarden.com) 暴露给自托管实例。然后，Bitwarden Cloud API 上的 [`PushController`](https://github.com/bitwarden/server/blob/master/src/Api/Controllers/PushController.cs) 会像云端注册一样注册推送令牌 - 将其发送到 Azure 通知中心。
+此 [`IPushRegistrationService`](https://github.com/bitwarden/server/blob/master/src/Core/Services/IPushRegistrationService.cs) 的实现允许自托管 Bitwarden API 通过调用 Bitwarden Cloud API 中 [`PushController`](https://github.com/bitwarden/server/blob/master/src/Api/Controllers/PushController.cs) 上的 `/push/register` 端点来注册推送令牌。这将作为 [https://push.bitwarden.com](https://push.bitwarden.com) 暴露给自托管实例。然后，Bitwarden Cloud API 上的 [`PushController`](https://github.com/bitwarden/server/blob/master/src/Api/Controllers/PushController.cs) 会像云端注册一样注册推送令牌 - 将其发送到 Azure 通知中心。
 
 {% hint style="success" %}
-在通过中继推送通知服务时，理解上下文的变化非常重要。中继在运行 Bitwarden API 的两个不同服务器（自托管实例和 Bitwarden 云实例）之间进行通信。这些服务器中的每一个都有不同的 IPushNotificationService 实施。一旦 Bitwarden Cloud API `/push/register` 端点收到消息，就会像服务本身触发的任何其他推送通知一样对其进行处理。
+在通过中继推送通知服务时，理解上下文的变化非常重要。中继在运行 Bitwarden API 的两个不同服务器（自托管实例和 Bitwarden 云实例）之间进行通信。这些服务器中的每一个都有不同的 IPushNotificationService 实现。一旦 Bitwarden Cloud API `/push/register` 端点收到消息，就会像服务本身触发的任何其他推送通知一样对其进行处理。
 {% endhint %}
 
 ### 使用推送令牌发送通知到设备 <a href="#using-the-push-token-to-send-notifications-to-the-device" id="using-the-push-token-to-send-notifications-to-the-device"></a>
 
 当客户端更改数据或发送无密码身份验证请求时，服务器就会负责向所有移动客户端发送推送通知，以让它们了解这一变更。
 
-#### 云端实施 <a href="#cloud-implementation" id="cloud-implementation"></a>
+#### 云端实现 <a href="#cloud-implementation" id="cloud-implementation"></a>
 
 <div align="left">
 
@@ -68,7 +68,7 @@
 
 向 Azure 通知中心注册时，每个推送令牌都与用户和设备相关联，如上所述。此时，这些标记被用于定位特定通知。对于服务器希望发送的每种类型的通知，都会标记有设备标识符和用户 ID。然后，Azure 通知中心使用这些标记来查找推送令牌并将通知发送到正确的设备。这样可以确保我们只会在用户和设备匹配时才会向设备发送通知。
 
-#### 自托管实施 <a href="#self-hosted-implementation" id="self-hosted-implementation"></a>
+#### 自托管实现 <a href="#self-hosted-implementation" id="self-hosted-implementation"></a>
 
 <div align="left">
 
@@ -128,4 +128,3 @@ Android 推送通知文档适用于从 Google Play 商店安装的 Bitwarden 应
 {% hint style="info" %}
 我们每天为设备上的每个账户注册一次推送令牌。不过，从 iOS 收到的令牌很可能每天都是相同的。在某些特殊情况下，例如从备份中恢复设备，会为设备生成不同的令牌。尽管通常不会出现这种情况，但我们每天都会进行检查，以确保 Bitwarden Azure 通知中心是最新的。
 {% endhint %}
-

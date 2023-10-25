@@ -120,7 +120,7 @@
   * [事件日志](architecture/deep-dives/event-logs.md)
   * [推送通知](architecture/deep-dives/push-notifications/README.md)
     * [移动端推送通知](architecture/deep-dives/push-notifications/mobile.md)
-    * [=其他客户端推送通知](architecture/deep-dives/push-notifications/non-mobile.md)
+    * [其他客户端推送通知](architecture/deep-dives/push-notifications/non-mobile.md)
 
 ## ？社区开发者 <a href="#community-developer" id="community-developer"></a>
 
