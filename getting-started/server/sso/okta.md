@@ -1,4 +1,4 @@
-# \*Okta
+# Okta
 
 {% hint style="info" %}
 对应的[官方页面地址](https://contributing.bitwarden.com/getting-started/server/sso/okta)
@@ -11,7 +11,7 @@
 1. Bitwarden 服务器已安装和配置，并且以下服务器项目正运行：
    * Identity
    * API
-   * SSO（位于 `server/bitwarden_license/src/Sso` )
+   * SSO（位于 `server/bitwarden_license/src/Sso`)
 2. 访问 Bitwarden Vault 中的开发集合
 
 ## 步骤 <a href="#steps" id="steps"></a>
@@ -29,7 +29,7 @@
 打开一个单独的浏览器标签，在本地 Bitwarden 网络密码库中配置 SSO：
 
 1. 登录网络密码库并导航到要为其启用 SSO 的组织
-2. 点击 `Settings` ，输入组织的标识符。该标识符应是唯一的，可以只是组织名称。单击「保存」。
+2. 点击 `Settings`，输入组织的标识符。该标识符应是唯一的，可以只是组织名称。点击「保存」。
 3. 转到 `Manage > Single Sign-On` 并输入以下信息：
 
 | 类型                                 | OpenId Connect                                                            |

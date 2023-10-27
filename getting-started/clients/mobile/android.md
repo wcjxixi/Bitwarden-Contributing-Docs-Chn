@@ -37,7 +37,7 @@
 2. 点击「New Device」
 3. 设置您要模拟的设备 - 如果您不确定，您可以选择 Base Device 并保留默认设置
 4. 然后，Visual Studio 将下载该设备的镜像。下载进度显示在 Android 设备管理器对话框的进度中。
-5. 完成后，模拟的 Android 设备将在「Android」->「Debug」->「（设备名称）」下作为构建目标使用
+5. 完成后，模拟的 Android 设备将在「Android」->「Debug」->「{设备名称}」下作为构建目标使用
 
 ### M1 Mac <a href="#m1-macs" id="m1-macs"></a>
 

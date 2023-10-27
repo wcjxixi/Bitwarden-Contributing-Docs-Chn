@@ -95,7 +95,7 @@ npm run build:watch
 要加载浏览器扩展构建：
 
 1. 在地址栏中导航到 `chrome://extensions`，这将打开扩展页面
-2. 开启「开发者模式」（拨动开关）
+2. 开启「开发者模式」（切换开关）
 3. 点击「加载已解压的扩展程序」按钮
 4. 打开您本地存储库的 `build` 文件夹然后确认您的选择
 
@@ -158,7 +158,7 @@ npm run build
 
 3、在 Xcode 中打开 `src/safari/desktop.xcodeproj`
 
-4、运行「设桌面」目标。
+4、运行「桌面」目标。
 
 {% hint style="info" %}
 每当对源文件进行任何更改时，请记住通过 Xcode 重新运行它。它不会自动重新加载。

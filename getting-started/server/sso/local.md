@@ -1,4 +1,4 @@
-# \*本地 IdP
+# 本地 IdP
 
 {% hint style="info" %}
 对应的[官方页面地址](https://contributing.bitwarden.com/getting-started/server/sso/local)
@@ -22,11 +22,11 @@
 
 2、勾选「允许 SSO 身份验证」复选框
 
-3、获取并输入 SSO 标识符
+3、编写并输入一个 SSO 标识符
 
 4、选择「SAML 2.0」作为 SSO 类型。先不要保存或退出此页面，稍后再回来查看
 
-5、打开一个新终端，导航至服务器存储库中的 `dev` 文件夹，例如
+5、打开一个新的终端，导航至服务器存储库中的 `dev` 文件夹，例如
 
 ```bash
 cd ~/Projects/server/dev
@@ -39,13 +39,13 @@ IDP_SP_ENTITY_ID=http://localhost:51822/saml2
 IDP_SP_ACS_URL=http://localhost:51822/saml2/yourOrgIdHere/Acs
 ```
 
-7、复制提供的 `authsources.php.example` 文件，其中包含 IdP 用户的配置：
+7、复制提供的 `authsources.php.example` 文件，其中包含了 IdP 用户的配置：
 
 ```bash
 cp authsources.php.example authsources.php
 ```
 
-默认情况下，该文件配置了两个用户： `user1` 和 `user2` 。密码均为 `password` 。您可以按照此格式添加或修改用户，也可以直接使用默认值。有关自定义此文件的更多信息，请参见[此处](https://github.com/kenchan0130/docker-simplesamlphp#advanced-usage)。
+默认情况下，该文件配置了两个用户：`user1` 和 `user2`。密码均为 `password`。您可以按照此格式添加或修改用户，也可以直接使用默认值。有关自定义此文件的更多信息，请参见[此处](https://github.com/kenchan0130/docker-simplesamlphp#advanced-usage)。
 
 8、启动 docker 容器：
 
@@ -53,7 +53,7 @@ cp authsources.php.example authsources.php
 docker-compose --profile idp up -d
 ```
 
-9、您可以通过导航至 [http://localhost:8090/simplesaml](http://localhost:8090/simplesaml)，然后「身份验证」→「测试已配置的身份验证源」→「`example-userpass`」 来测试用户配置。您应该可以使用配置的用户登录了。
+9、您可以通过导航至 [http://localhost:8090/simplesaml](http://localhost:8090/simplesaml)，然后「身份验证」→「测试已配置的身份验证源」→「`example-userpass`」来测试用户配置。您应该可以使用配置的用户登录了。
 
 ## 配置 Bitwarden <a href="#configure-bitwarden" id="configure-bitwarden"></a>
 

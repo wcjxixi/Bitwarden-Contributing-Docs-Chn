@@ -65,7 +65,7 @@ Native Messaging Test Runner 是一个 Node 应用程序，用于测试桌面端
 
 #### 我以为 Node 使用了 JavaScript？我们如何使用 TypeScript 类，包括来自 libs 的类？ <a href="#i-thought-node-used-javascript-how-are-we-using-typescript-classes-including-the-ones-from-libs" id="i-thought-node-used-javascript-how-are-we-using-typescript-classes-including-the-ones-from-libs"></a>
 
-好问题！用一点魔法✨我们将这些 TypeSript 文件编译成 Node 熟悉和喜爱的 JavaScript。它通过以下几个机制完成的：
+好问题！用一点魔法✨我们将这些 TypeSript 文件编译成 Node 熟悉和喜爱的 JavaScript。它通过以下几个机制来完成：
 
 * **`tsconfig.json`**：在该文件的 `paths` 节点中，将提供的 `paths` 中的文件编译成纯 JavaScript，然后放在 `dist` 文件夹中。
 * **`package.json`**：安装了 `module_alias`，它允许我们将 TypeScript 文件中使用的任何服务映射到它们编译的 JavaScript 等价物。在任何命令文件中直接使用的文件的路径被定义在 `package.json` 的 `"_moduleAliases"` 节点中。

@@ -44,4 +44,4 @@ aws_secret_access_key=minioadmin
 4. 使用 `npm run publish:win:dev` 发布新的版本
 5. 该应用程序现在应该会提示更新
 
-相关：[https://www.electron.build/tutorials/test-update-on-s3-locally](https://www.electron.build/tutorials/test-update-on-s3-locally)
+相关内容：[https://www.electron.build/tutorials/test-update-on-s3-locally](https://www.electron.build/tutorials/test-update-on-s3-locally)

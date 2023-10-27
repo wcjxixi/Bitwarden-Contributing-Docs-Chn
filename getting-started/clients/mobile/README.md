@@ -18,8 +18,8 @@ git config blame.ignoreRevsFile .git-blame-ignore-revs
 
 ## iOS 开发 <a href="#ios-development" id="ios-development"></a>
 
-不幸的是，iOS 开发需要配置配置文件和其他功能，仅供内部团队成员使用。目前我们还没有为社区开发者提供任何文档。
+请参阅 [iOS 移动应用程序](ios.md)页面以设置 iOS 开发环境。
 
 ## watchOS 开发 <a href="#watchos-development" id="watchos-development"></a>
 
-不幸的是，watchOS 开发需要配置配置文件和其他功能，仅供内部团队成员使用。目前我们还没有为社区开发者提供任何文档。
+请参阅 [watchOS 应用程序](watchos.md)页面来设置 watchOS 开发环境。

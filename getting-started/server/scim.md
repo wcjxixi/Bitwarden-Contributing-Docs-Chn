@@ -1,4 +1,4 @@
-# \*SCIM
+# SCIM
 
 {% hint style="info" %}
 对应的[官方页面地址](https://contributing.bitwarden.com/getting-started/server/scim)
@@ -23,7 +23,7 @@ SCIM 是跨域身份管理系统 (System for Cross-domain Identity Management) �
 
 1、登录到 Web  Vault 然后导航到「{您的组织}」->「设置」->「SCIM 配置」
 
-2、勾选「启用 SCIM」然后点击保存。此时您的 SCIM URL 和 API 密钥应该会显示出来。保留此窗口打开以供后面参考
+2、勾选「启用 SCIM」然后点击「保存」。此时您的 SCIM URL 和 API 密钥应该会显示出来。保留此窗口打开以供后面参考
 
 ### 启动 SCIM 项目​ <a href="#start-the-scim-project" id="start-the-scim-project"></a>
 
@@ -38,7 +38,7 @@ dotnet run
 
 ### 公开您的本地端口​ <a href="#expose-your-local-port" id="expose-your-local-port"></a>
 
-SCIM 要求 SCIM 项目和 IdP 之间的直接连接。因此，您需要将本地端口公开到互联网。请遵循 [Ingress Tunnels](tunnel.md) 上的任一个指南来执行此操作。默认公开的端口是 `44559`。
+SCIM 要求 SCIM 项目和 IdP 之间的直接连接。因此，您需要将本地端口暴露到互联网。请遵循 [Ingress Tunnels](tunnel.md) 上的任一个指南来执行此操作。默认暴露的端口是 `44559`。
 
 ### 配置 IdP ​ <a href="#configure-idp" id="configure-idp"></a>
 

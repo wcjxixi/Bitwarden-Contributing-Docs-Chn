@@ -1,14 +1,14 @@
-# \*Ingress 隧道
+# Ingress 隧道
 
 {% hint style="info" %}
 对应的[官方页面地址](https://contributing.bitwarden.com/getting-started/server/tunnel)
 {% endhint %}
 
-有时，允许其他团队成员访问本地运行的 Bitwarden 实例也是有用处的。通常这需要在防火墙中打开端口，即便如此，通常也只能通过 IP 地址进行连接。
+有时，允许其他团队成员访问本地运行的 Bitwarden 实例也是有用处的。通常这需要在防火墙中打开端口，即便如此，您通常也只能通过 IP 地址进行连接。
 
 ## 配置网络 <a href="#configure-web" id="configure-web"></a>
 
-如果目标是公开本地网络保险库（包括对大多数服务的访问），那么网络保险库就需要配置为不使用 `https`，而是以未加密的方式提供内容。
+如果目标是暴露本地网络密码库（包括对大多数服务的访问），那么网络密码库就需要配置为不使用 `https`，而是以未加密的方式提供内容。
 
 打开 `webpack.config.js` 并注释掉 `const devServer = {` 中的以下几行：
 
@@ -37,9 +37,9 @@ https: {
 2. 启动本地网络服务器，并注意其运行的 `$PORT`
 3. 使用 `cloudflared tunnel --url http://127.0.0.1:$PORT` 启动隧道
 
-Cloudflare 将为您建立一个隧道，并提供其 URL：`*.trycloudflare.com`。在尝试访问之前，请等待 DNS 开始解析。
+Cloudflare 将为您建立一个隧道，并提供其 URL：`*.trycloudflare.com`。在尝试访问之前，请等待 DNS 解析生效。
 
-**注意**：任何拥有此 URL 的人都可以在你的机器上访问转发的 URL。
+**注意**：任何拥有此 URL 的人都可以在您的机器上访问转发的 URL。
 
 ## Ngrok（需要免费账户） <a href="#ngrok-requires-a-free-account" id="ngrok-requires-a-free-account"></a>
 
@@ -59,7 +59,7 @@ ngrok http <port>
 https://abcd-123-456-789.au.ngrok.io -> http://localhost:<port>
 ```
 
-5、通过导航到转发 URL，并在末尾添加 `/alive` 来验证转发 URL 是否有效。例如， `https://abcd-123-456-789.au.ngrok.io/alive` ..
+5、通过导航到转发 URL，并在末尾添加 `/alive` 来验证转发 URL 是否有效。例如，`https://abcd-123-456-789.au.ngrok.io/alive` ..
 
 {% hint style="info" %}
 任何拥有此 URL 的人都可以在你的机器上访问转发的 URL。

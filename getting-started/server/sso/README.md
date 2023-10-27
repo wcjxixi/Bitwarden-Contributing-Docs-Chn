@@ -1,4 +1,4 @@
-# \*单点登录 (SSO)
+# 单点登录 (SSO)
 
 {% hint style="info" %}
 对应的[官方页面地址](https://contributing.bitwarden.com/getting-started/server/sso/)
@@ -6,7 +6,7 @@
 
 ## 设置和配置 <a href="#setup-and-configuration" id="setup-and-configuration"></a>
 
-您可以使用以下功能为开发设置 SSO：
+您可以使用以下方式为开发设置 SSO：
 
 * [本地 IdP](local.md)（推荐）
 * [Okta](okta.md)
@@ -24,7 +24,7 @@
 1. 通过 SSO 流程导航，直到浏览器窗口打开
 2. 打开开发工具，点击「网络」选项卡
 3. 使用 IDP 完成登录
-4. 当 Bitwarden 客户端无法启动时，请返回浏览器并点击最后一个网络请求。该请求应该是向 `localhost` 发送的，并以 `callback?client_id=desktop` 开始。...
+4. 当 Bitwarden 客户端无法启动时，请返回浏览器并点击最后一个网络请求。该请求应该是向 `localhost` 发送的，并以 `callback?client_id=desktop` 开始...
 5. 复制 `location` 响应头中的 URI。它应以 `bitwarden://sso-callback?code=` 开头。
 
 下面是一个示例：

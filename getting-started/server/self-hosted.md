@@ -1,11 +1,11 @@
-# \*自托管指南
+# 自托管指南
 
 {% hint style="info" %}
 对应的[官方页面地址](https://contributing.bitwarden.com/getting-started/server/self-hosted/)
 {% endhint %}
 
 {% hint style="info" %}
-此页面仅在您需要测试自托管功能时才与您相关。大多数开发工作都**不**需要它。 如果您只有本地服务器，请转至[服务器设置指南](guide.md)部分。
+此页面仅在您需要测试自托管功能时才与您相关。大多数开发工作都**不**需要它。如果您只有本地服务器，请转至[服务器设置指南](guide.md)部分。
 {% endhint %}
 
 本页面将阐述如何配置并运行自托管开发服务器以及云端开发服务器。这在以下情况下很有用：
@@ -162,7 +162,7 @@ npm ci
 
 上面，我们设置了一系列用户机密覆盖，使我们能够运行我们的自托管实例。我们需要确保启动服务器以使用这些设置。如果满足以下两个条件，服务器代码将使用这些设置：
 
-* 环境是开发
+* 环境用于开发
 * `developSelfHosted` 为 `true`
 
 我们基于您运行服务器的方式以不同方式执行此操作。在您的环境中，自托管启动配置（例如「Api-SelfHost」）将为您设置环境和 `developSelfHosted` 标志。
@@ -223,12 +223,12 @@ dotnet run --launch-profile Api-SelfHost
 
 ## Web 客户端 <a href="#web-client" id="web-client"></a>
 
-从 `clients-selfhost` 目录中，您可以执行
+从 `clients-selfhost` 目录中，您可以执行以下命令来启动 Bitwarden 许可服务器或 OSS Web 服务器：
 
 * `npm run build:bit:selfhost:watch`
 * `npm run build:oss:selfhost:watch`
 
-以启动 Bitwarden 许可或 OSS Web 服务器。默认端口为 `8081`，因此您可以同时运行云端配置和自托管配置的 Web 客户端。它还被配置为指向各种服务器项目的默认 `*-SelfHost` 端口。
+默认端口是 `8081`，因此您可以同时运行云端配置和自托管配置的 Web 客户端。它还被配置为指向各种服务器项目的默认 `*-SelfHost` 端口。
 
 <details>
 
