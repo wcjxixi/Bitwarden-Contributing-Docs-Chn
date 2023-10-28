@@ -8,7 +8,7 @@
 
 我们使用 `migrate.ps1` PowerShell 脚本将迁移应用到本地开发数据库。此脚本可以处理我们支持的不同数据库提供程序。
 
-有关如何使用 `migrate.ps1` 的说明，请参阅 [MSSQL](../../getting-started/server/mssql/#updating-the-database) 和[实体框架](../../getting-started/server/ef/#migrations)的入门部分。
+有关如何使用 `migrate.ps1` 的说明，请参阅 [MSSQL](../../getting-started/server/database/mssql.md#updating-the-database) 和[实体框架](../../getting-started/server/database/ef.md#migrations)的入门部分。
 
 ## 为新的更改创建迁移 <a href="#creating-migrations-for-new-changes" id="creating-migrations-for-new-changes"></a>
 
@@ -17,10 +17,10 @@
 ### MSSQL 迁移 <a href="#mssql-migrations" id="mssql-migrations"></a>
 
 {% hint style="success" %}
-我们建议首先阅读[进化的数据库设计](../../getting-started/server/mssql/edd.md)和 [T-SQL 代码样式](../../code-style/t-sql.md)，因为它们对我们如何编写迁移的有很大的影响。
+我们建议首先阅读[进化的数据库设计](edd.md)和 [T-SQL 代码样式](../code-style/t-sql.md)，因为它们对我们如何编写迁移的有很大的影响。
 {% endhint %}
 
-根据[进化数据库设计](../../getting-started/server/mssql/edd.md)的原则，每个更改都需要考虑分为两部分：
+根据[进化数据库设计](edd.md)的原则，每个更改都需要考虑分为两部分：
 
 1. 向后兼容的过渡迁移
 2. 非向后兼容的最终迁移

@@ -29,7 +29,7 @@
 * [NPM](https://www.npmjs.com/) v8（包含在 Node 中）
 * [Rust](https://www.rust-lang.org/tools/install) - 用于本地桌面组件
 * [Git](https://git-scm.com/)
-  * 强烈建议[提交签名](../tools/commit-signing.md)
+  * 强烈建议[提交签名](../contributing/commit-signing.md)
 
 ### 移动端 <a href="#mobile" id="mobile"></a>
 

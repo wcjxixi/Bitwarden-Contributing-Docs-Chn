@@ -13,7 +13,7 @@
 1. 安装所有推荐的用于开发的[工具和库](tools.md)
 2. 遵循[服务器设置指南](server/guide.md)设置您的本地服务器和相关服务
 3. 从源代码构建和运行各个[客户端](clients/)并将它们连接到您的本地服务器
-4. 阅读我们的[贡献指南](../contributing/contributing.md)和[代码样式](../code-style/)
+4. 阅读我们的[贡献指南](../contributing/contributing.md)和[代码样式](../contributing/code-style/)
 
 ## 获取帮助 <a href="#help" id="help"></a>
 

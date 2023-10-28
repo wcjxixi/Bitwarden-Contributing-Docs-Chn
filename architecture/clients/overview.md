@@ -42,4 +42,4 @@
 
 ## 表示层 <a href="#presentation" id="presentation"></a>
 
-表示层要么使用 [Angular](../presentation/angular.md) 实现，要么使用 CLI 中的[命令模式](../presentation/cli.md)实现。这一层应该只关注表现方面，所有业务逻辑都应该像前面提到的那样放在服务中。这允许多个组件提供相同的功能，而无需继承。
+表示层要么使用 [Angular](presentation/angular.md) 实现，要么使用 CLI 中的[命令模式](presentation/cli.md)实现。这一层应该只关注表现方面，所有业务逻辑都应该像前面提到的那样放在服务中。这允许多个组件提供相同的功能，而无需继承。
