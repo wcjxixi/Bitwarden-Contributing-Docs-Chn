@@ -28,7 +28,7 @@ Bitwarden 的存储库分为两类：团队拥有的和共享的。
 Renovate PR 示例
 {% endembed %}
 
-Renovate PR 包含多个相关领域。上面的 PR 示例包含两个分组的依赖项。PR 提议将依赖项从 `6.0.21` 升级到 `7.0.12`。该版本的存在时间为 **13 天**，**13%** 的存储库已采用该版本。Renovate 在 Renovate 管理的存储库中的测试成功率为 **74%**，以及对这一更改的置信度较低。有关更多详细信息，请参阅[合并置信度的 Renovate 文档](https://docs.renovatebot.com/merge-confidence/)。
+Renovate PR 包含多个相关领域。上面的 PR 示例包含了两个分组的依赖项。PR 提议将依赖项从 `6.0.21` 升级到 `7.0.12`。该版本的存在时间为 **13 天**，**13%** 的存储库已采用该版本。Renovate 在 Renovate 管理的存储库中的测试成功率为 **74%**，以及对这一更改的置信度较低。有关更多详细信息，请参阅[合并置信度的 Renovate 文档](https://docs.renovatebot.com/merge-confidence/)。
 
 ## 工作流 <a href="#workflow" id="workflow"></a>
 
