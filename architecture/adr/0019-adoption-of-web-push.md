@@ -25,42 +25,43 @@
 
 ### 成本和可靠性​ <a href="#cost-and-reliability" id="cost-and-reliability"></a>
 
-新的解决方案不仅要能扩展到基本无限的连接，还要能平衡成本与用户增长，同时提供高可用性。现有的移动通知方案要么有设备限制（例如 [Azure 通知中心](https://azure.microsoft.com/en-us/pricing/details/notification-hubs/)），要么缺乏服务级别保证，同时也不提供现代技术。此外，某些客户端（例如 [F-Droid](https://mobileapp.bitwarden.com/fdroid/)）无法利用成熟的（尽管是专有的）推送后端。单一服务提供商需要提供尽可能多的功能，同时还能为自托管提供灵活性。
+新的解决方案不仅要能扩展到基本无限的连接，还要能平衡成本与用户增长，同时提供高可用性。现有的移动通知方案要么有设备限制（例如 [Azure 通知中心](https://azure.microsoft.com/en-us/pricing/details/notification-hubs/)），要么缺乏服务级别保证。此外，某些客户端（例如 [F-Droid](https://mobileapp.bitwarden.com/fdroid/)）无法利用成熟的（尽管是专有的）推送后端。单一服务提供商需要提供尽可能多的功能，同时还能为自托管提供灵活性。
 
 ## 考虑的方案​ <a href="#considered-options" id="considered-options"></a>
 
 关于移动通知：
 
-* **解决 Azure 通知中心限制** -- 由于证书安全性问题，所有移动设备（即使是自托管安装）都必须利用 Bitwarden 云进行推送，因此应设计一种解决方案，在新订阅中将设备分散到多个通知中心。
-* **采用新的移动推送通知产品** -- 使用 Azure 通知中心以外的其他没有限制的产品，可能需要牺牲一些技术。
-* **采用新的组合推送服务提供商** -- 不仅要从 Azure 通知中心迁移，还要选择支持本地移动通知以及 Web Push 等其他所需协议的服务提供商。
+* **解决 Azure 通知中心限制** -- 由于证书安全性原因，所有移动设备（即使是自托管安装）都必须使用 Bitwarden 云进行推送，因此应设计一种解决方案，在新订阅中将设备分散到多个通知中心。
+* **采用新的移动推送通知产品** -- 使用 Azure 通知中心以外的其他没有限制的产品，或许需要牺牲一些技术。
 
 关于协议现代化：
 
 * **保留 SignalR 解决方案并继续扩大其规模** -- 保留通知服务虚拟机集群，并不断扩大集群以应对规模。同时将所有移动通知转移到自定义解决方案，放弃 Azure 通知中心。
-* **采用新的非移动推送通知产品** -- 在通知服务中使用 SignalR 以外的其他产品，如自研 Web Push 后端。为有需要的客户提供兼容的 Web Push 后端。
-* **采用新的组合推送服务提供商** -- 不仅要尽可能从 SignalR 迁移，还要选择支持本地移动通知协议的服务提供商。另外，如上所述，还要为自托管实现 Web Push 后端。
+* **采用新方法处理非移动推送通知** -- 在通知服务中使用 SignalR 以外的其他方法，如自研 [Web Push](https://web.dev/push-notifications-web-push-protocol/) 后端。托管兼容的 Web Push 后端，供有需要的客户自行托管。将 Web Push 与 Azure 通知中心一起用于 Bitwarden 云。
+* **采用新的组合推送服务提供商** -- 不仅要尽可能从 SignalR 迁移，还要选择支持原生移动通知协议的，与 Azure 通知中心不同的服务提供商。另外，如上所述，还要为自托管实现 Web Push 后端。
 
 ## 决策结果​ <a href="#decision-outcome" id="decision-outcome"></a>
 
-选择的方案：**采用新的组合推送服务提供商。**
+选择的方案：**解决 Azure 通知中心限制**和**采用新方法处理非移动推送通知**。
+
+在研究和规划决策过程中，Azure 通知中心发布了对 Web Push 协议的支持，因此大大调整了结果。通过继续使用 Azure 通知中心，可以继续利用重要的技术投资，用户无需迁移，而重点可以放在可从 Web Push 中受益的新设备类型的规模和支持上。
 
 ### 积极的后果​ <a href="#positive-consequences" id="positive-consequences"></a>
 
-* Web Push 在我们需要它的大多数地方都得到了很好的支持，而且是一种有价值的技术升级，易于将来维护。
-* 一些服务提供商为我们的云产品提供了 Web Push 后端，而且该协议也可以在自托管的通知服务中实施。
+* Web Push 在我们需要它的大多数地方都得到了[很好的支持](https://caniuse.com/push-api)，而且是一项有价值的技术升级，便于今后的维护。
+* 多家服务提供商（包括 Azure 通知中心在内）都为我们的云产品提供了 Web Push 后端，而且该协议也可以在自托管的通知服务中实施。
 * Web Push 非常适合 Manifest V3 和 Service Worker。
 * 通知服务的基础设施维护负担和成本将大幅降低。
 
 ### 消极的后果​ <a href="#negative-consequences" id="negative-consequences"></a>
 
 * 需要关注 Safari 对 Web Push 的支持，该支持在撰写本文时刚刚发布。
-* 选择不同的服务提供商可能会增加成本。
+* 使用多个 Azure 通知中心可能会增加成本。
 
 ### 计划​ <a href="#plan" id="plan"></a>
 
-通知服务将继续存在，并支持 SignalR 连接的 API 以及 Web Push 的新 API。基于云的客户端将在可行的情况下连接到具有 Web Push 的统一服务提供商，并在无法利用 Web Push 时利用现有的 SignalR 实现。自托管客户端将利用通知服务提供的 Web Push 和 SignalR 类似组合。Web Push 所需的密钥交换和安全性 (VAPID) 可以使用现有的内部技术用于自托管，以及服务提供商用于云托管。随着时间的推移，客户端将大部分迁移到 Web Push 连接，SignalR 的负载也将大大减少，不过在可预见的未来，SignalR 仍计划为某些客户端提供支持。
+通知服务将继续存在，并支持 SignalR 连接的 API 和 Web Push 的新 API。客户端将在可行的情况下使用 Web Push 进行连接，如果无法使用 Web Push，则使用现有的 SignalR 实现。自托管客户端将利用通知服务提供的 Web Push 和 SignalR 类似组合。Web Push 所需的密钥交换和安全性 (VAPID) 可以使用现有的内部技术用于自托管，以及服务提供商用于云托管。随着时间的推移，客户端将大部分迁移到 Web Push 连接，SignalR 的负载也将大大减少，不过在可预见的未来，SignalR 仍计划为某些客户端提供支持。
 
-所有移动设备都将迁移到同一个统一服务提供商，该服务提供商除支持 Web Push 外，还支持本地 iOS (APNS) 和 Android (FCM) 推送通知协议。尽管 SignalR 实现仍然可用，但对于不兼容的客户端，未来将考虑在支持 Web Push 的同时支持 [Unified Push](https://unifiedpush.org/)（统一推送）。
+移动设备将继续使用具有原生 iOS (APNS) 和 Android (FCM) 推送通知协议的 Azure 通知中心以及 Web Push。尽管 SignalR 实现仍然可用，但对于不兼容的客户端，未来将考虑在支持 Web Push 的同时支持 [Unified Push](https://unifiedpush.org/)（统一推送）。
 
 在将兼容客户端迁移到新提供商时，将考虑对推送通知有效载荷进行端到端加密（使用用户加密密钥），以便为潜在敏感的有效载荷内容提供更强的安全性。
