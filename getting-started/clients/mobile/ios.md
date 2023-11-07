@@ -13,10 +13,10 @@
 
 ## Apple 开发者账户设置 <a href="#apple-developer-account-setup" id="apple-developer-account-setup"></a>
 
-1. 接受邀请加入 Bitwarden Apple Developer 团队。您的电子邮件中应该会收到一个请求，主题是「您被邀请加入开发团队」。点击链接「接受邀请」，系统会提示您为自己的 [http://bitwarden.com](http://bitwarden.com/) 电子邮件地址创建一个 Apple ID。如果您没有收到这封邮件，请联系 IT 部门 (@IT in slack)。接受条款和条件并完成注册流程
-2. 访问 [Apple ID Online](https://appleid.apple.com/)，使用新的 Apple ID 登录。设置因素身份验证（使用手机和/或受信任的设备）-- 这一点至关重要，因为苹果不再允许没有 MFA 的「开发者」账户，但在本地构建失败时它不会告诉你这一点
-3. 访问 [App Store Connect](https://appstoreconnect.apple.com/) 并接受条款和条件
-4. 确保您有权访问 Bitwarden 团队和团队应用程序配置文件
+1. 接受邀请加入 Bitwarden Apple Developer 团队。您的电子邮件中应该会收到一个请求，主题是「您被邀请加入开发团队」。点击链接「接受邀请」，系统会提示您为自己的 Bitwarden 电子邮件地址创建一个 Apple ID。如果您没有收到这封邮件，请联系 IT 部门 (@IT in slack)。接受条款和条件并完成注册流程。
+2. 访问 [Apple ID Online](https://appleid.apple.com/)，使用新的 Apple ID 登录。设置因素身份验证（使用手机和/或受信任的设备）-- 这一点至关重要，因为苹果不再允许没有 MFA 的「开发者」账户，但在本地构建失败时它不会告诉你这一点。
+3. 访问 [App Store Connect](https://appstoreconnect.apple.com/) 并接受条款和条件。
+4. 确保您有权访问 Bitwarden 团队和团队应用程序配置文件。
 5. 访问 [Apple Developer Account](https://developer.apple.com/account/)，然后转到「证书、ID 和配置文件」菜单项。检查是否能在「证书」部分看到 8bit Solutions LLC 证书，以及在「配置文件」部分看到 Bitwarden 配置文件。如果缺少其中任何一项，请向 IT 部门 (@IT #tech-support in slack) 询问附加角色/权限。
 
 ## macOS 设置 <a href="#macos-setup" id="macos-setup"></a>

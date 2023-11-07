@@ -62,7 +62,7 @@ watchOS 应用程序是使用 `XCode` 和 `Swift` 开发的，我们需要将其
 正如我们在 csproj 中看到的那样，要将 watchOS 应用程序捆绑到 iOS 应用程序中，我们需要以正确的平台为目标。因此，如果要使用设备，可在 XCode 上以设备为目标构建 watchOS 应用程序，构建完成后可转到 VS4M 构建 iOS 应用程序（该程序将捆绑 watchOS 应用程序）并在设备上运行。
 {% endhint %}
 
-## 同步 iPhone <-> 手表 <a href="#synchronization-iphone-watch" id="synchronization-iphone-watch"></a>
+## iPhone 与 Watch 同步 <a href="#synchronization-between-iphone-and-watch" id="synchronization-between-iphone-and-watch"></a>
 
 为了在 iPhone 和 Watch 应用程序之间同步数据，需要使用 [Watch Connectivity Framework](https://developer.apple.com/documentation/watchconnectivity)。
 

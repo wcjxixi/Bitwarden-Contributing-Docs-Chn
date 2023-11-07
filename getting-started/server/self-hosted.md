@@ -39,9 +39,9 @@ git clone git@github.com:bitwarden/server.git server-selfhost
 * 作为用户机密存储在自托管实例中，以及
 * 在您的云端配置实例的 `Installations` 表中，以便它可以验证来自您的自托管服务器的请求
 
-要获取 ID 和 Key，可以：
+要获取 ID 和 Key，可以选择：
 
-* 从 [https://bitwarden.com/host/](https://bitwarden.com/host/) 获取它们，或者
+* 请求[主机安装 ID](https://bitwarden.com/host/)，或者
 * 生成一个 Guid (ID) 和随机字母数字字符串 (Key)
 
 记录下记录这些信息，以便在接下来的步骤中使用。

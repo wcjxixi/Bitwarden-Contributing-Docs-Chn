@@ -33,7 +33,7 @@ https: {
 
 ### 设置 <a href="#setup" id="setup"></a>
 
-1. 安装 `cloudflared`。请访问 [https://developers.cloudflare.com/cloudflare-one/connections/connect-apps/install-and-setup/installation](https://developers.cloudflare.com/cloudflare-one/connections/connect-apps/install-and-setup/installation)。
+1. [下载](https://developers.cloudflare.com/cloudflare-one/connections/connect-networks/downloads/)并安装 `cloudflared`
 2. 启动本地网络服务器，并注意其运行的 `$PORT`
 3. 使用 `cloudflared tunnel --url http://127.0.0.1:$PORT` 启动隧道
 
@@ -41,9 +41,9 @@ Cloudflare 将为您建立一个隧道，并提供其 URL：`*.trycloudflare.com
 
 **注意**：任何拥有此 URL 的人都可以在您的机器上访问转发的 URL。
 
-## Ngrok（需要免费账户） <a href="#ngrok-requires-a-free-account" id="ngrok-requires-a-free-account"></a>
+## Ngrok <a href="#ngrok" id="ngrok"></a>
 
-1、导航至 [https://ngrok.com/](https://ngrok.com/) 并注册账户
+1、注册一个免费的 ngrok 帐户。
 
 2、请按照[官方说明](https://dashboard.ngrok.com/get-started/setup)下载。或使用 [brew](https://formulae.brew.sh/cask/ngrok) 安装，它支持一个账户多个实例。
 

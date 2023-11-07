@@ -85,7 +85,7 @@ http://localhost:8090/simplesaml/saml2/idp/SSOService.php
 
 要添加或更改用户，只需编辑 `authsources.php`。您的更改将立即生效，但当前已通过身份验证的用户必须退出登录，其账户更改才能生效。
 
-要注销用户身份，请访问 [http://localhost:8090/simplesaml/module.php/core/authenticate.php?as=example-userpass](http://localhost:8090/simplesaml/module.php/core/authenticate.php?as=example-userpass) 并单击「注销」。或者，您也可以使用私密浏览会话。
+要注销用户身份，请访问 [http://localhost:8090/simplesaml/module.php/core/authenticate.php?as=example-userpass](http://localhost:8090/simplesaml/module.php/core/authenticate.php?as=example-userpass) 然后点击「注销」。或者，您也可以使用私密浏览会话。
 
 ### SAML 配置 <a href="#saml-configuration" id="saml-configuration"></a>
 

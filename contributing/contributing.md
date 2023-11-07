@@ -67,6 +67,6 @@ Bitwarden 认为，与全球的安全研究人员合作对于确保我们的用�
 
 ### 我们想帮助你！ <a href="#we-want-to-help-you" id="we-want-to-help-you"></a>
 
-如果您有一些您认为接近被利用的东西，或者如果您想了解有关内部 API 的一些信息，或者通常对您想努力提供帮助的应用程序有任何疑问，请通过 [https://bitwarden.com/contact ](https://bitwarden.com/contact)联系我们并询问该信息。如上所述，Bitwarden 希望帮助您发现问题，并且非常愿意提供帮助。
+如果您有一些您认为接近被利用的东西，或者如果您想了解有关内部 API 的一些信息，或者通常对您想努力提供帮助的应用程序有任何疑问，请[联系我们](https://bitwarden.com/contact)并询问该信息。如上所述，Bitwarden 希望帮助您发现问题，并且非常愿意提供帮助。
 
 感谢您帮助保护 Bitwarden 和我们的用户的安全！
