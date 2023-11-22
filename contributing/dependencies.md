@@ -71,3 +71,20 @@ Renovate PR 可能包含单个依赖项或一组相关依赖项。在 Bitwarden�
 有时，由于各种原因，Renovate 会为我们目前无法升级的依赖项创建 PR。例如， `contributing-docs` 依赖于 `docusaurus` ，而后者支持特定版本的 `react`。在 `docusaurus` 支持它之前，我们无法升级 `react`。
 
 在这些情况下，团队可以对 PR 注释不升级的原因，然后关闭 PR。
+
+## 更新配置 <a href="#renovate-configuration" id="renovate-configuration"></a>
+
+Renovate 通过每个存储库中的 `.github/renovate.json` 文件进行配置。为了保持一致性，我们遵循一个内部模板。该模板可在[模板库](https://github.com/bitwarden/template/blob/main/.github/renovate.json)中获取。
+
+Renovate 使用一个名为 [`PackageRules`](https://docs.renovatebot.com/configuration-options/#packagerules) 的概念，它允许我们指定依赖项的所有权，并确保将适当的团队添加为审阅者。下面是将 `@angular/core` 指派给 Platform 团队的示例。
+
+```json
+{
+  "matchPackageNames": ["@angular/core"],
+  "description": "Platform owned dependencies",
+  "commitMessagePrefix": "[deps] Platform:",
+  "reviewers": ["team:team-platform-dev"]
+}
+```
+
+对于由单个团队维护的存储库，无需使用 `packageRules` 来分配所有权。相反，请确保设置了适当的代码所有者。

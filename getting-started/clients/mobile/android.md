@@ -8,12 +8,12 @@
 
 在开始之前，您应该已经安装了推荐的[工具和库](../../tools.md)。您还需要安装：
 
-1. Visual Studio 2019（VS 2022 中尚未包含所需的依赖项；可以在 VS 2022 中完成开发）
-2. [.NET Core 3.1（最新版）](https://dotnet.microsoft.com/zh-cn/download/dotnet/3.1)\
+1. Visual Studio 2022
+2. [.NET 7（最新版）](https://dotnet.microsoft.com/zh-cn/download/dotnet/7.0)\
    注意：即使您使用的是 ARM 64 架构的 M1 Mac，您也可以安装所有 x64 SDK 来运行 android
-3. [Xamarin (Android)](https://learn.microsoft.com/zh-cn/xamarin/get-started/installation/?pivots=macos-vs2022)
-4. Android SDK 29\
-   您可以使用 [Xamarin](https://learn.microsoft.com/zh-cn/xamarin/get-started/installation/?pivots=macos-vs2022)、[Visual Studio](https://learn.microsoft.com/zh-cn/xamarin/android/get-started/installation/android-sdk) 或 [Android Studio](https://developer.android.com/studio/releases/platforms) 中的 SDK 管理器来安装它
+3. [Xamarin (Android)](https://learn.microsoft.com/zh-cn/xamarin/get-started/installation/?pivots=windows-vs2022)
+4. Android SDK 33\
+   您可以使用 [Xamarin](https://learn.microsoft.com/zh-cn/xamarin/get-started/installation/?pivots=macos-vs2022)、[Visual Studio](https://learn.microsoft.com/zh-cn/xamarin/android/get-started/installation/android-sdk) 或 [Android Studio](https://developer.android.com/studio/releases/platforms?hl=zh-cn) 中的 SDK 管理器来安装它
 
 确保您已安装 Android SDK 和模拟器：
 

@@ -6,10 +6,9 @@
 
 ## 要求 <a href="#requirements" id="requirements"></a>
 
-* dotnet Core 2.0（最新版）
-* dotnet Core 3.1（最新版）
+* [.NET 7（最新版）](https://dotnet.microsoft.com/zh-cn/download/dotnet/7.0)
 * Xamarin（iOS 版）
-* 安装了 Xcode 的 Mac
+* 安装了 Xcode 15 的 Mac
 
 ## Apple 开发者账户设置 <a href="#apple-developer-account-setup" id="apple-developer-account-setup"></a>
 
