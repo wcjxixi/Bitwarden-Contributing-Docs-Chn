@@ -102,7 +102,7 @@ transformed$ = observable$.pipe(map(transform));
 
 悬空订阅是内存泄漏的常见原因。为了避免这种情况，我们使用了 `prefer-takeUntil` 规则。这要求任何订阅首先通过 `takeUntil` 操作符进行管道传输。
 
-`takeUntil` 模式的主要好处是审阅者可以快速确认订阅是否已清理。
+`takeUntil` 模式的主要好处是审查者可以快速确认订阅是否已清理。
 
 ```javascript
 private destroy = new Subject<void>();

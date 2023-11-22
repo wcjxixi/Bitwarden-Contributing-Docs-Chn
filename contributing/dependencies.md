@@ -30,7 +30,7 @@ Renovate PR 示例
 
 Renovate PR 包含多个相关领域。上面的 PR 示例包含了两个分组的依赖项。PR 提议将依赖项从 `6.0.21` 升级到 `7.0.12`。该版本的存在时间为 **13 天**，**13%** 的存储库已采用该版本。Renovate 在 Renovate 管理的存储库中的测试成功率为 **74%**，以及对这一更改的置信度较低。有关更多详细信息，请参阅[合并置信度的 Renovate 文档](https://docs.renovatebot.com/merge-confidence/)。
 
-## 工作流 <a href="#workflow" id="workflow"></a>
+## 工作流程 <a href="#workflow" id="workflow"></a>
 
 Renovate 会在周末自动创建拉取请求，这自然与每个团队在下周一分配一些时间来处理各自团队中的拉取请求相吻合。团队应共同努力在一周内解决未完成的拉取请求，以避免工作停滞。
 
@@ -76,7 +76,7 @@ Renovate PR 可能包含单个依赖项或一组相关依赖项。在 Bitwarden�
 
 Renovate 通过每个存储库中的 `.github/renovate.json` 文件进行配置。为了保持一致性，我们遵循一个内部模板。该模板可在[模板库](https://github.com/bitwarden/template/blob/main/.github/renovate.json)中获取。
 
-Renovate 使用一个名为 [`PackageRules`](https://docs.renovatebot.com/configuration-options/#packagerules) 的概念，它允许我们指定依赖项的所有权，并确保将适当的团队添加为审阅者。下面是将 `@angular/core` 指派给 Platform 团队的示例。
+Renovate 使用一个名为 [`PackageRules`](https://docs.renovatebot.com/configuration-options/#packagerules) 的概念，它允许我们指定依赖项的所有权，并确保将适当的团队添加为审查者。下面是将 `@angular/core` 指派给 Platform 团队的示例。
 
 ```json
 {
