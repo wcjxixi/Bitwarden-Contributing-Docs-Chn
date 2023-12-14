@@ -39,21 +39,40 @@ IDP_SP_ENTITY_ID=http://localhost:51822/saml2
 IDP_SP_ACS_URL=http://localhost:51822/saml2/yourOrgIdHere/Acs
 ```
 
-7、复制提供的 `authsources.php.example` 文件，其中包含了 IdP 用户的配置：
+{% hint style="info" %}
+您应该已经在初始服务器设置期间创建了此 `.env` 文件。如果需要，您可以参考 `.env.example` 文件。
+{% endhint %}
+
+7、（可选）您可以生成证书来签署 SSO 请求。您可以使用为您选择的操作系统制作的脚本来完成此操作。
+
+```bash
+# Mac
+./create_certificates_mac.sh
+
+# Windows
+.\create_certificates_windows.ps1
+
+# Linux
+./create_certificates_linux.sh
+```
+
+将指纹（例如 `0BE8A0072214AB37C6928968752F698EEC3A68B5`）粘贴到 `globalSettings` > `identityServer` > `certificateThumbprint` 下的 `Secrets.json` 文件中。按[此处所示](../guide.md#configure-user-secrets)更新您的机密。
+
+8、复制提供的 `authsources.php.example` 文件，其中包含您的 IdP 用户配置。
 
 ```bash
 cp authsources.php.example authsources.php
 ```
 
-默认情况下，该文件配置了两个用户：`user1` 和 `user2`。密码均为 `password`。您可以按照此格式添加或修改用户，也可以直接使用默认值。有关自定义此文件的更多信息，请参见[此处](https://github.com/kenchan0130/docker-simplesamlphp#advanced-usage)。
+默认情况下，该文件配置了两个用户：`user1` 和 `user2`，并且都有密码`password`。您可以按照此格式添加或修改用户，或者仅使用默认值。有关自定义此文件的更多信息，请参阅[此处](https://github.com/kenchan0130/docker-simplesamlphp#advanced-usage)。
 
-8、启动 docker 容器：
+9、启动 docker 容器：
 
 ```bash
 docker-compose --profile idp up -d
 ```
 
-9、您可以通过导航至 [http://localhost:8090/simplesaml](http://localhost:8090/simplesaml)，然后「身份验证」→「测试已配置的身份验证源」→「`example-userpass`」来测试用户配置。您应该可以使用配置的用户登录了。
+10、您可以通过导航至 [http://localhost:8090/simplesaml](http://localhost:8090/simplesaml)，然后「身份验证」→「测试已配置的身份验证源」→「`example-userpass`」来测试用户配置。您应该可以使用配置的用户登录了。
 
 ## 配置 Bitwarden <a href="#configure-bitwarden" id="configure-bitwarden"></a>
 

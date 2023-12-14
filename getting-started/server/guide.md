@@ -161,68 +161,15 @@ Performing /mnt/migrator/DbScripts/2017-08-30_00_CollectionWriteOnly.sql
 您需要定期重新运行迁移帮助程序脚本，以使您的本地开发数据库保持最新。有关详细信息，请参阅 [MSSQL 数据库](database/mssql.md)。
 {% endhint %}
 
-## 生成证书 <a href="#generate-certificates" id="generate-certificates"></a>
+## 安装许可证书 <a href="#install-licensing-certificate" id="install-licensing-certificate"></a>
 
-下一步是为本地开发创建两个自签名证书。我们提供了一个帮助脚本，用于生成这些证书并将它们添加到您系统的钥匙串或证书存储中。
+要将本地服务器环境作为许可实例运行，您需要从共享的 Engineering 集合中下载 `Licensing Certificate - Dev` 然后安装它。这可以通过双击已下载的证书来完成。
 
-### macOS
-
-1、生成证书并将它们保存到您的钥匙串中：
-
-```bash
-sh create_certificates_mac.sh
-```
-
-2、系统将提示您输入 3 次密码。请创建一个复杂的密码，并在每次提示时将其输入 `Export Password` 字段中。您将无法复制/粘贴。
-
-3、您将收到类似于以下内容的输出。下一部分将需要此信息。
-
-```
-Certificate fingerprints:
-Identity Server Dev: 0BE8A0072214AB37C6928968752F698EEC3A68B5
-Data Protection Dev: C3A6CECAD3DB580F91A52FC9C767FE780300D8AB
-```
-
-4、打开钥匙串访问并转到您的登录钥匙串。
-
-5、双击 `Bitwarden Data Protection Dev` 和 `Bitwarden Identity Server Dev` 证书。
-
-6、将每个证书的信任设置更改为「始终信任」。
-
-### Windows
-
-1、生成证书并将它们保存到证书存储中：
-
-```bash
-.\create_certificates_windows.ps1
-```
-
-2、您将收到类似于以下内容的输出。下一部分将需要此信息。
-
-```
-PSParentPath: Microsoft.PowerShell.Security\Certificate::CurrentUser\My
-
-Thumbprint                                Subject
-----------                                -------
-0BE8A0072214AB37C6928968752F698EEC3A68B5  CN=Bitwarden Identity Server Dev
-C3A6CECAD3DB580F91A52FC9C767FE780300D8AB  CN=Bitwarden Data Protection Dev
-```
-
-### Linux <a href="#linux" id="linux"></a>
-
-1、生成证书并将其保存到证书存储区：
-
-```
-./create_certificates_linux.sh
-```
-
-2、您将收到类似下面的输出。您需要收集生成的证书指纹，以便在[配置用户机密](guide.md#configure-user-secrets)部分使用。
-
-```
-Certificate fingerprints:
-Identity Server Dev: 0BE8A0072214AB37C6928968752F698EEC3A68B5
-Data Protection Dev: C3A6CECAD3DB580F91A52FC9C767FE780300D8AB
-```
+1. 登录您公司发行的 Bitwarden 账户
+2. 在「Vaults」页面上，向下滚动到「Licensing Certificate - Dev」项
+3. 查看附件并下载两个文件
+4. 转到「钥匙串访问」然后将 dev.cer 证书设置为「始终信任」
+5. dev.pfx 文件将要求输入密码。您可以通过单击然后打开密码库中的 Licensing Certificate - Dev 项目来获取此证书
 
 ## 配置用户机密 <a href="#configure-user-secrets" id="configure-user-secrets"></a>
 
@@ -238,11 +185,13 @@ Data Protection Dev: C3A6CECAD3DB580F91A52FC9C767FE780300D8AB
 cp secrets.json.example secrets.json
 ```
 
+* 将用户机密文件从共享的 Development 集合（您的 Bitwarden Vault）复制到 `dev` 文件夹中。
+* 如果您无权访问 Development 集合，请联系我们的 IT 经理来安排访问权限。确保您已经使用公司电子邮件地址设置了 Bitwarden 账户。
+* 此 `Secrets.json` 被配置为使用 dockerized Azurite 和 MailCatcher 实例，建议在本指南中使用。
+
 2、使用您自己的值更新 `secrets.json`：
 
 * `sqlServer` > `connectionString`：在指示的地方插入您的密码
-* `identityServer` > `certificateThumbprint`：插入上一步中您的的 Identity 证书指纹
-* `dataProtection` > `certificateThumbprint`：插入上一步中您的数据保护证书指纹
 * `installation` > `id` 和 `key`：[申请一个主机安装 ID 和密钥](https://bitwarden.com/host/)，然后在此处插入
 * `licenseDirectory`：将其设为空目录，这是用于存储上传的许可证文件的位置
 
