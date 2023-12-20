@@ -70,7 +70,7 @@ Renovate PR 可能包含单个依赖项或一组相关依赖项。在 Bitwarden�
 
 有时，由于各种原因，Renovate 会为我们目前无法升级的依赖项创建 PR。例如， `contributing-docs` 依赖于 `docusaurus` ，而后者支持特定版本的 `react`。在 `docusaurus` 支持它之前，我们无法升级 `react`。
 
-在这些情况下，团队可以对 PR 注释不升级的原因，然后关闭 PR。
+在这些情况下，团队可以对 PR 注释不升级的原因，然后关闭 PR 或推迟到以后再升级。如果团队关闭了 PR，则希望其成员监控其依赖性，并在未来重新考虑升级问题。
 
 ## 更新配置 <a href="#renovate-configuration" id="renovate-configuration"></a>
 

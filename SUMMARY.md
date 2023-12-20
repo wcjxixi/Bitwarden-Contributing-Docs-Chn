@@ -6,7 +6,7 @@
 
 * [概述](getting-started/overview.md)
 * [工具](getting-started/tools.md)
-* [服务器](getting-started/server/README.md)
+* [=服务器](getting-started/server/README.md)
   * [设置指南](getting-started/server/guide.md)
   * [高级服务器设置](getting-started/server/advanced-setup.md)
   * [数据库](getting-started/server/database/README.md)
@@ -22,6 +22,7 @@
     * [Okta](getting-started/server/sso/okta.md)
   * [故障排除](getting-started/server/troubleshooting.md)
   * [用户机密](getting-started/server/secrets.md)
+  * [=公共 API](getting-started/server/gong-gong-api.md)
 * [客户端](getting-started/clients/README.md)
   * [Web Vault](getting-started/clients/web-vault/README.md)
     * [WebAuthn](getting-started/clients/web-vault/webauthn.md)
