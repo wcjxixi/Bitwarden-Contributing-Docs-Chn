@@ -6,7 +6,7 @@
 
 本文档假设您已了解[页面详细信息收集](collecting-page-details.md)，它是自动填充流程的第一部分。
 
-一旦 `autofill.js` 内容脚本从页面源收集了页面详细信息后，下一步就是生成我们所说的「填充脚本」。填充脚本是一系列指令，告诉 `autofill.js` 内容脚本要填充哪些字段以及每个字段应该填充哪些数据。
+一旦 `autofill-init.ts` 内容脚本从页面源收集了页面详细信息后，下一步就是生成我们所说的「填充脚本」。填充脚本是一系列指令，告诉 `autofill-init.ts` 内容脚本要填充哪些字段以及每个字段应该填充哪些数据。
 
 `AutofillService` 的职责生成填充脚本。可以使用三种方法来生成填充脚本：
 
@@ -24,7 +24,7 @@
 
 向 `generateFillScript()` 方法提供以下信息：
 
-1. 页面详细信息，表示从 `autofill.js` 页面收集的信息。这包括：
+1. 页面详细信息，表示从 `autofill-init.ts` 页面收集的信息。这包括：
    * AutoFillForm 对象的列表，代表页面上的每个表单
    * AutoFillField 对象的列表，代表页面上的每个字段
 2. 页面上填写的 CipherView
@@ -161,4 +161,4 @@
 
 ## 执行填充 <a href="#performing-the-fill" id="performing-the-fill"></a>
 
-生成脚本后，`AutoFillService` 会发出 `fillForm` 命令。`autofill.js` 内容脚本会侦听该命令，然后根据脚本中的指令在页面上执行填写内容的操作。
+生成脚本后，`AutoFillService` 会发出 `fillForm` 命令。`autofill-init.ts` 内容脚本会侦听该命令，然后根据脚本中的指令在页面上执行填写内容的操作。填充这些内容的逻辑结构位于 `InsertAutofillContentService` 类中。

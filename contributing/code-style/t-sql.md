@@ -23,7 +23,7 @@ IF OBJECT_ID('[dbo].[{table_name}]') IS NULL
 BEGIN
     CREATE TABLE [dbo].[{table_name}] (
         [Id]                UNIQUEIDENTIFIER NOT NULL,
-        '...
+        ...
         CONSTRAINT [PK_{table_name}] PRIMARY KEY CLUSTERED ([Id] ASC)
     );
 END
@@ -119,7 +119,8 @@ GO
 调整表时，您还应该检查该表是否被引用在任何视图中。如果视图中的基础表已被修改，则应运行 `sp_refreshview` 以重新生成视图元数据。
 
 ```sql
-EXECUTE sp_refreshview N'[dbo].[{view_name}]
+EXECUTE sp_refreshview N'[dbo].[{view_name}]'
+GO
 ```
 
 ### 视图 <a href="#views" id="views"></a>
@@ -167,7 +168,7 @@ GO
 
 ```sql
 CREATE OR ALTER {PROCEDURE|FUNCTION} [dbo].[{sproc_or_func_name}]
-'...
+...
 GO
 ```
 
