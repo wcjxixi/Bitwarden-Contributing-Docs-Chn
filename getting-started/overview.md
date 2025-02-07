@@ -6,6 +6,12 @@
 
 欢迎！Bitwarden 贡献文档包含社区开发人员入门所需要的所有信息。
 
+{% content-ref url="server/secrets.md" %}
+[secrets.md](server/secrets.md)
+{% endcontent-ref %}
+
+{% embed url="https://contributing.bitwarden.com/" %}
+
 ## 入门 <a href="#getting-started" id="getting-started"></a>
 
 您需要做的第一件事就是建立一个本地开发环境；为此，我们建议按以下顺序浏览此文档：
