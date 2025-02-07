@@ -1,4 +1,4 @@
-# \*高级服务器设置
+# 高级服务器设置
 
 {% hint style="info" %}
 任意对应的[官方页面地址](https://contributing.bitwarden.com/getting-started/server/advanced-setup)
@@ -92,7 +92,7 @@ Docker compose 将启动一个可以使用的本地 SMTP 服务器，但也可�
 
 运行反向代理可用于模拟以分布式方式运行多个服务器服务。`/dev` 文件夹中的 [Docker Compose](https://docs.docker.com/compose/) 配置已经为 Api 和 Identity 服务准备好了配置（可为其他服务扩展）。
 
-1、反向代理容器被设置为使用位于 `dev/reverse-proxy.conf` 的 [nginx](https://nginx.org/en/docs/beginners\_guide.html#conf\_structure) 配置文件。复制反向代理配置示例：
+1、反向代理容器被设置为使用位于 `dev/reverse-proxy.conf` 的 [nginx](https://nginx.org/en/docs/beginners_guide.html#conf_structure) 配置文件。复制反向代理配置示例：
 
 ```bash
 cd dev
@@ -135,4 +135,24 @@ dotnet run --urls=http://localhost:4002/ --no-build
 * **Api** - `http://localhost:4100`
 * **Identity** - `http://localhost:33756`
 
-> 如果您需要添加其他服务（除 Api 和 Identity 外），请将它们添加到 `dev/reverse-proxy.conf` 中，并确保在 `dev/docker-compose.yml` 文件中为反向代理容器暴露必要的端口。
+如果您需要添加其他服务（除 Api 和 Identity 外），请将它们添加到 `dev/reverse-proxy.conf` 中，并确保在 `dev/docker-compose.yml` 文件中为反向代理容器暴露必要的端口。
+
+## 使用 GitHub 软件包的 NuGet <a href="#nuget-with-github-packages" id="nuget-with-github-packages"></a>
+
+服务器端项目和解决方案可使用 [Bitwarden 共享的 .NET 扩展库](https://github.com/orgs/bitwarden/packages?repo_name=dotnet-extensions)和 [GitHub Packages](https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-nuget-registry) 提供的需要通过身份验证才能访问的预发布软件包。
+
+首先，[生成](https://github.com/settings/tokens/new)一个 GitHub 个人访问令牌（classic），其范围仅限于 `packages:read`。您可以设置过期日期，但考虑到范围，不设置过期日期可能更方便。复制令牌值并运行：
+
+```bash
+IFS= read -rs GITHUB_PAT < /dev/tty
+```
+
+粘贴数值并按 Enter 键。接下来，运行：
+
+```bash
+dotnet nuget add source --username bitwarden --password $GITHUB_PAT --store-password-in-clear-text --name github --configfile ~/.nuget/NuGet/NuGet.Config "https://nuget.pkg.github.com/bitwarden/index.json"
+```
+
+这将设置必要的全局源代码和凭据。任何 NuGet 还原现在也将利用我们为 NuGet 设置的 GitHub 包。
+
+共享库的完整版本发布请访问我们的 [NuGet.org presence](https://www.nuget.org/profiles/Bitwarden)。

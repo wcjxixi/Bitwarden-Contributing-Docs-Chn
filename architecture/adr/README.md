@@ -6,7 +6,7 @@
 
 > 架构决策记录：Architectural Decision Records，简称 ADR。
 
-[架构决策 (AD)](https://en.wikipedia.org/wiki/Architectural\_decision) 是一种软件设计选择，用于解决在架构上具有重要意义的功能性或非功能性需求。例如，对于实例，这可能是技术选择（例如 Java 与 JavaScript）、IDE 的选择（例如 IntelliJ 与 Eclipse IDE）、库之间的选择（例如 [SLF4J](https://www.slf4j.org/) 与 [java.util.logging](https://docs.oracle.com/javase/8/docs/api/java/util/logging/package-summary.html)），或功能上的决策（例如，无限撤消与有限撤消）。
+[架构决策 (AD)](https://en.wikipedia.org/wiki/Architectural_decision) 是一种软件设计选择，用于解决在架构上具有重要意义的功能性或非功能性需求。例如，对于实例，这可能是技术选择（例如 Java 与 JavaScript）、IDE 的选择（例如 IntelliJ 与 Eclipse IDE）、库之间的选择（例如 [SLF4J](https://www.slf4j.org/) 与 [java.util.logging](https://docs.oracle.com/javase/8/docs/api/java/util/logging/package-summary.html)），或功能上的决策（例如，无限撤消与有限撤消）。
 
 ## @Bitwarden
 
@@ -22,7 +22,7 @@ AD 还将作为提议和规划技术债务的基础。
 
 ### 标签 <a href="#tags" id="tags"></a>
 
-请确保每个 ADR 都包含一个标签，标记它们适用于哪些项目（_客户端_、_移动端_和/或_服务器_）。如果需要，请随意创建更多标签。
+请确保每个 ADR 都包含一个标签，标记它们适用于哪些项目（_客户端_、_移动&#x7AEF;_&#x548C;/&#x6216;_&#x670D;务器_）。如果需要，请随意创建更多标签。
 
 ## 流程 <a href="#process" id="process"></a>
 

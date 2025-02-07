@@ -37,3 +37,11 @@ Bitwarden 的自托管实例使用替代的 `EventService` 实现将事件日志
 
 1. 在[自托管配置](self-hosted.md)中运行您的本地开发服务器（Api、Identity 和 Web 密码库）
 2. 使用 `dotnet run` 或您的 IDE 启动 Events 项目（注意：自托管不需要 EventsProcessor）
+
+分布式事件（可选）
+
+事件可通过 AMQP 消息传递系统发布。该消息传递系统使新的集成能够订阅事件。
+
+RabbitMQ 实现增加了一个步骤，重构了本地或自托管运行时处理事件的方式。每个事件不是通过 EventsRepository 直接写入事件表，而是广播到 RabbitMQ 交换中心。新的 RabbitMqEventRepositoryListener 会订阅 RabbitMQ 交换并通过 EventsRepository 写入事件表。最终结果是相同的（事件存储在数据库中），但 RabbitMQ exchange 的添加允许其他集成进行订阅。
+
+为了说明扇出事件的能力，RabbitMqEventHttpPostListener 订阅 RabbitMQ 事件交换并将每个事件 POST 到可配置的 URL。这只是一个简单而具体的示例，说明如何通过转向分布式事件来启用多个集成。

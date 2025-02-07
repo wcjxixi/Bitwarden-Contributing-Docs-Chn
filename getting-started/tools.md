@@ -15,7 +15,7 @@
 ### IDE <a href="#ides" id="ides"></a>
 
 * [Visual Studio Code](https://code.visualstudio.com/) - 用于所有 Typescript 项目，也适用于 C#。一定要安装[扩展](tools.md#visual-studio-code-extensions)
-* [Visual Studio for Mac](https://visualstudio.microsoft.com/vs/mac/) - 特别适合 C#（用于服务器和移动端）
+* [JetBrains Rider](https://www.jetbrains.com/rider/download/) - 用于 C#、.NET 及更多功能的全功能集成开发环境。Bitwarden 开发人员应联系 IT 部门获取许可证。
 * [Xcode](https://developer.apple.com/xcode/) - 用于 iOS 移动端和 Safari 网页扩展开发
 
 ### 本地环境 <a href="#local-environment" id="local-environment"></a>
@@ -24,9 +24,10 @@
 * [Iterm2](https://iterm2.com/)（可通过 Homebrew 获得）- 更好的终端模拟器
 * 各种浏览器 - 值得庆幸有大量浏览器可用于在许多场景中测试扩展。您也可以使用多个浏览器安装不同版本的浏览器扩展来对这些扩展进行比较
 * [Docker](https://docs.docker.com/get-docker/) - 仅服务器开发需要
+* [.NET SDK](https://dotnet.microsoft.com/download) - 服务器和其他后端开发环境所需
 * [PowerShell](https://learn.microsoft.com/zh-cn/powershell/scripting/install/installing-powershell-on-macos)（可通过 Homebrew 获得：`brew install powershell`）
-* [NodeJS](https://nodejs.org/) v16（最好使用[节点版本管理器](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm)）
-* [NPM](https://www.npmjs.com/) v8（包含在 Node 中）
+* [NodeJS](https://nodejs.org/) v20（最好使用[节点版本管理器](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm)）
+* [NPM](https://www.npmjs.com/) v10（包含在 Node 中）
 * [Rust](https://www.rust-lang.org/tools/install) - 用于本地桌面组件
 * [Git](https://git-scm.com/)
   * 强烈建议[提交签名](../contributing/commit-signing.md)
@@ -77,7 +78,6 @@
 
 根据您的偏好或您正在开发的内容，以下工具可能会很有用：
 
-* [JetBrains Rider](https://www.jetbrains.com/rider/) ($) - Visual Studio 和/或 Visual Studio Code for MacOS 的替代
 * [Microsoft Azure Storage Explorer](https://azure.microsoft.com/zh-cn/features/storage-explorer/) - 用于连接本地 Azure 表存储和队列，或与本地 Azure 表存储和队列一起使用
 * [Parallels](https://www.parallels.com/) - 用于运行 Windows VM（虚拟机）
 * [Sourcetree](https://www.sourcetreeapp.com/) -Git GUI。注意：在 macOS 上使用 nvm 时，要使 git hooks 正常运行，请遵循[这些说明](https://typicode.github.io/husky/#/?id=command-not-found)。

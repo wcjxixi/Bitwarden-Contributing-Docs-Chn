@@ -4,7 +4,7 @@
 开始对应的[官方页面地址](https://contributing.bitwarden.com/contributing/database-migrations/edd)
 {% endhint %}
 
-在 Bitwarden，我们遵循[进化数据库设计 (EDD)](https://en.wikipedia.org/wiki/Evolutionary\_database\_design)。EDD 描述了一个过程，在这个过程中，数据库架构被持续更新，同时通过使用数据库过渡阶段仍然确保与旧版本的兼容性。
+在 Bitwarden，我们遵循[进化数据库设计 (EDD)](https://en.wikipedia.org/wiki/Evolutionary_database_design)。EDD 描述了一个过程，在这个过程中，数据库架构被持续更新，同时通过使用数据库过渡阶段仍然确保与旧版本的兼容性。
 
 Bitwarden 还需要支持：
 
@@ -27,7 +27,7 @@ Bitwarden 还需要支持：
 
 {% embed url="https://contributing.bitwarden.com/assets/images/transitions-b5d691da2f06e34d8a4e13a3ab25a4b8.png" %}
 
-值得注意的是，_重构阶段_通常是滚动的，一个重构的_结束阶段_是另一个重构的_过渡阶段_。下表详细说明了在哪个数据库阶段需要支持哪些应用程序版本。
+值得注意的是，_重构阶&#x6BB5;_&#x901A;常是滚动的，一个重构&#x7684;_&#x7ED3;束阶&#x6BB5;_&#x662F;另一个重构&#x7684;_&#x8FC7;渡阶段_。下表详细说明了在哪个数据库阶段需要支持哪些应用程序版本。
 
 | 数据库阶段 | Release X | Release X+1 | Release X+2 |
 | ----- | --------- | ----------- | ----------- |
@@ -67,9 +67,9 @@ Bitwarden 还需要支持：
 
 我们将首先创建一个迁移，将 `FirstName` 列添加到 `Customer` 表中。同时，我们还将更新存储过程，以同步 `FName` 和 `FirstName` 之间的内容，以确保新旧服务器版本可以同时运行。同步代码在下面的代码片断中突出显示。
 
-之后将部署新的服务器版本，一切检查完毕后，现有数据将使用_数据迁移_脚本进行迁移。这实际上是将 `FName` 复制到 `FirstName` 列。
+之后将部署新的服务器版本，一切检查完毕后，现有数据将使&#x7528;_&#x6570;据迁&#x79FB;_&#x811A;本进行迁移。这实际上是将 `FName` 复制到 `FirstName` 列。
 
-最后，将运行_第二次迁移_，删除旧列并更新存储过程以删除同步逻辑。
+最后，将运&#x884C;_&#x7B2C;二次迁移_，删除旧列并更新存储过程以删除同步逻辑。
 
 #### 迁移 <a href="#migrations" id="migrations"></a>
 
@@ -182,7 +182,7 @@ END
 * 自托管实例必须支持相同的数据库更改流程；但是，它们没有相同的始终在线应用程序限制
 * 最大限度地减少流程中的手动步骤
 
-支持所有这些约束条件的过程是一个复杂的流程。下面是状态机的图像，希望有助于可视化该过程及其支持的内容。它假设所有数据库更改都遵循[迁移](../../../contributing/database-migrations/)中规定的标准。
+支持所有这些约束条件的过程是一个复杂的流程。下面是状态机的图像，希望有助于可视化该过程及其支持的内容。它假设所有数据库更改都遵循[迁移](./)中规定的标准。
 
 ***
 

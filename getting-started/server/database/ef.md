@@ -16,7 +16,7 @@
 
 实体框架 (EF) 是一个 ORM 框架，充当数据库的包装器。它允许我们支持多个（非 MSSQL）数据库，而无需为每个数据库维护迁移和查询脚本。
 
-我们的 EF 实现目前支持 Postgres 和 MySQL。
+我们的 EF 实现目前支持 Postgres、MySQL 和 SQLite3。
 
 ## 设置 EF 数据库 <a href="#setting-up-ef-databases" id="setting-up-ef-databases"></a>
 
@@ -90,6 +90,10 @@ docker compose --profile mysql up
 {% endtab %}
 {% endtabs %}
 
+{% hint style="info" %}
+更改 `secrets.json` 文件后，记得运行 `pwsh setup_secrets.ps1 -clear` 使更改生效。
+{% endhint %}
+
 ### 迁移 <a href="#migrations" id="migrations"></a>
 
 {% tabs %}
@@ -151,25 +155,27 @@ pwsh migrate.ps1 -all
 
 ## 测试 EF 更改 <a href="#testing-ef-changes" id="testing-ef-changes"></a>
 
-由于我们允许使用多个数据库，因此对 EF 资源库/模型的任何更改都必须在所有可能的数据库中进行测试。您可能希望使用与本地开发数据库不同的数据库，因为测试可能会添加或删除数据。要将迁移应用到与全局设置不同的数据库，请从存储库的根目录运行以下命令：
+在您的 `server/dev/secrets.json` 文件中查找，或在 json 结构的根部添加此机密块：
 
-```bash
-# EntityFramework CLI 参考：https://learn.microsoft.com/en-us/ef/core/cli/dotnet
-
-# 迁移 Postgres 数据库 ex 连接字符串：Host=localhost;Username=postgres;Password=SET_A_PASSWORD_HERE_123;Database=vault_dev_test
-dotnet ef database update --startup-project util/PostgresMigrations --connection "[POSTGRES_CONNECTION_STRING]"
-
-# 迁移 MySql 数据库 ex 连接字符串：server=localhost;uid=root;pwd=SET_A_PASSWORD_HERE_123;database=vault_dev_test
-dotnet ef database update --startup-project util/MySqlMigrations --connection "[MYSQL_CONNECTION_STRING]"
-
-cd test/Infrastructure.IntegrationTest
-
-# https://learn.microsoft.com/en-us/aspnet/core/security/app-secrets?view=aspnetcore-6.0&tabs=windows#secret-manager
-dotnet user-secrets set "Ef:Postgres" "[POSTGRES_CONNECTION_STRING]"
-dotnet user-secrets set "Ef:MySql" "[MYSQL_CONNECTION_STRING]"
-
-# 您还可以为正常开发的 MSSQL 数据库设置连接字符串，如下所示
-dotnet user-secrets set "Dapper:SqlServer" "[MSSQL_CONNECTION_STRING]"
+```
+"databases:0:type": "Postgres",
+"databases:0:connectionString": "Host=localhost;Username=postgres;Password=_________;Database=ef_test",
+"databases:0:enabled": "true",
+"databases:1:type": "Sqlite",
+"databases:1:enabled": "true",
+"databases:1:connectionString": "Data Source=_________",
+"databases:2:type": "MySql",
+"databases:2:connectionString": "server=localhost;uid=root;pwd=_________;database=ef_test",
+"databases:2:enabled": "true",
+"databases:3:type": "SqlServer",
+"databases:3:connectionString": "Server=localhost;Database=ef_test;User Id=SA;Password=_________;Encrypt=True;TrustServerCertificate=True;",
+"databases:3:enabled": "true"
 ```
 
-然后，您可以从 `test/Infrastruct.IntegrationTest` 文件夹中使用 `dotnet test` 运行这些测试。
+{% hint style="info" %}
+示例数据库索引 + 类型组合是工具运行所必需的，并可支持同一数据库的多个版本同时运行测试。
+{% endhint %}
+
+此块用于为每个支持的提供程序类型测试数据库。集成测试将连接到这些数据库。如果尚未更新，则应更新这些连接字符串的密码，以使其与现有数据库相匹配。如果您的 `server/dev/secrets.json` 文件中根本没有这些设置，只需将其添加到底部即可。这些设置不会出现在 `globalSettings` 中。然后运行 `pwsh setup_secrets.ps1 -clear` 将其应用到本地项目。
+
+将连接字符串应用到项目后：使用 `pwsh server/dev/migrate.ps1 --all` 确保数据库已全部迁移。然后就可以使用 `dotnet test 从 test/Infrastructure.IntegrationTest` 文件夹运行 EF 测试了。

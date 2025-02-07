@@ -124,8 +124,3 @@
   * [推送通知](architecture/deep-dives/push-notifications/README.md)
     * [移动端推送通知](architecture/deep-dives/push-notifications/mobile.md)
     * [其他客户端推送通知](architecture/deep-dives/push-notifications/non-mobile.md)
-
-## ？社区开发者 <a href="#community-developer" id="community-developer"></a>
-
-* [社区开发者](community-developer/community-developer.md)
-* [Bitwarden 开发者](community-developer/bitwarden-developer.md)

@@ -12,21 +12,20 @@ Bitwarden 服务器由多个可以独立运行的服务组成。对于基本的�
 开始之前，请确保您已经安装好了推荐的[工具和库](../tools.md)，包括：
 
 * Docker Desktop
-* Visual Studio
+* Visual Studio 2022
 * Powershell
-* [NET 6.0 SDK](https://dotnet.microsoft.com/download)
+* [NET 8.0 SDK](https://dotnet.microsoft.com/download)
 * Azure Data Studio
 {% endhint %}
 
 ## 克隆存储库 <a href="#clone-the-repository" id="clone-the-repository"></a>
 
-1、克隆 Bitwarden 服务器项目：
+克隆 Bitwarden 服务器项目：
 
 ```bash
 git clone https://github.com/bitwarden/server.git
+cd server
 ```
-
-2、打开终端并导航到已克隆的存储库的根目录。
 
 ## 配置 Git <a href="#configure-git" id="configure-git"></a>
 
@@ -36,7 +35,7 @@ git clone https://github.com/bitwarden/server.git
 git config blame.ignoreRevsFile .git-blame-ignore-revs
 ```
 
-2、_（可选）_设置预提交 `dotnet format` 钩子：
+2、_（可选）_&#x8BBE;置预提交 `dotnet format` 钩子：
 
 ```bash
 git config --local core.hooksPath .git-hooks
@@ -100,11 +99,12 @@ docker compose --profile mssql --profile mail up -d
 
 ### SQL Server <a href="#sql-server" id="sql-server"></a>
 
-为了支持基于 ARM 的开发环境，例如 M1 Mac，我们使用 [Azure SQL Edge](https://hub.docker.com/\_/microsoft-azure-sql-edge) docker 容器而不是普通的 [Microsoft SQL Server](https://hub.docker.com/\_/microsoft-mssql-server) 容器。它的行为与常规 SQL Server 实例基本相同，并运行在 1433 端口上。
+为了支持基于 ARM 的开发环境，例如 M1 Mac，我们使用 [Azure SQL Edge](https://hub.docker.com/_/microsoft-azure-sql-edge) docker 容器而不是普通的 [Microsoft SQL Server](https://hub.docker.com/_/microsoft-mssql-server) 容器。它的行为与常规 SQL Server 实例基本相同，并运行在 1433 端口上。
 
 您可以使用 Azure Data Studio 并通过以下凭据连接到它：
 
 * 服务器：localhost
+* 端口：1433
 * 用户名：sa
 * 密码：（您在 `dev/.env` 中设置的密码）
 
@@ -133,43 +133,6 @@ pwsh -Command "Install-Module -Name Az -Scope CurrentUser -Repository PSGallery 
 ```bash
 pwsh setup_azurite.ps1
 ```
-
-## 创建数据库 <a href="#create-database" id="create-database"></a>
-
-现在 MSSQL 服务器已经运行了。下一步是创建 Bitwarden 服务器所使用的数据库。
-
-我们提供了一个帮助脚本用于创建开发数据库 `vault_dev` 并同时运行所有迁移。
-
-1、创建数据库并运行所有迁移：
-
-```bash
-pwsh migrate.ps1
-```
-
-2、您应该会收到各个迁移脚本已成功运行的确认信息：
-
-```
-Performing /mnt/migrator/DbScripts/2017-08-19_00_InitialSetup.sql
-Performing /mnt/migrator/DbScripts/2017-08-22_00_LicenseCheckScripts.sql
-Performing /mnt/migrator/DbScripts/2017-08-30_00_CollectionWriteOnly.sql
-[...]
-```
-
-如果迁移被跳过，即使这是一个新的数据库，请参阅 [MSSQL 数据库故障排除](database/mssql.md#troubleshooting)。
-
-{% hint style="info" %}
-您需要定期重新运行迁移帮助程序脚本，以使您的本地开发数据库保持最新。有关详细信息，请参阅 [MSSQL 数据库](database/mssql.md)。
-{% endhint %}
-
-## 安装许可证书 <a href="#install-licensing-certificate" id="install-licensing-certificate"></a>
-
-要将本地服务器环境作为许可实例运行，您需要从共享的 Engineering 集合中下载 `Licensing Certificate - Dev` 然后安装它。这可以通过双击已下载的证书来完成。
-
-1. 登录您公司发行的 Bitwarden 账户
-2. 在「Vaults」页面上，向下滚动到「Licensing Certificate - Dev」项
-3. 查看附件并下载两个文件
-4. 转到「钥匙串访问」然后将 dev.cer 证书设置为「始终信任」
-5. dev.pfx 文件将要求输入密码。您可以通过单击然后打开密码库中的 Licensing Certificate - Dev 项目来获取此证书
 
 ## 配置用户机密 <a href="#configure-user-secrets" id="configure-user-secrets"></a>
 
@@ -204,8 +167,35 @@ pwsh setup_secrets.ps1
 此帮助脚本还支持一个可选标志，该标志用于在重新应用它们之前删除所有现有的设置：
 
 ```bash
-pwsh setup_secrets.ps1 -clear:$True
+pwsh setup_secrets.ps1 -clear
 ```
+
+## 创建数据库 <a href="#create-database" id="create-database"></a>
+
+现在 MSSQL 服务器已经运行了。下一步是创建 Bitwarden 服务器所使用的数据库。
+
+我们提供了一个帮助脚本用于创建开发数据库 `vault_dev` 并同时运行所有迁移。
+
+导航至服务器 repo 中的 `dev` 文件夹，然后执行以下步骤：
+
+1、创建数据库并运行所有迁移：
+
+```bash
+pwsh migrate.ps1
+```
+
+2、您应该会收到各个迁移脚本已成功运行的确认信息：
+
+```
+info: Bit.Migrator.DbMigrator[12482444]
+      Migrating database.
+info: Bit.Migrator.DbMigrator[12482444]
+      Migration successful.
+```
+
+{% hint style="info" %}
+您需要定期重新运行迁移帮助程序脚本，以使您的本地开发数据库保持最新。有关详细信息，请参阅 [MSSQL 数据库](database/mssql.md)。
+{% endhint %}
 
 ## 构建并运行服务器 <a href="#build-and-run-the-server" id="build-and-run-the-server"></a>
 
@@ -245,7 +235,7 @@ dotnet run
 
 8、通过配置客户端的 API 和 Identity 端点将客户端连接到您的本地服务器。请参阅[更改客户端环境](https://help.ppgg.in/on-premises-hosting/connect-clients-to-your-instance)以及贡献文档中各客户端的说明。
 
-{% hint style="info" %}
+{% hint style="warning" %}
 如果您无法连接到 API 或 Identity 项目，请检查终端输出以确认它们所运行的端口。
 {% endhint %}
 
