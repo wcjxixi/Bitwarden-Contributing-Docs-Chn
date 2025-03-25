@@ -1,4 +1,4 @@
-# Android
+# =Android
 
 {% hint style="info" %}
 对应的[官方页面地址](https://contributing.bitwarden.com/getting-started/clients/mobile/android/)
@@ -76,7 +76,7 @@ Android 应用程序的默认配置是将自身注册到与 Bitwarden 的 QA Clo
 
 1. 启动本地服务器（`Api`、`Identity`、`Notifications`）
 2. 确保您的移动设备可以[连接到您的本地服务器](android.md#using-server-tunneling)
-3. [启动 Web 客户端](../web-vault/)，因为您需要它来发出登录请求
+3. [启动 Web 客户端](../../clients/web-vault/)，因为您需要它来发出登录请求
 4. 将 Android 应用程序部署到您的设备或模拟器
 5. 部署后，打开应用程序，登录您的 QA 账户然后在设置中激活无密码登录请求
 6. 使用您喜欢的浏览器打开 Web 密码库（例如：http://localhost:8080）

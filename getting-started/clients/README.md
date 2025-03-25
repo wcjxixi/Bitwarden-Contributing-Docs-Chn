@@ -1,11 +1,11 @@
-# 客户端
+# 网页客户端
 
 {% hint style="info" %}
 对应的[官方页面地址](https://contributing.bitwarden.com/getting-started/clients/)
 {% endhint %}
 
 {% hint style="info" %}
-对于移动应用程序，请访问[移动端](mobile/)章节。此页面涵盖了其他客户端。
+对于移动应用程序，请访问[移动端](../mobile/)章节。此页面涵盖了其他客户端。
 {% endhint %}
 
 本章节涵盖了各个 Bitwarden Typescript 客户端应用程序的开发信息：
