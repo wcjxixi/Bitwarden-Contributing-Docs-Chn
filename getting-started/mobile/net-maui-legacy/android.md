@@ -50,6 +50,24 @@
 
 {% embed url="https://contributing.bitwarden.com/assets/images/android-sdk-529574bf6a67ae6500b23196a6843ec5.png" %}
 
+## F-Droid[​](https://contributing.bitwarden.com/getting-started/mobile/net-maui-legacy/android/#f-droid) <a href="#f-droid" id="f-droid"></a>
+
+在 `App.csproj` 和 `Core.csproj` 中，我们现在可以在构建/发布时传递 `/p:CustomConstants=FDROID`，以便将 `FDROID` 常量添加到项目级别的已定义常量中，我们可以使用它与预编译指令一起，例如：
+
+```
+#if FDROID
+    // perform operation only for FDROID.
+#endif
+```
+
+## 构建[​](https://contributing.bitwarden.com/getting-started/mobile/net-maui-legacy/android/#building) <a href="#building" id="building"></a>
+
+目前在 Visual Studio for Mac 中构建项目时存在一些问题，因此如果您遇到一些错误，请使用 CLI 构建（之前删除 bin/obj 文件夹）：
+
+```
+dotnet build -f net8.0-android -c Debug
+```
+
 ## 测试与调试 <a href="#testing-and-debugging" id="testing-and-debugging"></a>
 
 ### 使用安卓模拟器 <a href="#using-the-android-emulator" id="using-the-android-emulator"></a>
