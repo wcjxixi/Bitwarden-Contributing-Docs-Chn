@@ -18,36 +18,36 @@ Bitwarden F-Droid 仓库会定期自动更新，以确保仓库中托管的 App 
 
 使用 Homebrew 下载和安装 Go 的命令如下：
 
-```
+```sh
 brew install go
 ```
 
-其他下载和安装选项可以在 [Go 安装文档 ](https://go.dev/doc/install)中找到。
+其他下载和安装选项可以在 [Go 安装文档](https://go.dev/doc/install)中找到。
 
 ### F-Droid 服务器和仓库工具[​](https://contributing.bitwarden.com/getting-started/mobile/android/f-droid/#f-droid-server-and-repo-tools) <a href="#f-droid-server-and-repo-tools" id="f-droid-server-and-repo-tools"></a>
 
-手动更新 F-Droid 仓库需要 F-Droid 服务器和仓库工具。安装 说明可以在官方网站上找到 F-Droid 服务器和仓库工具文档
+要手动更新 F-Droid 仓库，需要使用 F-Droid 服务器和仓库工具。安装说明可在官方的 [F-Droid 服务器和仓库工具文档](https://f-droid.org/zh_Hans/docs/Installing_the_Server_and_Repo_Tools/)中找到。
 
 ### 安卓 SDK[​](https://contributing.bitwarden.com/getting-started/mobile/android/f-droid/#android-sdk) <a href="#android-sdk" id="android-sdk"></a>
 
 F-Droid 服务器和仓库工具需要 `apksigner`，它是安卓 SDK 的一部分。
 
-使用 Homebrew 安装所需的安卓 SDK 工具，请运行以下命令：
+要使用 Homebrew 安装所需的安卓 SDK 工具，请运行以下命令：
 
-```
+```sh
 brew install android-sdk
 android update sdk --no-ui --all --filter tools,platform-tools,build-tools-25.0.0
 ```
 
-可以在以下位置找到下载和安装所需安卓 SDK 工具的备用说明： [这里 ](https://developer.android.com/studio/releases/platform-tools).
+可以在[此处](https://developer.android.com/tools/releases/platform-tools?hl=zh-cn)找到下载和安装所需 Android SDK 工具的替代说明。
 
 ## 文件结构[​](https://contributing.bitwarden.com/getting-started/mobile/android/f-droid/#file-structure) <a href="#file-structure" id="file-structure"></a>
 
 该存储库的结构如下：
 
 * `fdroid/`：存放应用的 F-Droid 仓库。
-* `metascoop/`：用于在 Bitwarden 应用发布新版本时更新 F-Droid 仓库的 Go 应用。
-* `repos.yml`：定义源仓库和可供托管的可用的 F-Droid 应用的文件。
+* `metascoop/`：用于在 Bitwarden App 发布新版本时更新 F-Droid 仓库的 Go App。
+* `repos.yml`：定义源代码库和可托管的 F-Droid App 的文件。
 
 ### `repos.yml`[​](https://contributing.bitwarden.com/getting-started/mobile/android/f-droid/#reposyml) <a href="#reposyml" id="reposyml"></a>
 
