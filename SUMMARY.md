@@ -54,7 +54,7 @@
     * [JumpCloud](getting-started/business/directory-connector/jumpcloud.md)
     * [OpenLDAP Docker 服务器](getting-started/business/directory-connector/open-ldap.md)
   * [Key Connector](getting-started/business/key-connector.md)
-  * [=Splunk App](getting-started/business/splunk-app.md)
+  * [Splunk App](getting-started/business/splunk-app.md)
 
 ## 贡献 <a href="#contributing" id="contributing"></a>
 
