@@ -136,6 +136,7 @@
   * [表示层](architecture/clients/presentation/README.md)
     * [Angular](architecture/clients/presentation/angular.md)
     * [CLI](architecture/clients/presentation/cli.md)
+  * [=依赖注入](architecture/clients/dependency-injection.md)
   * [服务层](architecture/clients/services/README.md)
     * [Vision](architecture/clients/services/vision.md)
     * [实现](architecture/clients/services/implementation.md)
