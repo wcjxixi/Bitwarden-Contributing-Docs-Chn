@@ -19,7 +19,7 @@ sm-operator 使用[控制器](https://github.com/bitwarden/sm-kubernetes/blob/ma
 {% endhint %}
 
 {% tabs %}
-{% tab title="开发容器" %}
+{% tab title="Dev 容器" %}
 * [Visual Studio Code](https://code.visualstudio.com/)
 * [Docker](https://www.docker.com/)
 * [Visual Studio Code Dev Containers Extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers)
@@ -57,7 +57,7 @@ git clone https://github.com/bitwarden/sm-kubernetes.git
 在存储库根目录下打开 Visual Studio Code。
 
 {% tabs %}
-{% tab title="开发容器" %}
+{% tab title="Dev 容器" %}
 开发容器的设置是自动化的。这将创建一个 Kind 集群并设置所有必要的软件。
 
 * 打开命令调板（根据用户设置，使用 `Cmd/Ctrl`+`Shift`+`P` 或 `F1`）
@@ -77,7 +77,7 @@ git clone https://github.com/bitwarden/sm-kubernetes.git
 
 ### 配置设置[​](https://contributing.bitwarden.com/getting-started/sdk/secrets-manager/integrations/kubernetes#configuration-settings) <a href="#configuration-settings" id="configuration-settings"></a>
 
-创建了 Dev Container 或运行了 `make setup` 后，就会在存储库根目录下创建一个 `.env` 文件。可以更新以下环境变量设置来改变 operator 的行为：
+创建了 Dev 容器或运行了 `make setup` 后，就会在存储库根目录下创建一个 `.env` 文件。可以更新以下环境变量设置来改变 operator 的行为：
 
 * **BW\_API\_URL** - 设置 Secrets Manager SDK 使用的 Bitwarden API URL。这对于自托管场景以及访问欧洲服务器非常有用。
 * **BW\_IDENTITY\_API\_URL** - 设置 Secrets Manager SDK 使用的 Bitwarden Identity 服务 URL。这对于自托管场景以及访问欧洲服务器非常有用。
@@ -86,8 +86,8 @@ git clone https://github.com/bitwarden/sm-kubernetes.git
 
 ## 运行和调试[​](https://contributing.bitwarden.com/getting-started/sdk/secrets-manager/integrations/kubernetes#running-and-debugging) <a href="#running-and-debugging" id="running-and-debugging"></a>
 
-1. 使用 `make install` 或通过命令调色板中的“任务：运行任务”中的“apply-crd”任务将自定义资源定义安装到集群中。
-2. 要调试代码，只需按 F5。您还可以在命令行中使用 `make run` 来运行，
+1. 使用 `make install` 或通过在命令调色板中使用「Tasks: Run Task」中被称为「apply-crd」的 Visual Studio 任务将自定义资源定义安装到群集中。
+2. 要调试代码，只需按一下 F5。您还可以在命令行中使用 `make run` 来运行，而无需调试。，
 
 {% hint style="success" %}
 您也可以通过运行以下命令（不使用调试器）一步到位：`make install run`
@@ -95,38 +95,37 @@ git clone https://github.com/bitwarden/sm-kubernetes.git
 
 ### 卸载自定义资源定义[​](https://contributing.bitwarden.com/getting-started/sdk/secrets-manager/integrations/kubernetes#uninstall-custom-resource-definition) <a href="#uninstall-custom-resource-definition" id="uninstall-custom-resource-definition"></a>
 
-要从集群中删除 CRDs：
+要从集群中删除 CRD：
 
-```
+```bash
 make uninstall
 ```
 
 {% hint style="success" %}
-运行 `make --help` 获取所有潜在 `make` 目标的更多信息
+运行 `make --help` 获取所有潜在 `make` 目标的更多信息。
 {% endhint %}
 
-### 创建一个 BitwardenSecret 进行测试[​](https://contributing.bitwarden.com/getting-started/sdk/secrets-manager/integrations/kubernetes#create-a-bitwardensecret-to-test) <a href="#create-a-bitwardensecret-to-test" id="create-a-bitwardensecret-to-test"></a>
+### 创建 BitwardenSecret 用于测试[​](https://contributing.bitwarden.com/getting-started/sdk/secrets-manager/integrations/kubernetes#create-a-bitwardensecret-to-test) <a href="#create-a-bitwardensecret-to-test" id="create-a-bitwardensecret-to-test"></a>
 
-调试器运行中，我们现在将创建一个 BitwardenSecret 对象，以将 Secret Manager 密钥同步到 K8s 密钥：
+调试器运行中，我们现在将创建一个 BitwardenSecret 对象，以将 Secret Manager 机密同步到 K8s 机密中：
 
 {% hint style="warning" %}
-通过 kubectl 创建以下授权令牌密钥，将令牌放置在机器终端的历史记录中。对于生产系统，请考虑使用 CSI 密钥驱动程序或通过临时构建代理应用密钥。
+通过 kubectl 创建下面的授权令牌机密后，您的授权令牌就会出现在机器终端历史记录中。对于生产系统，请考虑使用 CSI 机密驱动程序或通过一个短暂的构建代理应用该机密。
 {% endhint %}
 
 {% hint style="success" %}
 确保在 VS Code 的 Dev 容器终端中运行以下命令。
 {% endhint %}
 
-1. 在您将创建 Secrets Manager 身份验证令牌的命名空间中创建一个密钥。 正在创建您的 BitwardenSecret 对象： `kubectl create secret generic bw-auth-token -n <some-namespace> --from-literal=token="<Auth-Token-Here>"`
+1. 在创建 BitwardenSecret 对象的命名空间中创建一个秘密，用于存放 Secrets Manager 身份验证令牌：`kubectl create secret generic bw-auth-token -n <some-namespace> --from-literal=token="<Auth-Token-Here>"`
 
 {% hint style="success" %}
 要获取命名空间列表，请运行 `kubectl get namespaces`
 {% endhint %}
 
-2. 安装一个 BitwardenSecret 实例。一个示例可以在 [config/samples/k8s\_v1\_bitwardensecret.yaml](https://github.com/bitwarden/sm-kubernetes/blob/main/config/samples/k8s_v1_bitwardensecret.yaml) 中找到。 您需要复制此示例并根据您的需求进行更新。然后按照以下方式应用： `kubectl apply -n <some-namespace> -f k8s_v1_bitwardensecret.yaml`
-3. 在调试控制台窗口中，您应该看到表示密钥已启动并完成同步的消息。
-4. 运行以下命令查看是否创建了密钥： `kubectl get secrets -n <some-namespace>`
-5. 运行以下命令查看同步密钥的结构和数据： `kubectl get secret -n <some-namespace> <secret-name> -o yaml`
+2. 安装 BitwardenSecret 实例。[config/samples/k8s\_v1\_bitwardensecret.yaml](https://github.com/bitwarden/sm-kubernetes/blob/main/config/samples/k8s_v1_bitwardensecret.yaml) 中有一个示例。您需要复制这个示例并根据自己的需要进行更新。然后按照这个方式应用：`kubectl apply -n <some-namespace> -f k8s_v1_bitwardensecret.yaml`
+3. 在调试控制台窗口中，您应该看到表示机密已启动并完成同步的运行以下命令查看是否创建了密钥： `kubectl get secrets -n <some-namespace>`
+4. 运行以下命令查看同步密钥的结构和数据： `kubectl get secret -n <some-namespace> <secret-name> -o yaml`
 
 {% hint style="success" %}
 密钥值以 Base64 编码的字符串形式存储。
@@ -175,7 +174,7 @@ Windows 上的 Kind 在从本地注册表中拉取时比较困难，因此我们
 
 要从集群中移除安装的控制器 pod，请运行：
 
-```
+```bash
 make undeploy
 ```
 
@@ -202,7 +201,7 @@ make undeploy
 
 如果您正在通过编辑 API 定义 [api/v1/bitwardensecret\_types.go](https://github.com/bitwarden/sm-kubernetes/blob/main/api/v1/bitwardensecret_types.go)，请使用以下命令重新生成清单：
 
-```
+```bash
 make manifests
 ```
 
