@@ -41,7 +41,7 @@
     * [F-Droid](getting-started/mobile/android/f-droid.md)
   * [iOS](getting-started/mobile/ios.md)
   * [.NET MAUI (legacy)](getting-started/mobile/net-maui-legacy/README.md)
-    * [=Android](getting-started/mobile/net-maui-legacy/android.md)
+    * [Android](getting-started/mobile/net-maui-legacy/android.md)
     * [iOS](getting-started/mobile/net-maui-legacy/ios.md)
     * [watchOS](getting-started/mobile/net-maui-legacy/watchos.md)
 * [SDK](getting-started/sdk/README.md)
