@@ -11,15 +11,18 @@
 
 ## 设置 <a href="#setup" id="setup"></a>
 
-1.  克隆仓库：
+1、克隆仓库：
 
-    ```sh
-    $ git clone https://github.com/bitwarden/android
-    ```
-2. 在项目的根目录下创建一个 `user.properties` 文件，并添加以下属性：
-   * `gitHubToken`：一个具有 `read:packages` 权限的「经典」 GitHub 个人访问令牌 (PAT)（例如：`gitHubToken=gph_xx...xx`）。这些令牌可以通过访问 [GitHub 令牌页面](https://github.com/settings/tokens)生成。参阅[有关身份验证的 GitHub 包用户文档](https://docs.github.com/zh/packages/working-with-a-github-packages-registry/working-with-the-gradle-registry)了解更多详情。
-   * `localSdk`：一个布尔值，用于确定是否应从本地 Maven 仓库加载 SDK（例如：`localSdk=true`）。这在开发新 SDK 时特别有用。查看[将 SDK 链接到客户端](../../sdk/internal-sdk.md#linking-the-sdk-to-clients)了解更多详情。
-3. 设置代码风格格式化工具：
+```sh
+$ git clone https://github.com/bitwarden/android
+```
+
+2、在项目的根目录下创建一个 `user.properties` 文件，并添加以下属性：
+
+* `gitHubToken`：一个具有 `read:packages` 权限的「经典」 GitHub 个人访问令牌 (PAT)（例如：`gitHubToken=gph_xx...xx`）。这些令牌可以通过访问 [GitHub 令牌页面](https://github.com/settings/tokens)生成。参阅[有关身份验证的 GitHub 包用户文档](https://docs.github.com/zh/packages/working-with-a-github-packages-registry/working-with-the-gradle-registry)了解更多详情。
+* `localSdk`：一个布尔值，用于确定是否应从本地 Maven 仓库加载 SDK（例如：`localSdk=true`）。这在开发新 SDK 时特别有用。查看[将 SDK 链接到客户端](../../sdk/internal-sdk.md#linking-the-sdk-to-clients)了解更多详情。
+
+3、设置代码风格格式化工具：
 
 所有代码必须遵循以下指南中描述的[代码样式指南文档](../../../contributing/code-style/android-and-kotlin.md) 。为了帮助遵守这些规则，所有贡献者应将 `docs/bitwarden-style.xml` 作为他们的代码样式方案应用。在 IntelliJ / Android Studio 中：
 
