@@ -12,7 +12,7 @@
   * [数据库](getting-started/server/database/README.md)
     * [MSSQL](getting-started/server/database/mssql.md)
     * [实体框架](getting-started/server/database/ef.md)
-  * [事件记录](getting-started/server/events.md)
+  * [事件日志](getting-started/server/events.md)
   * [Ingress 隧道](getting-started/server/tunnel.md)
   * [SCIM](getting-started/server/scim.md)
   * [自托管指南](getting-started/server/self-hosted.md)
