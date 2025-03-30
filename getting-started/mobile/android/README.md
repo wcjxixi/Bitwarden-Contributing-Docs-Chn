@@ -1,7 +1,7 @@
 # Android
 
 {% hint style="info" %}
-对应的[官方页](https://contributing.bitwarden.com/getting-started/clients/mobile/)[面地址](https://contributing.bitwarden.com/getting-started/clients/mobile/)
+对应的[官方页面地址](https://contributing.bitwarden.com/getting-started/mobile/android/)
 {% endhint %}
 
 ## 要求 <a href="#requirements" id="requirements"></a>

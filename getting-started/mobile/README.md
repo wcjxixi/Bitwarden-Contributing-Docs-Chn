@@ -1,7 +1,7 @@
 # 移动端
 
 {% hint style="info" %}
-对应的[官方页](https://contributing.bitwarden.com/getting-started/clients/mobile/)[面地址](https://contributing.bitwarden.com/getting-started/clients/mobile/)
+对应的[官方页面地址](https://contributing.bitwarden.com/getting-started/mobile/)
 {% endhint %}
 
 ## 安卓开发 <a href="#android-development" id="android-development"></a>

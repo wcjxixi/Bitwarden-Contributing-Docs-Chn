@@ -1,7 +1,7 @@
 # iOS
 
 {% hint style="info" %}
-对应的[官方页面地址](https://contributing.bitwarden.com/getting-started/clients/mobile/ios/)
+对应的[官方页面地址](https://contributing.bitwarden.com/getting-started/mobile/net-maui-legacy/ios/)
 {% endhint %}
 
 ## 要求 <a href="#requirements" id="requirements"></a>
@@ -86,11 +86,7 @@ sudo xcode-select -s /Applications/Xcode_14_2.app
 * 用户界面：Storyboard
 * 保留所有其他复选框未选中（或取消选中它们）
 
-<div align="left">
-
-<figure><img src="https://contributing.bitwarden.com/assets/images/new-project-options-03e83d1de2942e190f3d992d846409df.png" alt=""><figcaption></figcaption></figure>
-
-</div>
+<div align="left"><figure><img src="https://contributing.bitwarden.com/assets/images/new-project-options-03e83d1de2942e190f3d992d846409df.png" alt=""><figcaption></figcaption></figure></div>
 
 5、点击「下一步」，保存到默认位置，然后点击「创建」
 

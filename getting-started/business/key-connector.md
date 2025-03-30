@@ -1,7 +1,7 @@
 # Key Connector
 
 {% hint style="info" %}
-对应的[官方页面地址](https://contributing.bitwarden.com/getting-started/enterprise/key-connector)
+对应的[官方页面地址](https://contributing.bitwarden.com/getting-started/business/key-connector)
 {% endhint %}
 
 {% hint style="info" %}

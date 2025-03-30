@@ -1,7 +1,7 @@
 # 目录连接器
 
 {% hint style="info" %}
-对应的[官方页面地址](https://contributing.bitwarden.com/getting-started/enterprise/directory-connector/)
+对应的[官方页面地址](https://contributing.bitwarden.com/getting-started/business/directory-connector/)
 {% endhint %}
 
 Bitwarden 目录连接器是一个桌面应用程序，用于将您的 Bitwarden 企业组织同步到现有的用户和群组目录。

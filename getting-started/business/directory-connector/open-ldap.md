@@ -1,7 +1,7 @@
 # OpenLDAP Docker 服务器
 
 {% hint style="info" %}
-对应的[官方页面地址](https://contributing.bitwarden.com/getting-started/enterprise/directory-connector/open-ldap)
+对应的[官方页面地址](https://contributing.bitwarden.com/getting-started/business/directory-connector/open-ldap)
 {% endhint %}
 
 此方法使用 [OpenLDAP Docker 镜像](https://github.com/osixia/docker-openldap)来运行可用于开发的本地目录服务。

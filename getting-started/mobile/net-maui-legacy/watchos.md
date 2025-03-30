@@ -1,7 +1,7 @@
-# \*watchOS
+# watchOS
 
 {% hint style="info" %}
-对应的[官方页面地址](https://contributing.bitwarden.com/getting-started/clients/mobile/watchos/)
+对应的[官方页面地址](https://contributing.bitwarden.com/getting-started/mobile/net-maui-legacy/watchos/)
 {% endhint %}
 
 ## 要求​ <a href="#requirements" id="requirements"></a>

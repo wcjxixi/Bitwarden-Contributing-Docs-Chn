@@ -1,7 +1,7 @@
 # JumpCloud
 
 {% hint style="info" %}
-对应的[官方页面地址](https://contributing.bitwarden.com/getting-started/enterprise/directory-connector/jumpcloud)
+对应的[官方页面地址](https://contributing.bitwarden.com/getting-started/business/directory-connector/jumpcloud)
 {% endhint %}
 
 [JumpCloud](https://jumpcloud.com/) 提供了带有免费层级的 LDAP 即服务，可用于测试。

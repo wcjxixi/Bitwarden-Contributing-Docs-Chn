@@ -1,5 +1,5 @@
 # =.NET MAUI (legacy)
 
 {% hint style="info" %}
-对应的官方文档地址
+对应的[官方文档地址](https://contributing.bitwarden.com/getting-started/mobile/net-maui-legacy/)
 {% endhint %}
