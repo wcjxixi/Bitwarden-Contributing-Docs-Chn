@@ -16,7 +16,7 @@
 
 为了使一切正常工作，需要使用**设备**。在模拟器上，同步将无法正常工作（某些其他部分可能也无法正常工作）。此外，尽可能启用蓝牙功能，以简化设备间的同步和调试通信。
 
-建议同时阅读 [watchOS 架构](../../../architecture/mobile-clients/watchos.md)。
+建议同时阅读 [watchOS 架构](../../../architecture/mobile-clients/net-maui-legacy/watchos.md)。
 
 ## macOS 设置​ <a href="#macos-setup" id="macos-setup"></a>
 
