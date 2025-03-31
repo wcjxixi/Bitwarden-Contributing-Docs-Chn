@@ -28,7 +28,7 @@
 },
 ```
 
-4、使用以下内容在用户目录 (Windows) 中创建 `.aws/credentials`
+4、使用以下内容在用户主目录（Windows：C:\Users\username，Linux：\~/）中创建 `.aws/credentials`
 
 ```systemd
 [default]
@@ -42,6 +42,8 @@ aws_secret_access_key=minioadmin
 2. 在 `dist/nsis-web/Bitwarden-Installer-1.32.0.exe` 中安装构建
 3. 更新 `src/package.json` 中的版本号
 4. 使用 `npm run publish:win:dev` 发布新的版本
-5. 该应用程序现在应该会提示更新
+5. 该 App 现在应该会提示更新
+
+备注：这也可以在 Linux 上完成，只需在步骤 1 和 4 中使用 `npm run publish:lin`。
 
 相关内容：[https://www.electron.build/tutorials/test-update-on-s3-locally](https://www.electron.build/tutorials/test-update-on-s3-locally)
